@@ -1,4 +1,4 @@
-# grupo_11_-nombre-
+# Grupo_11_-nombre-
 ## Integrantes:
 - Maximiliano Rodriguez
 - Matias Buccione
@@ -8,4 +8,5 @@
 #### Descripcion de sitio
 - ¡Bienvenido a la compra online! 
 - Encontrá Los Mejores Productos De Todas Las Marcas. Ofertas Imperdibles y Envío a Todo el País.
-## Sitio dirigido a todo publico.
+
+#### Sitio dirigido a todo publico.
