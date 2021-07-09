@@ -1,14 +1,14 @@
 # Grupo_11_-nombre-
 ## Integrantes:
-- Maximiliano Rodriguez
-26 años. San Miguel. Programador(en proceso).
+#### Maximiliano Rodriguez
+- 26 años. San Miguel. Programador(en proceso).
 
-- Matias Buccione
-- descripcion................
-- Agustin Nieva
-- descripcion................
-- Juan Cabrera
-- descripcion................
+#### Matias Buccione
+- 
+#### Agustin Nieva
+- 
+#### Juan Cabrera
+- 
 
 #### Descripcion de sitio
 - ¡Bienvenido a la compra online! 
