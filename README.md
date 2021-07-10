@@ -2,9 +2,8 @@
 ## Integrantes:
 #### Maximiliano Rodriguez
 - 26 años. San Miguel. Programador(en proceso).
-
 #### Matias Buccione
-- 
+- 26 años. Capital federal(Bs. As.).Programador (en processo)
 #### Agustin Nieva
 - 18 años. Tartagal salta. Programador(en proceso) y maestro de ingles
 #### Juan Cabrera
