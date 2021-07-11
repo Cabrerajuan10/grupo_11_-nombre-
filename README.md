@@ -1,5 +1,5 @@
 # Grupo_11_ElectroHouse
-### Integrantes:
+#### Integrantes:
 - Maximiliano Rodriguez  
   26 años. San Miguel. Programador(en proceso).
 - Matias Buccione   
@@ -7,7 +7,8 @@
 - Agustin Nieva   
   18 años. Tartagal salta. Programador(en proceso) y maestro de ingles
 - Juan Cabrera  
-  22 años. Capital Federal(Bs. As.). Tecnico Mecanico Electricista. Programador web(en proceso).
+  22 años. Capital Federal(Bs. As.). Tecnico Mecanico Electricista. Estudiante de Programacion web.
+
 
 #### Descripcion de sitio
 - ¡Bienvenido a la compra online!
