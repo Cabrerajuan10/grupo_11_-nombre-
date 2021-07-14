@@ -18,11 +18,10 @@ Entrá y Enterate.
 #### Sitio dirigido al publico en general.
 
 #### Sitios de referencia:
-- www.fravega.com
-- www.garbarino.com
-- www.casadelaudio.com
-- www.sodimac.com.ar
-- www.cetrogar.com.ar
-- www.rodo.com.ar
-- www.compumundo.com
-
+- www.fravega.com: por su paleta de colores
+- www.garbarino.com: debido a su manejo en home
+- www.casadelaudio.com: por su esteica en general
+- www.sodimac.com.ar: debido a su poco conocimiento pero buen wireframe
+- www.cetrogar.com.ar: por curiosidad 
+- www.rodo.com.ar: por su simplicidad
+- www.compumundo.com: por la basta cantidad de productos
