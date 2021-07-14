@@ -1,4 +1,4 @@
-# Grupo_11_ElectroHouse
+# Grupo_11_CommunityElectro
 #### Integrantes:
 - Maximiliano Rodriguez  
   26 años. San Miguel. Programador(en proceso).
@@ -16,4 +16,13 @@ Somos una empresa que se dedica a la venta de electrodomesticos y dispositivos e
 En ElectroHouse podés encontrar todos los productos que forman parte de un hogar. Ofertas Imperdibles, Descuentos y Envío a Todo el País. Rápido, Facil y Seguro.  
 Entrá y Enterate.
 #### Sitio dirigido al publico en general.
+
+#### Sitios de referencia:
+- www.fravega.com
+- www.garbarino.com
+- www.casadelaudio.com
+- www.sodimac.com.ar
+- www.cetrogar.com.ar
+- www.rodo.com.ar
+- www.compumundo.com
 
