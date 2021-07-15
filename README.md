@@ -25,3 +25,5 @@ Entrá y Enterate.
 - www.cetrogar.com.ar: por curiosidad 
 - www.rodo.com.ar: por su simplicidad
 - www.compumundo.com: por la basta cantidad de productos
+- www.mercadolibre.com.ar
+- oportunidades-vip.com.ar
