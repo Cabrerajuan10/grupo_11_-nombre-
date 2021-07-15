@@ -18,7 +18,7 @@ Entrá y Enterate.
 #### Sitio dirigido al publico en general.
 
 #### Sitios de referencia:
-- www.fravega.com: por su paleta de colores
+- www.fravega.com
 - www.garbarino.com: debido a su manejo en home
 - www.casadelaudio.com: por su esteica en general
 - www.sodimac.com.ar: debido a su poco conocimiento pero buen wireframe
@@ -26,4 +26,4 @@ Entrá y Enterate.
 - www.rodo.com.ar: por su simplicidad
 - www.compumundo.com: por la basta cantidad de productos
 - www.mercadolibre.com.ar
-- https://oportunidades-vip.com.ar 
+- www.oportunidades-vip.com.ar
