@@ -13,7 +13,7 @@
 #### Descripcion de sitio
 - ¡Bienvenido a la compra online!
 Somos una empresa que se dedica a la venta de electrodomesticos y dispositivos electronicos.  
-En Comunnity electro podés encontrar todos los productos que forman parte de un hogar. Ofertas Imperdibles, Descuentos y Envío a Todo el País. Rápido, Facil y Seguro.  
+En Community electro podés encontrar todos los productos que forman parte de un hogar. Ofertas Imperdibles, Descuentos y Envío a Todo el País. Rápido, Facil y Seguro.  
 Entrá y Enterate.
 #### Sitio dirigido al publico en general.
 
