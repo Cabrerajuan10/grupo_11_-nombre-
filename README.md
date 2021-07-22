@@ -17,11 +17,15 @@ En Community electro podés encontrar todos los productos que forman parte de un
 Entrá y Enterate.
 #### Sitio dirigido al publico en general.
 
-#### Paleta de colores : 
+#### Paleta de colores :
 Naranja #F49B49
+
 Blanco #FFFFFF
+
 Celeste #22B1D0
+
 Gris #DCDCDC
+
 
 #### Tipografías :
  Montserrat
