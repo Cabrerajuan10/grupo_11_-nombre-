@@ -17,6 +17,18 @@ En Community electro podés encontrar todos los productos que forman parte de un
 Entrá y Enterate.
 #### Sitio dirigido al publico en general.
 
+#### Paleta de colores : 
+Naranja #F49B49
+Blanco #FFFFFF
+Celeste #22B1D0
+Gris #DCDCDC
+
+#### Tipografías :
+ Montserrat
+
+ Noto Sans TC
+
+
 #### Sitios de referencia:
 - www.fravega.com: por estetica.
 - www.sodimac.com.ar: por su cantidad de productos, estetica y servicios que ofrecen.
