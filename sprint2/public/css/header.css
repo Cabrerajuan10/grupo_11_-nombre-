@@ -1,28 +1,53 @@
-*{
-    width: 100%;
-    background-color: #22B1D0;
-
-}
-
-body .logo{
-    margin-left: 5px;
-    width: 140px;
-}
-
-body .banner{
+* {
+  width: 100%;
+  background-color: #22b1d0;
+  font-family: montserrat;
   
-    width:100%;
-}
-.barra-buscador{
-    background-color: white;
-    margin: 10px 10px;
-  font-size: 20px;
-    width: 35%;
 }
 
-header .lupa{
+.container {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  
+}
+
+.logo {
+display: flex;
+  display: flex;
+  border-right: 5px;
+  width: 30%;
+  height: 60%;
+}
+
+.barra-buscador {
     color: white;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    width: 25px;
+  width: 45%;
+  display: block;
+  margin-top: 30px;
+}
+
+.menu {
+    display:flex;
+  margin-top: 5px;
+  text-align: end;
+
+}
+
+.login {
+    display: flex;
+    text-align: center;
+  width: 20%;
+  margin-top: 50px;
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+.shopping {
+    display: flex;
+    text-align: center;
+  width: 20%;
+  margin-top: 50px;
+  margin-left: 50px;
+
 }
