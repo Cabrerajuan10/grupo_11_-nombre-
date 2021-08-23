@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 *{
     margin:0px;
     padding:0px;
     box-sizing: border-box;
+    font-family: Montserrat;
 }
 
 *{
@@ -14,10 +17,16 @@
 
 
 .categorias-producto {
-    width: 50%;
-    margin-left: 5px;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 10px;
     color: black;
     text-decoration: none;
+}
+
+.categorias-producto a{
+    color: rgb(109, 107, 107);
+    text-decoration:none;
 }
 
 .main-detalleProducto{
@@ -34,30 +43,37 @@
     width: 90%;
 }
 
+
 .carousel-inner{
     display: flex;
     margin: auto;
     width: 80%;
+    position: relative;
 }
-
 .descripcion{
     margin-left:10px;
 }
 
 .descuento{
     display: flex;
-    width: 70px;
-    height: 32px;
+    width: 80px;
+    height: 40px;
     justify-content: center;
     align-items: center;
-    background-color:#22B1D0;
+    background: linear-gradient(to right,#22B1D0, #1fd2fa, #14b7db) ;
     color: #ffffff;
-    font-weight: 600;
     border: solid 1px black;
-    border-radius: 5px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 14px;
     position: absolute;
-    bottom: 85%;
-    left: 60%;
+    left: 68%;
+    top: 7%;
+    z-index: 2;
+}
+
+.descuento p{
+    margin:auto;
 }
 
 .descripcion-precio{
@@ -69,11 +85,13 @@
 
 .precio{
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
+
+
 .separador2{
-    width: 100%;
+    width: 97%;
     margin: auto;
     margin-top: 10px;
 }
@@ -83,7 +101,7 @@
     justify-content: center;
     align-items: center;
     width: 70%;
-    height: 40px;
+    height: 50px;
     border: solid 1px black;
     border-radius: 5px;
     text-align: center;
@@ -96,7 +114,7 @@
 }
 
 .boton-comprar:hover{
-    opacity: 80%;
+    background: linear-gradient(to right,#cf8642,#f3a15a,#c57a34);
 }
 
 .boton-comprar a{
@@ -106,8 +124,61 @@
     font-weight: 400;
 }
 
+.tarjeta-envio{
+    display: flex;
+    flex-direction: column;
+    width:70%;
+    height: 100px;
+    margin-top:30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    font-size: 15px;
+
+}
+
+.envio-gratis span i{
+    margin-right: 7px;
+    color:rgb(42, 175, 236)
+}
+
+.envio-gratis span b{
+    color: rgb(101, 161, 41);
+}
+
+.tarjeta a i{
+    margin-right: 7px;
+    
+}
+
+.tarjeta a{
+    color: rgb(42, 175, 236);
+    text-decoration: none;
+    text-decoration-color: none;
+}
+
+
 .productos-recomendados{
     margin-top: 30px;
+}
+
+.separador3{
+    width: 60%;
+    margin: auto;               
+    margin-top:40px;
+}
+
+.descripcion-fichaTecnica{
+    margin-top: 50px;
+}
+
+
+@media(max-width: 480px){
+.precio-regular{
+    display: none;
+}
 }
 
 
@@ -115,13 +186,68 @@
 
 
 
+/* !TABLET */
+
+
+@media(min-width:481px){
+    .detalleProducto{
+        width: 100%;
+    }
+
+    .carousel-detalleProducto{
+        width: 90%;
+    }
+
+    .descripcion{
+        margin-left:10px;
+    }
+  
+    .descuento{
+        display: flex;
+        width: 80px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right,#22B1D0, #1fd2fa, #14b7db) ;
+        color: #ffffff;
+        border: solid 1px black;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        font-size: 14px;
+        position: absolute;
+        left: 75%;
+        top: 8%;
+        z-index: 2;
+    }
+
+    .descuento p{
+        margin:auto;
+    }
+
+    .precio-regular{
+        color: rgba(black, black, black, 0.5);
+        font-size: 13px;
+    }
+    .precio-regular span{
+        text-decoration: line-through;
+        opacity: .5;
+    }
+    
+   .descripcion-precio h4 {
+       font-size:25px;
+   }
+    
+    }
 
 
 
 
-/* DESKTOP */
 
-@media(min-width:750px){
+
+
+/* !DESKTOP */
+
+@media(min-width:769px){
 .detalleProducto{
     display: flex;
     flex-direction: row;
@@ -137,19 +263,61 @@
 
 .descuento{
     display: flex;
-    width: 70px;
-    height: 32px;
+    width: 80px;
+    height: 40px;
     justify-content: center;
     align-items: center;
-    background-color:#22B1D0;
+    background: linear-gradient(to right,#22B1D0, #1fd2fa, #14b7db) ;
     color: #ffffff;
-    font-weight: 600;
     border: solid 1px black;
-    border-radius: 5px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 14px;
     position: absolute;
-    bottom: 85%;
-    left: 31%;
-    
+    left: 75%;
+    top: 8%;
+    z-index: 2;
 }
 
+.descuento p{
+    margin:auto;
+}
+
+
+.descripcion-precio h4{
+    font-size: 27px;
+}
+
+.precio-regular{
+    color: rgba(black, black, black, 0.5);
+    font-size: 13px;
+}
+.precio-regular span{
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.precio{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.descripcion-fichaTecnica{
+    display: none;
+}
+}
+
+
+
+
+@media(max-width: 480px){
+    .precio-regular{
+        display: none;
+    }
+}
+
+@media(min-width:1250px){
+    .descripcion-precio h4{
+        font-size: 34px;
+    }
 }
