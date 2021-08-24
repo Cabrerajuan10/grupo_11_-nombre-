@@ -72,6 +72,10 @@
     z-index: 2;
 }
 
+.myCarousel{
+    position: relative;
+}
+
 .descuento p{
     margin:auto;
 }
@@ -117,15 +121,18 @@
     margin-bottom: 15px;
     box-shadow: 1px 1px 2px 2px rgb(168, 164, 164);
     cursor: pointer;
+    transition: all 0.4s ease;
 }
 
 .boton-comprar:hover{
     background: linear-gradient(to right,#cf8642,#f3a15a,#c57a34);
+    ;
 }
 
 .boton-comprar:active{
-        width:69%;      
+   transform: scale(.9);
 }
+
 
 .boton-comprar a{
     color: #ffffff;
@@ -218,6 +225,7 @@
     }
 
     .carousel-detalleProducto{
+        margin: auto;
         width: 90%;
     }
 
