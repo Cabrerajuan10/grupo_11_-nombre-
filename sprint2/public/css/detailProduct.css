@@ -15,29 +15,35 @@
     background-color: #DCDCDC;
 }
 
+.categorias ul{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 0px;
+    color: rgb(3, 3, 3);
+    text-decoration: none;
+}
+
+.separador-uno{
+    margin-top: 0px;
+    width: 80%;
+    margin: auto;
+}
+
 .navegacion{
     display: flex;
     width: 100%;
     flex-direction: row;
 }
 
-.categorias-producto a{
-    color: rgb(109, 107, 107);
-    text-decoration:none;
-}
-
 .main-detalleProducto{
     width: 100vw;
 }
-
-
 
 .carousel-detalleProducto{
     width: 90%;
     margin: auto;
     margin-left: 10px;
 }
-
 
 .carousel-inner{
     display: flex;
@@ -92,9 +98,7 @@
     margin-top: 10px;
 }
 
-
-
-.descripcion p{
+.titulo{
     font-size:22px;
     font-weight: 600;
     line-height:normal;
@@ -110,18 +114,18 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 90%;
     height: 60px;
     border: solid 1px black;
     border-radius: 5px;
     text-align: center;
     background-color: #F49B49;
-    margin-left: 5px;
     margin-top:15px;
     margin-bottom: 15px;
     box-shadow: 1px 1px 2px 2px rgb(168, 164, 164);
     cursor: pointer;
     transition: all 0.4s ease;
+    font-size: 18px;
 }
 
 .boton-comprar:hover{
@@ -133,7 +137,6 @@
    transform: scale(.9);
 }
 
-
 .boton-comprar a{
     color: #ffffff;
     text-decoration: none;
@@ -143,47 +146,62 @@
 
 .tarjeta-envio{
     display: flex;
-    flex-direction: column;
-    width:70%;
+    width:90%;
+    flex-wrap: nowrap;
     height: 100px;
     margin-top:30px;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     border-top: solid 1px black;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px rgb(83, 15, 15);
     font-size: 15px;
+    /* text-align: center; */
 
 }
 
-.envio-gratis span i{
-    margin-right: 7px;
-    color:rgb(42, 175, 236)
+.envio{
+width: 100%;
+height: 40%;
 }
 
-.envio-gratis span b{
-    width: 300px;
-    color: rgb(101, 161, 41);
+.envio p{
+display: inline-block;
 }
 
-.envio-gratis{
-    min-width:320px;
+.envio p i{
+    width: 32px;
+    height: 32px;
+    border: solid 1px black;
+    border-radius: 50%;
+    padding: 7px;
+    color: rgb(7, 114, 7);
+    background-color: #ffffff;
 }
+
+.gratis b{
+    color: rgb(7, 114, 7);
+    margin-left: 4px;
+}
+
 .tarjeta{
-    min-width:320px;
+width: 100%;
+height: 40%;
 }
 
-.tarjeta a i{
-    margin-right: 7px;
-    
+.tarjeta p{
+    display: inline-block;
 }
 
-.tarjeta a{
-    color: rgb(42, 175, 236);
-    text-decoration: none;
-    text-decoration-color: none;
+.tarjeta p i{
+    width: 32px;
+    height: 32px;
+    border: solid 1px black;
+    border-radius: 50%;
+    padding: 7px;
+    color: rgb(7, 114, 7);
+    background-color: #ffffff;
 }
-
 
 .productos-recomendados{
     margin-top: 30px;
@@ -199,7 +217,6 @@
     margin-top: 50px;
 }
 
-
 @media(max-width: 480px){
 .precio-regular{
     display: none;
@@ -211,7 +228,9 @@
     margin-top: 50px;
 }
 
-
+.fichaTecnica-producto{
+  margin-left: 12px;   
+}
 
 
 
@@ -268,7 +287,10 @@
        font-size:29px;
    }
 
-    
+   .tarjeta-envio{
+       
+       font-size: 17px;
+   }
     }
 
 
@@ -338,7 +360,13 @@
 .right, .left{
     display: none;
 }
+
+.tarjeta-envio{
+    font-size: 15px;
 }
+}
+
+
 
 
 
@@ -355,6 +383,11 @@
     }
 }
 
+@media(max-width: 355px){
+    .tarjeta-envio{
+        display: none;
+    }
+}
 
 
 
