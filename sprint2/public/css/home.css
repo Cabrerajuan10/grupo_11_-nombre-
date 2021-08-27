@@ -1,0 +1,249 @@
+.home{
+    background-color: var(--colorGris);
+}
+
+.home .banner img{
+    height: 200px;
+}
+
+.home .form-1, .form-2, .form-3 {
+    background-color: var(--colorCeleste);
+    width: 280px;
+    height: 60px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.home .credit-card, .debit-card, .efectivo{
+    background-color: var(--colorBlanco);
+    width: 220px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home h5{
+    margin: 0;
+}
+
+.home .box-prom   i{
+    font-size: 40px;
+    padding: 20px;
+    background-color: var(--colorNaranja);
+    color: var(--colorBlanco);
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.home .box-prom .mobile i{
+    padding: 20px 32.5px;
+}
+
+.home .box-prom{
+    display: flex;
+    justify-content: space-around;
+}
+
+.home .box-prom1{
+    display: flex;
+    flex-direction: column;
+}
+
+.home .box-prom2{
+    display: flex;
+    flex-direction: column;
+}
+
+ .home article {
+    width: 93%;
+    margin: auto;
+    background-color: var(--colorBlanco);
+
+}
+
+.home .descripcion{
+    margin-bottom: 20px;
+}
+
+.home .descripcion .precio{
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: var(--colorNaranja);
+}
+
+.home .descripcion .descuento{
+    font-size: 18px;
+    margin: 0;
+    color: var(--colorVerde);
+} 
+
+.home .categoria a{
+    background-color: var(--colorBlanco);
+    color: var(--colorCeleste);
+    padding: 10px;
+}
+
+.home .box-medios-de-pago{
+    width: 90%;
+    margin: auto;
+}
+
+.home .box-articles{
+    width: 100%;
+}
+
+.home .box-categorias .categoria{
+    border-radius: 30%;
+    width: 150px;
+    height: 150px;
+    padding:10px;
+}
+
+.home .box-product-interes{
+    width: 93%;
+    margin:auto;
+}
+
+.home .box-product-interes img{
+    width: 100%;
+}
+
+.home .box-product-interes .poduct-interes img{
+    margin-top: 15px;
+}
+
+
+.home h4{
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+/* 
+
+.home .box-product-interes .poduct-interes img{
+    width: 90px;
+}
+
+.home .box-product-interes .poduct-interes div{
+    width: 90px;
+}
+
+
+} */
+
+
+@media (min-width:670px){
+    .home .banner img{
+    height: 300px;
+    }
+
+    .home .box-prom   i{
+        font-size: 60px;
+        padding: 30px;
+        background-color: var(--colorNaranja);
+        color: var(--colorBlanco);
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+
+    .home .box-prom .mobile i{
+        padding: 30px 48.75px;
+    }
+
+    .home article {
+        width: 91%;
+    }
+
+    .home .box-product-interes{
+        width: 97%;
+    }
+
+    .home .box-product-interes .poduct-interes{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .home .box-product-interes .poduct-interes .product1{
+        background-color: var(--colorBlanco);
+        margin-top: 15px;
+    }
+
+    .home .box-product-interes .poduct-interes img{
+        width: 240px;
+    }
+
+    .home .box-product-interes .poduct-interes div {
+        width: 240px;
+    }
+
+    .home .box-product-interes .poduct-interes .product1 {
+        height: 240px;
+        padding-top: 66px;
+    }
+
+}
+
+
+
+
+@media(min-width:1024px){
+    .home .banner img{
+    height: 400px;
+    }
+
+    .home .box-prom   i{
+        font-size: 75px;
+        padding: 45px;
+        background-color: var(--colorNaranja);
+        color: var(--colorBlanco);
+        border-radius: 50%;
+        margin-top: 50px;
+    }
+
+    .home .box-prom .mobile i{
+        padding: 45px 68.44px;
+    }
+
+    .home .box-prom1{
+        display: block;        
+    }
+
+    .home .box-prom2{
+        display: block;        
+    }
+    
+    .home .box-prom .laptop{
+        margin-right: 60px;
+    }
+
+    .home .box-prom .mobile{
+        margin-right: 70px;
+    }
+
+    .home article {
+        width: 89%;
+    }
+
+    .home .box-product-interes{
+        width: 98%;
+    }
+
+    .home .box-product-interes .poduct-interes img{
+        width:320px;
+    }
+
+    .home .box-product-interes .poduct-interes div {
+        width:320px;
+    }
+
+    .home .box-product-interes .poduct-interes .product1 {
+        height:320px;
+        padding-top: 88px;
+    }
+
+
+}

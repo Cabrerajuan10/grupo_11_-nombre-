@@ -122,7 +122,8 @@ header .menu-bar ul{
     header .menu-bar ul{
         display: flex;
         justify-content: space-around;
-        padding-top: 10px;
+        padding-top: 5px;
+        font-size: 18px;
     }
 
     header .nav-search-header {
