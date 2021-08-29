@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detalle del producto</title>
-
-  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../public/css/glider.css">
   <link rel="stylesheet" href="../public/css/detailProduct.css">
 
 
@@ -48,96 +47,53 @@
 
 
       <div class="carousel-detalleProducto">
- <div class="container">
-        <div id="main_area">
-                <!-- Slider -->
-                <div class="row">
-                    <div class="span12" id="slider">
-                        <!-- Top part of the slider -->
-                        <div class="row">
-                            <div class="span8" id="carousel-bounding-box"> 
-                              
-                                <div class="carousel slide" id="myCarousel">
-                                           <div class="descuento">
-                                       <p>30 OFF%</p>
-                                          </div>            
-                                    <!-- Carousel items -->
-                                    <div class="carousel-inner"> 
-                                       
-                                        <div class="active item" data-slide-number="0">
-                                        <img src="../public/img/detailProduct/smartv-43-samsung-img1.png"></div>
 
-                                        <div class="item" data-slide-number="1">
-                                        <img src="../public/img/detailProduct/smartv-43-samsung-img2.png"></div>
-
-                                        <div class="item" data-slide-number="2">
-                                        <img src="../public/img/detailProduct/smartv-43-samsung-img3.png"></div>
-
-                                    </div><!-- Carousel nav -->
-                                    <a class="carousel-control left" data-slide="prev" href="#myCarousel">‹</a> <a class="carousel-control right" data-slide="next" href="#myCarousel">›</a>
-                                </div>
-                            </div>
-
-                            <div class="span4" id="carousel-text"></div>
-
-                            <div id="slide-content" style="display: none;">
-                                <div id="slide-content-0">
-                                  
-                                </div>
-
-                                <div id="slide-content-1">
-                                  
-                                </div>
-
-                                <div id="slide-content-2">
-                                  
-                                </div>
-
-                                <div id="slide-content-3">
-                                    
-                                </div>
-
-                                <div id="slide-content-4">
-                                    
-                                </div>
-
-                                <div id="slide-content-5">
-                                   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/Slider-->
-
-                <div class="row hidden-phone" id="slider-thumbs">
-                    <div class="span12">
-                        <!-- Bottom switcher of slider -->
-
-                        <ul class="thumbnails">
-                            <li class="span2">
-                                <a class="thumbnail" id="carousel-selector-0"><img src="../public/img/detailProduct/smartv-43-samsung-img1.png"></a>
-                            </li>
-
-                            <li class="span2">
-                                <a class="thumbnail" id="carousel-selector-1"><img src="../public/img/detailProduct/smartv-43-samsung-img2.png"></a>
-                            </li>
-
-                            <li class="span2">
-                                <a class="thumbnail" id="carousel-selector-2"><img src="../public/img/detailProduct/smartv-43-samsung-img3.png"></a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="descuento">
+              <p>30 OFF%</p>
+                 </div>  
+      
+            <div class="carousel-item active">
+              <img src="../public/img/detailProduct/smartv-43-samsung-img1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../public/img/detailProduct/smartv-43-samsung-img2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../public/img/detailProduct/smartv-43-samsung-img3.png" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-</div>
 
+        <div class="imagen-principal">
+        <img id="img-principal" src="../public/img/detailProduct/smartv-43-samsung-img1.png" alt="">
+        <div class="descuento">
+            <p>30 OFF%</p>
+        </div> 
+        </div>
 
-       
+       <div class="img-items">
+         <div><img class="item" id="img-prev1" src="../public/img/detailProduct/smartv-43-samsung-img1.png" alt=""></div>
+         <div><img class="item" id="img-prev2" src="../public/img/detailProduct/smartv-43-samsung-img2.png" alt=""></div>
+         <div><img class="item" id="img-prev3" src="../public/img/detailProduct/smartv-43-samsung-img3.png" alt=""></div>
+       </div>
 
 
       </div>
-
 
       <div class="descripcion">
         <p class="titulo">Smart TV 4K UHD Samsung 43" UN43TU7000</p>
@@ -178,126 +134,110 @@
               <a class="cuotas" href="#">Conoce las cuotas con tu tarjeta</a>
             </div>
           </div>
-
-
-
         </div>
-
-
       </div>
       </div>
-
     </section>
 
-
     <!--MENU DESPLEGABLE DE LA DESCRIPCION DEL PRODUCTO-->
-   <div class="fichaTecnica-producto">
-    <div class="menuAcordeon-detalleProducto">
-      <div class="row">
-          <div class="col-md-6">
-              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                  <div class="panel panel-default">
-                      <div class="panel-heading" role="tab" id="headingOne">
-                          <h4 class="panel-title">
-                          
-                              <a role="button" data-toggle="collapse"  data-parent="#accordion"  href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
-                                <div class="descripcion-icono">
-                                  <i class="fas fa-exclamation-circle"></i>
-                                        Descripcion
-                                      </div>
-                        
-                              </a>
-                          </h4>
-                      </div>
-                      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                          <div class="panel-body">
-                              
-                                <h3>DESCRIPCION</h3>
+   <div class="fichaTecnica-descripcion">
+   
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <div class="descripcion-titulo">
+              <p><i class="fas fa-exclamation-circle"></i></p>
+              <p>Descripcion</p>
+            </div>    
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body"><h3>DESCRIPCION</h3>
 
-                                
-
-                                <p>Con la tecnología Crystal UHD 4K, HDR y un diseño sofisticado y súper delgado, el Smart TV Samsung UN43TU7000 ofrece una experiencia multimedia única. Además, es eficiente, intuitivo y fácil de usar.</h5>
-                                
-                                
-                                
-                                h2Conectá tus dispositivos
-                                Mediante sus entradas HDMI podés conectar reproductores de audio y video; consolas de juegos y notebooks. Su gran capacidad de transmisión de datos permite disfrutar de imágenes en alta definición y un sonido de gran fidelidad. También, a través de su puerto USB podrás reproducir contenido digital (música, imágenes y videos) almacenado en dispositivos externos como tablets, smartphones y pendrives.
-                                
-                                
-                                
-                                Navegá por la web
-                                Gracias a que posee Wi-Fi incorporado, podrás acceder a internet de forma inalámbrica, navegar y ejecutar tus aplicaciones favoritas.
-                                
-                                
-                                
-                                Disfrutá 4K UHD
-                                El Smart TV Samsung UN43TU7000 tiene una resolución cuatro veces superior a la de una TV Full HD (3840 x 2160 píxeles) y cuenta con una pantalla Crystal Display con imágenes con una gama de colores más amplia. La pantalla Crystal Display garantiza una expresión de colores optimizada para que puedas ver cada detalle. Su panel LED ofrece además la característica de alto rango dinámico (HDR), que aumenta la expresión brillante del televisor para que puedas disfrutar de un inmenso espectro de colores y detalles visuales, incluso en las escenas más oscuras.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="panel panel-default">
-                      <div class="panel-heading" role="tab" id="headingTwo">
-                          <h4 class="panel-title">
-                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            
-<div class="fichaTecnica-icono">
-  <i class="far fa-file-alt"></i>
-  Ficha tecnica
-</div>
-                              </a>
-                          </h4>
-                      </div>
-                      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                          <div class="panel-body">
-                              <div class="menuAcordeon-descripcion">
-                                <ul>
-                                  <li><b>Imagen</b>:
-                                    Tamaño de Pantalla
-                                    43"</li>
-                                  <li><b>Tipo de resolución</b>:
-                                    4K UHD</li>
-                                  <li><b>Resolución</b>:
-                                    3840 x 2160p</li>
-                                  <li><b>Formato de pantalla:</b> Plano</li>
-                                  <li><b>Tipo de pantalla:</b>
-                                    LED 4K Ultra HD</li>
-                                  <li><b>Caracteristicas generales:</b>Smart TV</li>
-                                  <li><b>Caracteristicas Smart:</b></li>
-                                  <li><b> Youtube:</b> si</li>
-                                  <li><b>Netflix:</b> si</li>
-                                  <li><b>Entradas hdmi:</b>2</li>
-                                  <li><b>Entradas usb:</b>1</li>
-                                  <li><b>Conexion a internet:</b>si</li>
-                                  <li><b>Control remoto:</b>si</li>
-                                  <li><b>Dimenciones:</b></li>
-                                  <li><b>Alto</b>: 57,2cm</li>
-                                  <li><b>Ancho:</b>97,9cm</li>
-                                  <li><b> Profundidad:</b> 7,7cm</li>
-                                  <li><b> Peso:</b> 8,3kg</li>
-                                  <li><b>Modelo:</b>UN43TU7000</li>
-                                  <li><b>Origen:</b>Argentina</li>
-                                </ul>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  </div>
-              </div>
-          </div>
+            <p>Con la tecnología Crystal UHD 4K, HDR y un diseño sofisticado y súper delgado, el Smart TV Samsung UN43TU7000 ofrece una experiencia multimedia única. Además, es eficiente, intuitivo y fácil de usar.</h5>
+         
+            h2Conectá tus dispositivos
+            Mediante sus entradas HDMI podés conectar reproductores de audio y video; consolas de juegos y notebooks. Su gran capacidad de transmisión de datos permite disfrutar de imágenes en alta definición y un sonido de gran fidelidad. También, a través de su puerto USB podrás reproducir contenido digital (música, imágenes y videos) almacenado en dispositivos externos como tablets, smartphones y pendrives.
+         
+            Navegá por la web
+            Gracias a que posee Wi-Fi incorporado, podrás acceder a internet de forma inalámbrica, navegar y ejecutar tus aplicaciones favoritas.
+         
+            Disfrutá 4K UHD
+            El Smart TV Samsung UN43TU7000 tiene una resolución cuatro veces superior a la de una TV Full HD (3840 x 2160 píxeles) y cuenta con una pantalla Crystal Display con imágenes con una gama de colores más amplia. La pantalla Crystal Display garantiza una expresión de colores optimizada para que puedas ver cada detalle. Su panel LED ofrece además la característica de alto rango dinámico (HDR), que aumenta la expresión brillante del televisor para que puedas disfrutar de un inmenso espectro de colores y detalles visuales, incluso en las escenas más oscuras.</p></div>
+        </div>
       </div>
-  </div>
-</div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            <div class="fichaTecnica-titulo">
+              <p><i class="far fa-file-alt"></i></p>
+              <p>Ficha tecnica</p>
+            </div>
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">   <ul>
+            <li><b>Imagen</b>:
+              Tamaño de Pantalla
+              43"</li>
+            <li><b>Tipo de resolución</b>:
+              4K UHD</li>
+            <li><b>Resolución</b>:
+              3840 x 2160p</li>
+            <li><b>Formato de pantalla:</b> Plano</li>
+            <li><b>Tipo de pantalla:</b>
+              LED 4K Ultra HD</li>
+            <li><b>Caracteristicas generales:</b>Smart TV</li>
+            <li><b>Caracteristicas Smart:</b></li>
+            <li><b> Youtube:</b> si</li>
+            <li><b>Netflix:</b> si</li>
+            <li><b>Entradas hdmi:</b>2</li>
+            <li><b>Entradas usb:</b>1</li>
+            <li><b>Conexion a internet:</b>si</li>
+            <li><b>Control remoto:</b>si</li>
+            <li><b>Dimenciones:</b></li>
+            <li><b>Alto</b>: 57,2cm</li>
+            <li><b>Ancho:</b>97,9cm</li>
+            <li><b> Profundidad:</b> 7,7cm</li>
+            <li><b> Peso:</b> 8,3kg</li>
+            <li><b>Modelo:</b>UN43TU7000</li>
+            <li><b>Origen:</b>Argentina</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
 
+  </div>
 
     <hr class="separador3">
-
-
 
     <!-- PRODUCTOS RECOMENDADOS-->
     <section class="productos-recomendados">
 
       <div class="productos">
         <h3>Mira tambien</h3>
+
+        <div class="glider-contain">
+          <div class="glider">
+            <div><img src="../public/img/detailProduct/visa-removebg-preview 1.png" alt=""></div>
+            <div><img src="../public/img/detailProduct/american_express-removebg-preview 1.png" alt=""></div>
+            <div><img src="../public/img/detailProduct/tarjeta naranja imagen 1.png" alt=""></div>
+            <div><img src="../public/img/detailProduct/visa-removebg-preview 1.png" alt=""></div>
+            <div><img src="../public/img/detailProduct/visa-removebg-preview 1.png" alt=""></div>
+            <div><img src="../public/img/detailProduct/american_express-removebg-preview 1.png" alt=""></div>
+            <div><img src="../public/img/detailProduct/tarjeta naranja imagen 1.png" alt=""></div>
+            <div><img src="../public/img/detailProduct/visa-removebg-preview 1.png" alt=""></div>
+            <div><img src="../public/img/detailProduct/visa-removebg-preview 1.png" alt=""></div>
+            <div><img src="../public/img/detailProduct/american_express-removebg-preview 1.png" alt=""></div>
+            <div><img src="../public/img/detailProduct/tarjeta naranja imagen 1.png" alt=""></div>
+            <div><img src="../public/img/detailProduct/visa-removebg-preview 1.png" alt=""></div>
+          </div>
+        
+          <button aria-label="Previous" class="glider-prev">«</button>
+          <button aria-label="Next" class="glider-next">»</button>
+          <div role="tablist" class="dots" id="dots"></div>
+        </div>
       </div>
     </section>
   </main>
@@ -315,16 +255,11 @@
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
 
-
-<!-- LINK DE JS PARA FUNCIONALIDAD DE GALERIA IMG SMALL-->
-<script src="../public/js/index.js"></script>
-  
-
-<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
+<script src="../public/js/glider.js"></script>
+<script src="../public/js/detailProduct.js"></script>
 
 </body>
 

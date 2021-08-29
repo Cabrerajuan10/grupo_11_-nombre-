@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 *{
@@ -22,6 +23,8 @@
     color: rgb(3, 3, 3);
     text-decoration: none;
 }
+
+
 
 .separador-uno{
     margin-top: 0px;
@@ -78,7 +81,7 @@
     z-index: 2;
 }
 
-.myCarousel{
+ .myCarousel{
     position: relative;
 }
 
@@ -86,7 +89,7 @@
     margin:auto;
 }
 
-.descripcion-precio{
+ .descripcion-precio{
     display: flex;
     flex-direction: column;
     
@@ -104,7 +107,7 @@
     line-height:normal;
 }
 
-.separador2{
+ .separador2{
     width: 97%;
     margin: auto;
     margin-top: 10px;
@@ -156,11 +159,11 @@
     ;
 }
 
-.boton-comprar:active{
+ .boton-comprar:active{
    transform: scale(.9);
 }
 
-.agregar-carrito:active{
+ .agregar-carrito:active{
 transform: scale(.9);
 }
 
@@ -245,27 +248,55 @@ height: 40%;
 .separador3{
     width: 60%;
     margin: auto;               
-    margin-top:40px;
+    margin-top:80px;
 }
 
-.descripcion-fichaTecnica{
-    margin-top: 50px;
-}
-
-@media(max-width: 480px){
-.precio-regular{
-    display: none;
-}
-}
 
 .menuAcordeon-detalleProducto{
     width: 80%;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
-.fichaTecnica-producto{
-  margin-left: 12px;   
+.img-items{
+display: none;
 }
+
+.imagen-principal{
+    display: none;
+}
+
+.imagen-principal{
+    display: none;
+}
+
+.fichaTecnica-descripcion{
+    width: 90%;
+    margin-top: 100px;
+    margin-left: 10px;
+}
+
+ .descripcion-titulo, .fichaTecnica-titulo{
+    display: flex;
+    color: #ffffff;
+    justify-content: flex-start;
+
+}
+
+.descripcion-titulo p i, .fichaTecnica-titulo p i{
+    margin-right: 4px;
+    color:rgb(65, 62, 62);
+}
+
+.accordion-button{
+    background: linear-gradient(to right, #22B1D0, #4bcbe7, #a2e8f8  );
+
+}
+
+ .accordion-body{
+    background-image: url(../img/detailProduct/imagenFondo-descripcion.jpg);
+    background-size: cover;
+}
+
 
 
 
@@ -274,20 +305,20 @@ height: 40%;
 
 
 @media(min-width:481px){
-    .detalleProducto{
+.detalleProducto{
         width: 100%;
     }
 
-    .carousel-detalleProducto{
+   .carousel-detalleProducto{
         margin: auto;
         width: 90%;
     }
 
-    .descripcion{
+ .descripcion{
         margin-left:10px;
     }
   
-    .descuento{
+     .descuento{
         display: flex;
         width: 80px;
         height: 40px;
@@ -305,27 +336,28 @@ height: 40%;
         z-index: 2;
     }
 
-    .descuento p{
+  .descuento p{
         margin:auto;
     }
 
-    .precio-regular{
+.precio-regular{
         color: rgba(black, black, black, 0.5);
         font-size: 13px;
     }
-    .precio-regular span{
+ .precio-regular span{
         text-decoration: line-through;
         opacity: .5;
     }
     
-   .descripcion-precio h4 {
+.descripcion-precio h4 {
        font-size:29px;
    }
 
-   .tarjeta-envio{
+.tarjeta-envio{
        
        font-size: 17px;
    }
+
     }
 
 
@@ -360,7 +392,7 @@ height: 40%;
     border-bottom-right-radius: 20px;
     font-size: 14px;
     position: absolute;
-    left: 65%;
+    left: 75%;
     top: 8%;
     z-index: 2;
 }
@@ -390,8 +422,7 @@ height: 40%;
 
 .descripcion-fichaTecnica{
     display: none;
-}
-
+} 
 .right, .left{
     display: none;
 }
@@ -403,6 +434,53 @@ height: 40%;
 .boton-comprar, .agregar-carrito{
     width: 50%;
 }
+
+.slide{
+display: none;
+} 
+
+.img-items{
+    display: flex;
+   justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 180px;
+    margin-top: 20px;
+    margin-left: 40px;
+    
+    
+}
+
+.imagen-principal{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    position: relative; 
+ }
+
+  #img-principal{
+    width: 400px;
+    height: 400px;
+    
+     
+ }
+
+ .item{
+     width: 75%;
+     margin: auto;
+     cursor: pointer;
+     transition: all 0.5s ease-in-out;
+      
+ }
+
+ .item:hover{
+     border: solid 1px #22B1D0;
+     border-radius: 5px;
+     transform: scale(1.2);
+ }
+
+
 }
 
 
@@ -411,7 +489,7 @@ height: 40%;
 
 
 @media(max-width: 480px){
-    .precio-regular{
+     .precio-regular{
         display: none;
     }
 }
@@ -428,107 +506,8 @@ height: 40%;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*ESTILOS DE MENU ACORDEON/ DESCRIPCION, FICHA TECNICA*/
-
-a:hover, a:focus{
-    text-decoration: none;
-    outline: none;
-}
-#accordion .panel{
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
-    margin-bottom: 15px;
-}
-#accordion .panel-heading{
-    padding: 0;
-    border-radius:0;
-    border: none;
-}
-#accordion .panel-title a{
-    display: block;
-    padding: 14px 30px 14px 70px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background: #F49B49;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.5s ease 0s;
-}
-#accordion .panel-title a.collapsed{
-    background: linear-gradient(to right, #22B1D0, #98cfdb, #c4eaf3);
-    color: #000000;
-}
-#accordion .panel-title a.collapsed:hover{
-    color: #000000;
-}
-#accordion .panel-title a:before{
-    content: "";
-    width: 55px;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 0;
-    left: -13px;
-    transform: skewX(-25deg);
-    transition: all 0.5s ease 0s;
-}
-#accordion .panel-title a.collapsed:hover:before{
-    background: #22B1D0;
-}
-#accordion .panel-title a:after{
-    content: "\f047";
-    font-family: FontAwesome;
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    color: #ffffff;
-    transform: translateY(-50%);
-}
-#accordion .panel-title a.collapsed:after{
-    color: #9f9f9f;
-}
-#accordion .panel-title a.collapsed:hover:after{
-    color: #ffffff;
-}
-#accordion .panel-body{
-    font-size: 14px;
-    color: #5a3245;
-    line-height: 25px;
-    padding: 20px 15px 20px 40px;
-    position: relative;
-    border: none;
-    transition: all 0.5s ease 0s;
-}
-#accordion .panel-body:before{
-    content: "";
-    width: 5px;
-    height: 40px;
-    background: #F49B49;
-    position: absolute;
-    top: 30px;
-    left: 0;
-}
-#accordion .panel-body p{
-    margin-bottom: 0;
-}
+@media(max-width: 480px){
+   .precio-regular{
+        display: none;
+    }
+    }

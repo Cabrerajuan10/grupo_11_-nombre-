@@ -1,23 +1,66 @@
-jQuery(document).ready(function($) {
- 
-    $('#myCarousel').carousel({
-            interval: 5000
-    });
+/*SLIDER PRODUTOS RECOMENDADOS*/
+new Glider(document.querySelector('.glider'), {
+        // Mobile-first defaults
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        scrollLock: true,
+        dots: 'dots',
+        arrows: {
+          prev: '.glider-prev',
+          next: '.glider-next'
+        },
+        responsive: [
+                {
+             // screens greater than >= 775px
+              breakpoint: 769,
+             settings: {
+               // Set to `auto` and provide item width to adjust to viewport
+               slidesToShow: 'auto',
+               slidesToScroll: 'auto',
+              itemWidth: 150,
+             duration: 0.25
+            }
+         },
+                   {
+            // screens greater than >= 775px
+            breakpoint: 769,
+            settings: {
+              // Set to `auto` and provide item width to adjust to viewport
+              slidesToShow: 'auto',
+              slidesToScroll: 'auto',
+              itemWidth: 150,
+              duration: 0.25
+            }
+          },{
+            // screens greater than >= 1024px
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 6,
+              slidesToScroll: 1,
+              itemWidth: 150,
+              duration: 0.25
+            }
+          }
+        ]
+      });
 
-    $('#carousel-text').html($('#slide-content-0').html());
-
-    //Handles the carousel thumbnails
-    $('[id^=carousel-selector-]').click( function(){
-            var id_selector = $(this).attr("id");
-            var id = id_selector.substr(id_selector.length -1);
-            var id = parseInt(id);
-            $('#myCarousel').carousel(id);
-    });
 
 
-    // When the carousel slides, auto update the text
-    $('#myCarousel').on('slid', function (e) {
-            var id = $('.item.active').data('slide-number');
-            $('#carousel-text').html($('#slide-content-'+id).html());
-    });
-});
+/* FUNCIONALIDAD QUE PERMITE HACER CLICK EN IMG MINIATURA Y QUE SE MUESTRE COMO IMG PRINCIPAL */
+
+
+document.getElementById('img-prev1').addEventListener('click', () =>{
+        document.getElementById('img-principal').setAttribute('src', '../public/img/detailProduct/smartv-43-samsung-img1.png')
+})
+
+
+document.getElementById('img-prev2').addEventListener('click', () =>{
+        document.getElementById('img-principal').setAttribute('src', '../public/img/detailProduct/smartv-43-samsung-img2.png')
+})
+
+
+document.getElementById('img-prev3').addEventListener('click', () =>{
+        document.getElementById('img-principal').setAttribute('src', '../public/img/detailProduct/smartv-43-samsung-img3.png')
+})
+
+
