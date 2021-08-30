@@ -1,7 +1,7 @@
 /*SLIDER PRODUTOS RECOMENDADOS*/
 new Glider(document.querySelector('.glider'), {
         // Mobile-first defaults
-        slidesToShow: 1,
+        slidesToShow: 'auto',
         slidesToScroll: 1,
         scrollLock: true,
         dots: 'dots',
@@ -12,7 +12,7 @@ new Glider(document.querySelector('.glider'), {
         responsive: [
                 {
              // screens greater than >= 775px
-              breakpoint: 769,
+              breakpoint: 480,
              settings: {
                // Set to `auto` and provide item width to adjust to viewport
                slidesToShow: 'auto',
