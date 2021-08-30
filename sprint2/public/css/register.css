@@ -1,0 +1,38 @@
+
+  main{
+    background-color:#aaa;
+    font-family: "Montserrat", sans-serif;
+  }
+
+.contenedor-registro{
+
+  position:static;
+  display:flex;
+  flex-direction: column;
+     text-align: center;
+     width:50%;
+      
+  }
+
+.contenedor-registro .p{
+    
+    padding: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+
+}
+      
+.casillero{
+    display:flex;
+    flex-direction: column;
+    
+    
+}
+
+  
+main .button-registrate{
+    padding: 10px;
+    border-radius: 10px;
+    font-size:15px;
+    box-shadow:  00px 12px 12px -6px black;
+}

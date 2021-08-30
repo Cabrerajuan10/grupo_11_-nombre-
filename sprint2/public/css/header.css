@@ -1,53 +1,108 @@
-* {
+header{
+  background-color: var(--colorCeleste);
+  height: 90px;
+}
+header .nav-search-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+header .logo img{
+  width: 60px;
+}
+header .buscador{
+  display: flex;
+  min-width: 30%;
+}
+header .buscador .search-bar{
+  flex-grow: 1;
+
+}
+header .buscador .search-bar .buscar_texto{
+  border: none;
+  border-radius: 5px;
+}
+header .buscador .search-bar .buscar_texto{
   width: 100%;
-  background-color: #22b1d0;
-  font-family: montserrat;
-  
 }
-
-.container {
+header .buscador  .search button{
+  border: none;
+  border-radius:5px;
+  background-color: white;
+  margin-left: -8px;
+}
+header .menu-head a{
+  margin: 0 8px;
+  font-size: 18px;
+}
+header .menu-head .user-head{
+  display: none;
+}
+header a {
+ color: var(--colorBlanco);
+}
+header .nav-menu-header{
   display: flex;
-  flex-direction:row;
-  justify-content: center;
-  
+  display: none;
 }
-
-.logo {
-display: flex;
+header .searh-header{
   display: flex;
-  border-right: 5px;
-  width: 30%;
-  height: 60%;
+  flex-direction: column;
+  flex-grow: .7;
+}
+header .menu-bar ul{
+  display: flex;
+  display: none;
 }
 
-.barra-buscador {
-    color: white;
-  width: 45%;
-  display: block;
-  margin-top: 30px;
+
+@media(min-width:670px){
+  header .menu-head .user-head{
+      display: inline-block;
+  } 
+  header .menu-head a{
+      margin: 0 15px;
+  }
+  header .menu-head a{
+      justify-content: flex-end;
+  }
 }
-
-.menu {
-    display:flex;
-  margin-top: 5px;
-  text-align: end;
-
-}
-
-.login {
-    display: flex;
-    text-align: center;
-  width: 20%;
-  margin-top: 50px;
-  margin-top: 50px;
-  margin-left: 30px;
-}
-
-.shopping {
-    display: flex;
-    text-align: center;
-  width: 20%;
-  margin-top: 50px;
-  margin-left: 50px;
-
+@media(min-width:1024px){
+  header .logo img{
+      width: 90px;
+  }
+  header .menu-head a{
+      margin: 0 35px;
+  }
+  header .menu-head .menu-burguer{
+      display: none;
+  }
+  header .searh-header{
+      justify-content: center;
+      padding-top: 0;
+  }
+  header .nav-search-header{
+      align-items: flex-start;
+  }
+  header .search-bar{
+      padding-top: 33px;
+  }
+  header .search{
+      padding-top: 33px;
+  }    
+  header .menu-head{
+  padding-top: 31px;
+  }
+  header .menu-bar ul{
+      display: flex;
+      justify-content: space-around;
+      padding-top: 5px;
+      font-size: 18px;
+  }
+  header .nav-search-header {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 0;
+  }
 }
