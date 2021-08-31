@@ -1,202 +1,113 @@
-
-
-
-
-.contenedor {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 10px 15px 10px;
+main .contenedor {
   background-color: var(--colorCeleste);
-  
-}
-
-.option article{
-  padding: 10px;
-}
-.option a.detalle-carrito{
-  text-decoration-line: underline;
-  padding: 10px;
-  font-size: 20px;
-  color: white;
-}
-
-
-.contenedor .cantidad a{
-  text-decoration-line: underline;
-  padding: 10px;
-  font-size: 20px;
-  color: white;
-}
-
-div .descripcion-producto{
-  color: white;
-}
-
-button.comprar {
-  position: relative;
-  top: 10px;
-  padding: 8px;
-  left:80%;
-  color: white;
-  background-color: var(--colorNaranja);
-  border-radius: 20px;
-  font-size: 20px;
-}
-button.comprar:hover{
-  color: rgba(255, 255, 255, 1);
-  box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
-  transition: all 0.2s ease;
-  background-color: #D89353;
-transform: scale(1.09);
-}
-
-
-
-main .basado{
   display: flex;
   justify-content: space-around;
+}
+
+.detalle-carrito {
   color: black;
+  font-weight: 700;
 }
-
-
-.articulos{
-  display: inline-flex;
-  justify-content: space-around;
-  padding-top: 5%;
-  padding-bottom: 5%;
-}
-
-.articulos .producto:hover{
-transform: scale(1.09)
-}
-
-div.cantidad li{
-  color: white;
-}
-
-.producto {
-  display: inline-flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  text-align: center;
+.cant a {
   color: black;
-  font-size: 25px;
-  padding: 10px;
- box-shadow:  00px 10px 10px -6px black;
- margin:-1% 5% 1% 1%;
+  font-weight: 700;
 }
 
-div .cantidad-precio{
-  background-color:white;
-  display:flex;
+.cantidad .cantidad-precio {
+  display: flex;
   flex-direction: column;
-  text-align: center;
+  margin-top: 50px;
   border: 1px solid #292323;
-  margin-top: 60px;
-  font-size:25px;
+  background-color: white;
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid #aaa;
+  font-weight: 700;
 }
-  
-div .cantidad-precio .cant{
-  color: black;
-}
 
-
-
-  
-
-@media only screen and (max-width: 320px) {
-  main .contenedor{
-    display:inline-flex;
-    border-radius: 5px;
-} 
-main button.comprar {
-position:initial;
-   display: inline-flex;
-  
-}
-.articulos{
+.total .cantidad-precio {
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
+  background-color: white;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid #aaa;
+  margin-bottom: 10px;
 }
-.articulos .producto:hover{
-  transform: scale(1.09);
-  }
 
-  .articulos{
+main .boton .comprar {
+  background-color: var(--colorNaranja);
+  padding: 8px;
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #515157;
+}
+
+main .boton {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 5px;
+}
+
+.articulos .producto {
+  display: none;
+}
+
+.basado {
+  display: none;
+}
+
+@media (min-width: 670px) {
+  main .boton {
     display: flex;
+    flex-direction: row-reverse;
+    margin: 20px;
+  }
+
+  main .boton .comprar:hover {
+    color: white;
+    transition: all 0.2s ease;
+    background-color: #d89353;
+    transform: scale(1.09);
+  }
+
+  .basado {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+  }
+  .articulos {
+    display: inline-flex;
     justify-content: space-around;
-    padding-top: 5%;
-    padding-bottom: 5%;
-  
-  }
-  .articulos .producto:hover{
-  transform: scale(1.09);
-  }
-  
-  div.cantidad li{
-    color: white;
-  }
-  
-  .producto {
-
-    display: inline;
-    position: relative;
-    flex-wrap: wrap;
-    text-align: center;
-    color: black;
-    font-size: 16px;
-    padding: 10px;
-   box-shadow:  00px 10px 10px -6px black;
-
-  }
-
-}
-
-@media only screen and (max-width: 768px) {
-  main .contenedor{
-    display:inline-flex;
     width: 100%;
- 
-} 
-main button.comprar {
-
-   display: inline-flex;
-  
-}
-
-}
-.articulos .producto:hover{
-  transform: scale(1.09);
   }
 
-  .articulos{
-    display:flex;
-    flex-direction: row;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    
+  .articulos .producto {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 30%;
+    border: 1px solid #aaa;
   }
 
-  .articulos .producto:hover{
-  transform: scale(1.09);
-  }
-  
-  div.cantidad li{
-    color: white;
-  }
-  
   .producto {
-    color: black;
-    font-size: 16px;
-    padding: 10px;
-   box-shadow:  00px 10px 10px -6px black;
-
+    text-align: center;
+    font-size: 10px;
+    box-shadow: 0px 8px 15px -6px black;
   }
+  .articulos .producto:hover {
+    transform: scale(1.09);
+  }
+}
 
-
-
-
-
-
-
+@media (min-width: 1024px) {
+  div.articulos .producto {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border: 1px solid #aaa;
+  }
+}
