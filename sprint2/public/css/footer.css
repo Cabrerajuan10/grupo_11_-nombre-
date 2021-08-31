@@ -156,7 +156,7 @@ footer .copy{
     /*!DESKTOP*/
 
 @media (min-width: 769px){
-    .atencion-cliente{
+    footer .atencion-cliente{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -166,7 +166,7 @@ footer .copy{
        
     }
 
-    .contacto-footer{
+    footer .contacto-footer{
         float: left;
         width: 25%;
         color: #ffffff;
@@ -174,7 +174,7 @@ footer .copy{
         margin-left: 15px;
     }
     
-    .atencion{
+    footer .atencion{
         display: inline-block;
         margin: 0 auto;
         width: 25%;
@@ -184,11 +184,11 @@ footer .copy{
 
     }
     
-    .atencion a{
+    footer .atencion a{
         font-size: 20px;
     }
 
-    .telefono{
+    footer .telefono{
         float: right;
         width: 25%;
         font-size:25px;
@@ -196,7 +196,7 @@ footer .copy{
         color: #ffffff;
     }
 
-    .telefono a{
+    footer .telefono a{
         font-size: 20px;
     }
 }
