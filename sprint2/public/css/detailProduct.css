@@ -36,28 +36,28 @@
 
 
 
-.main-detalleProducto {
+.detalle-producto .main-detalleProducto {
     width: 100vw;
 }
 
-.carousel-detalleProducto {
+.detalle-producto .carousel-detalleProducto {
     width: 90%;
     margin: auto;
     margin-left: 10px;
 }
 
-.carousel-inner {
+.detalle-producto .carousel-inner {
     display: flex;
     margin: auto;
     width: 80%;
     position: relative;
 }
 
-.descripcion {
+.detalle-producto .descripcion {
     margin-left: 10px;
 }
 
-.descuento {
+.detalle-producto .descuento {
     display: flex;
     width: 80px;
     height: 40px;
@@ -75,39 +75,35 @@
     z-index: 2;
 }
 
-.myCarousel {
-    position: relative;
-}
-
-.descuento p {
+.detalle-producto .descuento p {
     margin: auto;
 }
 
-.descripcion-precio {
+.detalle-producto .descripcion-precio {
     display: flex;
     flex-direction: column;
 
 }
 
-.precio {
+.detalle-producto .precio {
     font-size: 22px;
     font-weight: 600;
     margin-top: 10px;
 }
 
-.titulo {
+.detalle-producto .titulo {
     font-size: 22px;
     font-weight: 600;
     line-height: normal;
 }
 
-.separador2 {
+.detalle-producto .separador2 {
     width: 97%;
     margin: auto;
     margin-top: 10px;
 }
 
-.boton-comprar {
+.detalle-producto .boton-comprar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,7 +121,7 @@
     font-size: 18px;
 }
 
-.agregar-carrito {
+.detalle-producto .agregar-carrito {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,32 +139,32 @@
     font-size: 18px;
 }
 
-.boton-comprar:hover {
+.detalle-producto .boton-comprar:hover {
     background: linear-gradient(to right, #cf8642, #f3a15a, #c57a34);
     ;
 }
 
-.agregar-carrito:hover {
+.detalle-producto .agregar-carrito:hover {
     background: linear-gradient(to right, #cf8642, #f3a15a, #c57a34);
     ;
 }
 
-.boton-comprar:active {
+.detalle-producto .boton-comprar:active {
     transform: scale(.9);
 }
 
-.agregar-carrito:active {
+.detalle-producto .agregar-carrito:active {
     transform: scale(.9);
 }
 
-.boton-comprar a {
+.detalle-producto .boton-comprar a {
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 400;
 }
 
-.agregar-carrito a {
+.detalle-producto .agregar-carrito a {
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
@@ -176,7 +172,7 @@
 }
 
 
-.tarjeta-envio {
+.detalle-producto .tarjeta-envio {
     display: flex;
     width: 90%;
     flex-wrap: nowrap;
@@ -188,20 +184,19 @@
     border-top: solid 1px black;
     border-bottom: solid 1px rgb(83, 15, 15);
     font-size: 15px;
-    /* text-align: center; */
 
 }
 
-.envio {
+.detalle-producto .envio {
     width: 100%;
     height: 40%;
 }
 
-.envio p {
+.detalle-producto .envio p {
     display: inline-block;
 }
 
-.envio p i {
+.detalle-producto .envio p i {
     width: 32px;
     height: 32px;
     border: solid 1px black;
@@ -214,21 +209,21 @@
 
 
 
-.gratis b {
+.detalle-producto .gratis b {
     color: rgb(7, 114, 7);
     margin-left: 4px;
 }
 
-.tarjeta {
+.detalle-producto .tarjeta {
     width: 100%;
     height: 40%;
 }
 
-.tarjeta p {
+.detalle-producto .tarjeta p {
     display: inline-block;
 }
 
-.tarjeta p i {
+.detalle-producto .tarjeta p i {
     width: 32px;
     height: 32px;
     border: solid 1px black;
@@ -238,60 +233,60 @@
     background-color: #ffffff;
 }
 
-.productos-recomendados {
+.detalle-producto .productos-recomendados {
     margin-top: 30px;
 }
 
-.separador3 {
+.detalle-producto .separador3 {
     width: 60%;
     margin: auto;
     margin-top: 80px;
 }
 
 
-.menuAcordeon-detalleProducto {
+.detalle-producto .menuAcordeon-detalleProducto {
     width: 80%;
     margin-top: 40px;
 }
 
-.img-items {
+.detalle-producto .img-items {
     display: none;
 }
 
-.imagen-principal {
+.detalle-producto .imagen-principal {
     display: none;
 }
 
-.imagen-principal {
+.detalle-producto .imagen-principal {
     display: none;
 }
 
-.fichaTecnica-descripcion {
+.detalle-producto .fichaTecnica-descripcion {
     width: 90%;
     margin-top: 100px;
     margin-left: 10px;
 }
 
-.descripcion-titulo,
-.fichaTecnica-titulo {
+.detalle-producto .descripcion-titulo,
+.detalle-producto .fichaTecnica-titulo {
     display: flex;
     color: #ffffff;
     justify-content: flex-start;
 
 }
 
-.descripcion-titulo p i,
-.fichaTecnica-titulo p i {
+.detalle-producto .descripcion-titulo p i,
+.detalle-producto .fichaTecnica-titulo p i {
     margin-right: 4px;
     color: rgb(65, 62, 62);
 }
 
-.accordion-button {
+.detalle-producto .accordion-button {
     background: linear-gradient(to right, #22B1D0, #4bcbe7, #a2e8f8);
 
 }
 
-.accordion-body {
+.detalle-producto .accordion-body {
     background-image: url(../img/detailProduct/imagenFondo-descripcion.jpg);
     background-size: cover;
 }
@@ -310,16 +305,16 @@
         width: 100%;
     }
 
-    .carousel-detalleProducto {
+    .detalle-producto .carousel-detalleProducto {
         margin: auto;
         width: 90%;
     }
 
-    .descripcion {
+    .detalle-producto .descripcion {
         margin-left: 10px;
     }
 
-    .descuento {
+    .detalle-producto .descuento {
         display: flex;
         width: 80px;
         height: 40px;
@@ -337,25 +332,25 @@
         z-index: 2;
     }
 
-    .descuento p {
+    .detalle-producto .descuento p {
         margin: auto;
     }
 
-    .precio-regular {
+    .detalle-producto .precio-regular {
         color: rgba(black, black, black, 0.5);
         font-size: 13px;
     }
 
-    .precio-regular span {
+    .detalle-producto .precio-regular span {
         text-decoration: line-through;
         opacity: .5;
     }
 
-    .descripcion-precio h4 {
+    .detalle-producto .descripcion-precio h4 {
         font-size: 29px;
     }
 
-    .tarjeta-envio {
+    .detalle-producto .tarjeta-envio {
 
         font-size: 17px;
     }
@@ -373,17 +368,17 @@
         flex-direction: row;
     }
 
-    .carousel-detalleProducto {
+    .detalle-producto .carousel-detalleProducto {
         width: 50%;
     }
 
-    .descripcion {
+    .detalle-producto .descripcion {
         width: 50%;
         margin-top: 60px;
         margin-left: 30px;
     }
 
-    .descuento {
+    .detalle-producto .descuento {
         display: flex;
         width: 80px;
         height: 40px;
@@ -401,48 +396,48 @@
         z-index: 2;
     }
 
-    .descuento p {
+    .detalle-producto .descuento p {
         margin: auto;
     }
 
 
-    .descripcion-precio h4 {
+    .detalle-producto .descripcion-precio h4 {
         font-size: 27px;
     }
 
-    .precio-regular {
+    .detalle-producto .precio-regular {
         color: rgba(black, black, black, 0.5);
         font-size: 13px;
     }
 
-    .precio-regular span {
+    .detalle-producto .precio-regular span {
         text-decoration: line-through;
         opacity: .5;
     }
 
-    .precio {
+    .detalle-producto .precio {
         font-size: 30px;
         font-weight: 500;
     }
 
-    .descripcion-fichaTecnica {
+    .detalle-producto .descripcion-fichaTecnica {
         display: none;
     }
 
-    .tarjeta-envio {
+    .detalle-producto .tarjeta-envio {
         font-size: 15px;
     }
 
-    .boton-comprar,
-    .agregar-carrito {
+    .detalle-producto .boton-comprar,
+    .detalle-producto .agregar-carrito {
         width: 50%;
     }
 
-    .slide {
+    .detalle-producto .slide {
         display: none;
     }
 
-    .img-items {
+    .detalle-producto .img-items {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -454,7 +449,7 @@
 
     }
 
-    .imagen-principal {
+    .detalle-producto .imagen-principal {
         display: flex;
         justify-content: center;
         width: 100%;
@@ -462,14 +457,14 @@
         position: relative;
     }
 
-    #img-principal {
+    .detalle-producto #img-principal {
         width: 400px;
         height: 400px;
 
 
     }
 
-    .item {
+    .detalle-producto .item {
         width: 75%;
         margin: auto;
         cursor: pointer;
@@ -477,7 +472,7 @@
 
     }
 
-    .item:hover {
+    .detalle-producto .item:hover {
         border: solid 1px #22B1D0;
         border-radius: 5px;
         transform: scale(1.2);
@@ -492,25 +487,25 @@
 
 
 @media(max-width: 480px) {
-    .precio-regular {
+    .detalle-producto .precio-regular {
         display: none;
     }
 }
 
 @media(min-width:1250px) {
-    .descripcion-precio h4 {
+    .detalle-producto .descripcion-precio h4 {
         font-size: 38px;
     }
 }
 
 @media(max-width: 355px) {
-    .tarjeta-envio {
+    .detalle-producto .tarjeta-envio {
         display: none;
     }
 }
 
 @media(max-width: 480px) {
-    .precio-regular {
+    .detalle-producto .precio-regular {
         display: none;
     }
 }
