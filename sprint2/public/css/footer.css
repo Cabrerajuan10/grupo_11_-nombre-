@@ -2,16 +2,13 @@ footer {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-}
-
-footer{
     width: 100vw;
     border: solid 1px #dcdcdc;
     margin-top: 50px;
     background-color: #F49B49;
 }
 
-.redes-sociales-footer{
+.footer .redes-sociales {
     display: flex;
     width: 100%;
     height: 50px;
@@ -20,188 +17,186 @@ footer{
     justify-content: center;
     align-items: center;
 }
-.seguinos-footer{
-    color:#22B1D0;
+
+.footer .seguinos {
+    color: #22B1D0;
     font-weight: 500;
-    font-size:22px;
+    font-size: 22px;
     margin-right: 20px;
-    
+
 }
-.instagram-footer{
+
+.footer .instagram {
     width: 35px;
     height: 35px;
 }
-.twitter-footer{
+
+.footer .twitter {
     width: 60px;
     height: 60px;
 }
-.facebook-footer{
+
+.footer .facebook {
     width: 40px;
     height: 40px;
     margin-left: 8px;
 }
 
-.atencion-cliente-footer{
+.footer .atencion-cliente {
     display: flex;
     width: 100%;
     flex-direction: column;
     margin-left: 8px;
 }
 
-
-.contacto-footer{
+.footer .contacto {
     width: 70%;
     margin-top: 20px;
     margin-bottom: 30px;
     color: #ffffff;
     font-size: 22px;
-    
+
 }
 
- .atencion-footer{
-    width:70%;
-    font-size:22px;
+.footer .atencion {
+    width: 70%;
+    font-size: 22px;
     color: #ffffff;
 }
 
-.atencion-footer a{
-    font-size:18px;
+.footer .atencion a {
+    font-size: 18px;
 }
-.telefono-footer{
-    font-size:22px;
+
+.footer .telefono {
+    font-size: 22px;
     margin-top: 35px;
     color: #ffffff;
 }
-.telefono-footer a{
+
+.footer .telefono a {
     font-size: 18px;
 }
-.logo-footer{
+
+.footer .logo {
     width: 270px;
     height: 250px;
 }
-.logo-copy-footer{
-    display:flex;
+
+.footer .logo-copy {
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.copy-footer{
-    width:100%;
-    text-align:center;
+.footer .copy {
+    width: 100%;
+    text-align: center;
     font-size: 12px;
-    color:#ffffff;
+    color: #ffffff;
 }
 
 
 
 
+/*!TABLET*/
 
 
-    /*!TABLET*/
-
-
-    @media (min-width: 481px){
-        .atencion-cliente-footer{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            width: 100%;
-           
-        }
-    
-        .contacto-footer{
-            float: left;
-            width: 25%;
-            color: #ffffff;
-            font-size: 17px; 
-            margin-left: 15px;
-        }
-        
-        .atencion-footer{
-            display: inline-block;
-            margin: 0 auto;
-            width: 25%;
-            color: #ffffff;
-            font-size:17px;
-    
-        }
-        
-        .atencion-footer a{
-            font-size: 12px;
-        }
-    
-        .telefono-footer{
-            float: right;
-            width: 25%;
-            font-size:17px;
-            margin-bottom: 32px;
-            color: #ffffff;
-        }
-    
-        .telefono-footer a{
-            font-size: 12px;
-        }
-    
-    }
-
-
-
-
-
-
-
-
-
-
-    /*!DESKTOP*/
-
-@media (min-width: 769px){
-    .atencion-cliente-footer{
+@media (min-width: 481px) {
+    .footer .atencion-cliente {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         text-align: center;
         width: 100%;
-       
+
     }
 
-    .contacto-footer{
+    .footer .contacto {
         float: left;
         width: 25%;
         color: #ffffff;
-        font-size: 25px; 
+        font-size: 17px;
         margin-left: 15px;
     }
-    
-    .atencion-footer{
+
+    .footer .atencion {
         display: inline-block;
         margin: 0 auto;
         width: 25%;
         color: #ffffff;
-        font-size:25px;
+        font-size: 17px;
+
+    }
+
+    .footer .atencion a {
+        font-size: 12px;
+    }
+
+    .footer .telefono {
+        float: right;
+        width: 25%;
+        font-size: 17px;
+        margin-bottom: 32px;
+        color: #ffffff;
+    }
+
+    .footer .telefono a {
+        font-size: 12px;
+    }
+
+}
+
+
+
+
+
+/*!DESKTOP*/
+
+@media (min-width: 769px) {
+    .footer .atencion-cliente {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+
+    }
+
+    .footer .contacto {
+        float: left;
+        width: 25%;
+        color: #ffffff;
+        font-size: 25px;
+        margin-left: 15px;
+    }
+
+    .footer .atencion {
+        display: inline-block;
+        margin: 0 auto;
+        width: 25%;
+        color: #ffffff;
+        font-size: 25px;
         margin-bottom: 25px;
 
     }
-    
-    .atencion-footer a{
+
+    .footer .atencion a {
         font-size: 20px;
     }
 
-    .telefono-footer{
+    .footer .telefono {
         float: right;
         width: 25%;
-        font-size:25px;
+        font-size: 25px;
         margin-bottom: 70px;
         color: #ffffff;
     }
 
-    .telefono-footer a{
+    .footer .telefono a {
         font-size: 20px;
     }
 }
-
-
