@@ -28,6 +28,7 @@ header .buscador .search-bar{
 
 header .buscador .search-bar .buscar_texto{
     border: none;
+    border-radius: 5px 0 0 5px;
 }
 
 header .buscador .search-bar .buscar_texto{
@@ -36,6 +37,7 @@ header .buscador .search-bar .buscar_texto{
 
 header .buscador  .search button{
     border: none;
+    border-radius: 0 5px 5px 0;
 }
 
 

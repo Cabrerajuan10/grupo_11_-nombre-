@@ -1,5 +1,6 @@
 .home{
     background-color: var(--colorGris);
+    padding-bottom: 50px;
 }
 
 .home .banner img{
@@ -64,8 +65,9 @@
 
 }
 
-.home .descripcion{
+.home .descripcion {
     margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 .home .descripcion .precio{
@@ -116,24 +118,11 @@
 }
 
 
-.home h4{
+.home h4.section{
     margin-top: 40px;
     margin-left: 10px;
+    font-size: 1.3rem;
 }
-
-/* 
-
-.home .box-product-interes .poduct-interes img{
-    width: 90px;
-}
-
-.home .box-product-interes .poduct-interes div{
-    width: 90px;
-}
-
-
-} */
-
 
 @media (min-width:670px){
     .home .banner img{
@@ -155,6 +144,10 @@
 
     .home article {
         width: 91%;
+    }
+
+    .home h4 {
+        font-size: 1.7rem;
     }
 
     .home .box-product-interes{

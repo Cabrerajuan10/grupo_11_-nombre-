@@ -1,0 +1,93 @@
+*{
+  font-family: montserrat;
+}
+
+.container-login {
+  display: flex;
+  flex-direction: column;
+}
+.container-login {
+  display: flex;
+  flex-direction: center;
+  text-align: center;
+}
+.container-login .p {
+  margin-top: 25px;
+}
+
+.iniciar-olvide .boton {
+  background-color: var(--colorCeleste);
+  padding: 8px;
+  font-weight: 600;
+  font-size: 10px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.iniciar-olvide {
+  display: inline-flex;
+  justify-content: space-around;
+  margin: 15px;
+}
+
+.registro .registrate {
+  margin: 10px;
+  background-color: rgb(167, 165, 165);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.publi {
+  display: none;
+}
+
+@media (min-width: 670px) {
+  .vista-login main {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .container-login {
+ 
+    flex-direction: column;
+    width: 400px;
+  }
+
+  .publi {
+    display: inline-flex;
+    justify-content: center;
+    width: 400px;
+    margin-top: 15px;
+   
+  }
+
+  .producto {
+    margin: 15px;
+  }
+}
+
+.contrainer-login .registro .registrate {
+  display: inline-flex;
+  justify-content: flex-end;
+}
+@media (min-width: 1024px) {
+  .container-login {
+    width: 50%;
+    margin-left:20%;
+  
+  }
+
+  .publi {
+    width: 25%;
+    position: absolute;
+    right:70%;
+    
+  }
+.descripcion-producto{
+  font-size: 15px;
+}
+  .producto {
+    margin: 15px;
+  }
+}

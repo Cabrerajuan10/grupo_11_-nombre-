@@ -3,15 +3,16 @@
     margin: 0;
     padding: 0;
 }
-
 :root{
     --colorCeleste: #22B1D0;
     --colorGris: #DCDCDC;
     --colorNaranja: #F49B49;
-    --colorBlanco: #ffffff;
-    --colorVerde: #39b54a;
+    --colorBlanco: #FFFFFF;
 }
-
 li {
     list-style: none;
+}
+
+a{
+    text-decoration:none;
 }
