@@ -510,9 +510,3 @@
         display: none;
     }
 }
-
-@media(max-width: 480px) {
-    .detalle-producto .precio-regular {
-        display: none;
-    }
-}
