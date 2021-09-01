@@ -1,5 +1,5 @@
 main {
-  background-color: #aaa;
+  background-color:var(--colorGris);
   font-family: "Montserrat", sans-serif;
   width: 100%;
 }
@@ -27,6 +27,9 @@ main {
   border-radius: 8px;
   margin-left: 220px;
 }
+
+
+
 
 @media(min-width:670px){
     .contenedor-registro {
