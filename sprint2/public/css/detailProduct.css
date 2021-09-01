@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
+:root{
+    --colorCeleste: #22B1D0;
+    --colorGris: #DCDCDC;
+    --colorNaranja: #F49B49;
+    --colorBlanco: #FFFFFF;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -9,7 +16,7 @@
 }
 
 .detalle-producto {
-    background-color: #DCDCDC;
+    background-color: var(--colorGris);
 }
 
 .detalle-producto .categorias ul {
@@ -64,7 +71,7 @@
     justify-content: center;
     align-items: center;
     background: linear-gradient(to right, #22B1D0, #1fd2fa, #14b7db);
-    color: #ffffff;
+    color: var(--colorBlanco);
     border: solid 1px black;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -112,7 +119,7 @@
     border: solid 1px black;
     border-radius: 5px;
     text-align: center;
-    background-color: #F49B49;
+    background-color: var(--colorNaranja);
     margin-top: 15px;
     margin-bottom: 15px;
     box-shadow: 1px 1px 2px 2px rgb(168, 164, 164);
@@ -130,7 +137,7 @@
     border: solid 1px black;
     border-radius: 5px;
     text-align: center;
-    background-color: #F49B49;
+    background-color: var(--colorNaranja);
     margin-top: 15px;
     margin-bottom: 15px;
     box-shadow: 1px 1px 2px 2px rgb(168, 164, 164);
@@ -158,14 +165,14 @@
 }
 
 .detalle-producto .boton-comprar a {
-    color: #ffffff;
+    color: var(--colorBlanco);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 400;
 }
 
 .detalle-producto .agregar-carrito a {
-    color: #ffffff;
+    color: var(--colorBlanco);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 400;
@@ -182,7 +189,7 @@
     justify-content: space-around;
     align-items: center;
     border-top: solid 1px black;
-    border-bottom: solid 1px rgb(83, 15, 15);
+    border-bottom: solid 1px black;
     font-size: 15px;
 
 }
@@ -230,7 +237,7 @@
     border-radius: 50%;
     padding: 7px;
     color: rgb(7, 114, 7);
-    background-color: #ffffff;
+    background-color: var(--colorBlanco);
 }
 
 .detalle-producto .productos-recomendados {
@@ -270,7 +277,7 @@
 .detalle-producto .descripcion-titulo,
 .detalle-producto .fichaTecnica-titulo {
     display: flex;
-    color: #ffffff;
+    color: var(--colorBlanco);
     justify-content: flex-start;
 
 }
@@ -321,7 +328,7 @@
         justify-content: center;
         align-items: center;
         background: linear-gradient(to right, #22B1D0, #1fd2fa, #14b7db);
-        color: #ffffff;
+        color: var(--colorBlanco);
         border: solid 1px black;
         border-top-left-radius: 20px;
         border-bottom-right-radius: 20px;
@@ -385,7 +392,7 @@
         justify-content: center;
         align-items: center;
         background: linear-gradient(to right, #22B1D0, #1fd2fa, #14b7db);
-        color: #ffffff;
+        color: var(--colorBlanco);
         border: solid 1px black;
         border-top-left-radius: 20px;
         border-bottom-right-radius: 20px;
@@ -473,7 +480,7 @@
     }
 
     .detalle-producto .item:hover {
-        border: solid 1px #22B1D0;
+        border: solid 1px var(--colorCeleste);
         border-radius: 5px;
         transform: scale(1.2);
     }
