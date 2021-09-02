@@ -1,21 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-*{
-    margin:0px;
-    padding:0px;
-    box-sizing: border-box;
-    font-family: Montserrat;
+:root{
+    --colorCeleste: #22B1D0;
+    --colorGris: #DCDCDC;
+    --colorNaranja: #F49B49;
+    --colorBlanco: #FFFFFF;
 }
 
-*{
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
     list-style: none;
 }
 
-.body-detalleProducto{
-    background-color: #DCDCDC;
+.detalle-producto {
+    background-color: var(--colorGris);
 }
 
-.categorias ul{
+.detalle-producto .categorias ul {
     display: flex;
     justify-content: flex-start;
     margin-left: 0px;
@@ -23,51 +27,51 @@
     text-decoration: none;
 }
 
-.separador-uno{
+.detalle-producto .categorias ul a {
+    text-decoration: none;
+    margin-right: 4px;
+    color: black;
+}
+
+
+
+.detalle-producto .separador-uno {
     margin-top: 0px;
     width: 80%;
     margin: auto;
 }
 
-.navegacion{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-}
 
-.main-detalleProducto{
+
+.detalle-producto .main-detalleProducto {
     width: 100vw;
 }
 
-.carousel-detalleProducto{
+.detalle-producto .carousel-detalleProducto {
     width: 90%;
     margin: auto;
     margin-left: 10px;
 }
 
-.carousel-inner{
+.detalle-producto .carousel-inner {
     display: flex;
     margin: auto;
     width: 80%;
     position: relative;
 }
 
-.right, .left{
-    text-decoration: none;
+.detalle-producto .descripcion {
+    margin-left: 10px;
 }
 
-.descripcion{
-    margin-left:10px;
-}
-
-.descuento{
+.detalle-producto .descuento {
     display: flex;
     width: 80px;
     height: 40px;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right,#22B1D0, #1fd2fa, #14b7db) ;
-    color: #ffffff;
+    background: linear-gradient(to right, #22B1D0, #1fd2fa, #14b7db);
+    color: var(--colorBlanco);
     border: solid 1px black;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -78,133 +82,128 @@
     z-index: 2;
 }
 
-.myCarousel{
-    position: relative;
+.detalle-producto .descuento p {
+    margin: auto;
 }
 
-.descuento p{
-    margin:auto;
-}
-
-.descripcion-precio{
+.detalle-producto .descripcion-precio {
     display: flex;
     flex-direction: column;
-    
+
 }
 
-.precio{
+.detalle-producto .precio {
     font-size: 22px;
     font-weight: 600;
     margin-top: 10px;
 }
 
-.titulo{
-    font-size:22px;
+.detalle-producto .titulo {
+    font-size: 22px;
     font-weight: 600;
-    line-height:normal;
+    line-height: normal;
 }
 
-.separador2{
+.detalle-producto .separador2 {
     width: 97%;
     margin: auto;
     margin-top: 10px;
 }
 
-.boton-comprar{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 60px;
-    border: solid 1px black;
-    border-radius: 5px;
-    text-align: center;
-    background-color: #F49B49;
-    margin-top:15px;
-    margin-bottom: 15px;
-    box-shadow: 1px 1px 2px 2px rgb(168, 164, 164);
-    cursor: pointer;
-    transition: all 0.1s ease;
-    font-size: 18px;
-}
-
-.agregar-carrito{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 60px;
-    border: solid 1px black;
-    border-radius: 5px;
-    text-align: center;
-    background-color: #F49B49;
-    margin-top:15px;
-    margin-bottom: 15px;
-    box-shadow: 1px 1px 2px 2px rgb(168, 164, 164);
-    cursor: pointer;
-    transition: all 0.1s ease;
-    font-size: 18px;
-}
-
-.boton-comprar:hover{
-    background: linear-gradient(to right,#cf8642,#f3a15a,#c57a34);
-    ;
-}
-
-.agregar-carrito:hover{
-    background: linear-gradient(to right,#cf8642,#f3a15a,#c57a34);
-    ;
-}
-
-.boton-comprar:active{
-   transform: scale(.9);
-}
-
-.agregar-carrito:active{
-transform: scale(.9);
-}
-
-.boton-comprar a{
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-.agregar-carrito a{
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-
-.tarjeta-envio{
+.detalle-producto .boton-comprar {
     display: flex;
-    width:90%;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+    border: solid 1px black;
+    border-radius: 5px;
+    text-align: center;
+    background-color: var(--colorNaranja);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 2px 2px rgb(168, 164, 164);
+    cursor: pointer;
+    transition: all 0.1s ease;
+    font-size: 18px;
+}
+
+.detalle-producto .agregar-carrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+    border: solid 1px black;
+    border-radius: 5px;
+    text-align: center;
+    background-color: var(--colorNaranja);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 2px 2px rgb(168, 164, 164);
+    cursor: pointer;
+    transition: all 0.1s ease;
+    font-size: 18px;
+}
+
+.detalle-producto .boton-comprar:hover {
+    background: linear-gradient(to right, #cf8642, #f3a15a, #c57a34);
+    ;
+}
+
+.detalle-producto .agregar-carrito:hover {
+    background: linear-gradient(to right, #cf8642, #f3a15a, #c57a34);
+    ;
+}
+
+.detalle-producto .boton-comprar:active {
+    transform: scale(.9);
+}
+
+.detalle-producto .agregar-carrito:active {
+    transform: scale(.9);
+}
+
+.detalle-producto .boton-comprar a {
+    color: var(--colorBlanco);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.detalle-producto .agregar-carrito a {
+    color: var(--colorBlanco);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+
+.detalle-producto .tarjeta-envio {
+    display: flex;
+    width: 90%;
     flex-wrap: nowrap;
     height: 100px;
-    margin-top:30px;
+    margin-top: 30px;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     border-top: solid 1px black;
-    border-bottom: solid 1px rgb(83, 15, 15);
+    border-bottom: solid 1px black;
     font-size: 15px;
-    /* text-align: center; */
 
 }
 
-.envio{
-width: 100%;
-height: 40%;
+.detalle-producto .envio {
+    width: 100%;
+    height: 40%;
 }
 
-.envio p{
-display: inline-block;
+.detalle-producto .envio p {
+    display: inline-block;
 }
 
-.envio p i{
+.detalle-producto .envio p i {
     width: 32px;
     height: 32px;
     border: solid 1px black;
@@ -214,58 +213,93 @@ display: inline-block;
     background-color: #ffffff;
 }
 
-.gratis b{
+
+
+
+.detalle-producto .gratis b {
     color: rgb(7, 114, 7);
     margin-left: 4px;
 }
 
-.tarjeta{
-width: 100%;
-height: 40%;
+.detalle-producto .tarjeta {
+    width: 100%;
+    height: 40%;
 }
 
-.tarjeta p{
+.detalle-producto .tarjeta p {
     display: inline-block;
 }
 
-.tarjeta p i{
+.detalle-producto .tarjeta p i {
     width: 32px;
     height: 32px;
     border: solid 1px black;
     border-radius: 50%;
     padding: 7px;
     color: rgb(7, 114, 7);
-    background-color: #ffffff;
+    background-color: var(--colorBlanco);
 }
 
-.productos-recomendados{
+.detalle-producto .productos-recomendados {
     margin-top: 30px;
 }
 
-.separador3{
+.detalle-producto .separador3 {
     width: 60%;
-    margin: auto;               
-    margin-top:40px;
+    margin: auto;
+    margin-top: 80px;
 }
 
-.descripcion-fichaTecnica{
-    margin-top: 50px;
+
+.detalle-producto .menuAcordeon-detalleProducto {
+    width: 80%;
+    margin-top: 40px;
 }
 
-@media(max-width: 480px){
-.precio-regular{
+.detalle-producto .img-items {
     display: none;
 }
+
+.detalle-producto .imagen-principal {
+    display: none;
 }
 
-.menuAcordeon-detalleProducto{
-    width: 80%;
-    margin-top: 50px;
+.detalle-producto .imagen-principal {
+    display: none;
 }
 
-.fichaTecnica-producto{
-  margin-left: 12px;   
+.detalle-producto .fichaTecnica-descripcion {
+    width: 90%;
+    margin-top: 100px;
+    margin-left: 10px;
 }
+
+.detalle-producto .descripcion-titulo,
+.detalle-producto .fichaTecnica-titulo {
+    display: flex;
+    color: var(--colorBlanco);
+    justify-content: flex-start;
+
+}
+
+.detalle-producto .descripcion-titulo p i,
+.detalle-producto .fichaTecnica-titulo p i {
+    margin-right: 4px;
+    color: rgb(65, 62, 62);
+}
+
+.detalle-producto .accordion-button {
+    background: linear-gradient(to right, #22B1D0, #4bcbe7, #a2e8f8);
+
+}
+
+.detalle-producto .accordion-body {
+    background-image: url(../img/detailProduct/imagenFondo-descripcion.jpg);
+    background-size: cover;
+}
+
+
+
 
 
 
@@ -273,28 +307,28 @@ height: 40%;
 /* !TABLET */
 
 
-@media(min-width:481px){
-    .detalleProducto{
+@media(min-width:481px) {
+    .detalleProducto {
         width: 100%;
     }
 
-    .carousel-detalleProducto{
+    .detalle-producto .carousel-detalleProducto {
         margin: auto;
         width: 90%;
     }
 
-    .descripcion{
-        margin-left:10px;
+    .detalle-producto .descripcion {
+        margin-left: 10px;
     }
-  
-    .descuento{
+
+    .detalle-producto .descuento {
         display: flex;
         width: 80px;
         height: 40px;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(to right,#22B1D0, #1fd2fa, #14b7db) ;
-        color: #ffffff;
+        background: linear-gradient(to right, #22B1D0, #1fd2fa, #14b7db);
+        color: var(--colorBlanco);
         border: solid 1px black;
         border-top-left-radius: 20px;
         border-bottom-right-radius: 20px;
@@ -305,230 +339,174 @@ height: 40%;
         z-index: 2;
     }
 
-    .descuento p{
-        margin:auto;
+    .detalle-producto .descuento p {
+        margin: auto;
     }
 
-    .precio-regular{
+    .detalle-producto .precio-regular {
         color: rgba(black, black, black, 0.5);
         font-size: 13px;
     }
-    .precio-regular span{
+
+    .detalle-producto .precio-regular span {
         text-decoration: line-through;
         opacity: .5;
     }
-    
-   .descripcion-precio h4 {
-       font-size:29px;
-   }
 
-   .tarjeta-envio{
-       
-       font-size: 17px;
-   }
+    .detalle-producto .descripcion-precio h4 {
+        font-size: 29px;
     }
+
+    .detalle-producto .tarjeta-envio {
+
+        font-size: 17px;
+    }
+
+}
 
 
 
 
 /* !DESKTOP */
 
-@media(min-width:769px){
-.detalleProducto{
-    display: flex;
-    flex-direction: row;
+@media(min-width:769px) {
+    .detalleProducto {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .detalle-producto .carousel-detalleProducto {
+        width: 50%;
+    }
+
+    .detalle-producto .descripcion {
+        width: 50%;
+        margin-top: 60px;
+        margin-left: 30px;
+    }
+
+    .detalle-producto .descuento {
+        display: flex;
+        width: 80px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right, #22B1D0, #1fd2fa, #14b7db);
+        color: var(--colorBlanco);
+        border: solid 1px black;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        font-size: 14px;
+        position: absolute;
+        left: 75%;
+        top: 8%;
+        z-index: 2;
+    }
+
+    .detalle-producto .descuento p {
+        margin: auto;
+    }
+
+
+    .detalle-producto .descripcion-precio h4 {
+        font-size: 27px;
+    }
+
+    .detalle-producto .precio-regular {
+        color: rgba(black, black, black, 0.5);
+        font-size: 13px;
+    }
+
+    .detalle-producto .precio-regular span {
+        text-decoration: line-through;
+        opacity: .5;
+    }
+
+    .detalle-producto .precio {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .detalle-producto .descripcion-fichaTecnica {
+        display: none;
+    }
+
+    .detalle-producto .tarjeta-envio {
+        font-size: 15px;
+    }
+
+    .detalle-producto .boton-comprar,
+    .detalle-producto .agregar-carrito {
+        width: 50%;
+    }
+
+    .detalle-producto .slide {
+        display: none;
+    }
+
+    .detalle-producto .img-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 180px;
+        margin-top: 20px;
+        margin-left: 40px;
+
+
+    }
+
+    .detalle-producto .imagen-principal {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 400px;
+        position: relative;
+    }
+
+    .detalle-producto #img-principal {
+        width: 400px;
+        height: 400px;
+
+
+    }
+
+    .detalle-producto .item {
+        width: 75%;
+        margin: auto;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+
+    }
+
+    .detalle-producto .item:hover {
+        border: solid 1px var(--colorCeleste);
+        border-radius: 5px;
+        transform: scale(1.2);
+    }
+
+
 }
-.carousel-detalleProducto{
-    width: 50%;
-}
-.descripcion{
-    width: 50%;
-    margin-top: 60px;
-    margin-left: 30px;
-}
-
-.descuento{
-    display: flex;
-    width: 80px;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right,#22B1D0, #1fd2fa, #14b7db) ;
-    color: #ffffff;
-    border: solid 1px black;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    font-size: 14px;
-    position: absolute;
-    left: 65%;
-    top: 8%;
-    z-index: 2;
-}
-
-.descuento p{
-    margin:auto;
-}
-
-
-.descripcion-precio h4{
-    font-size: 27px;
-}
-
-.precio-regular{
-    color: rgba(black, black, black, 0.5);
-    font-size: 13px;
-}
-.precio-regular span{
-    text-decoration: line-through;
-    opacity: .5;
-}
-
-.precio{
-    font-size: 30px;
-    font-weight: 500;
-}
-
-.descripcion-fichaTecnica{
-    display: none;
-}
-
-.right, .left{
-    display: none;
-}
-
-.tarjeta-envio{
-    font-size: 15px;
-}
-
-.boton-comprar, .agregar-carrito{
-    width: 50%;
-}
-}
 
 
 
 
 
 
-@media(max-width: 480px){
-    .precio-regular{
+@media(max-width: 480px) {
+    .detalle-producto .precio-regular {
         display: none;
     }
 }
 
-@media(min-width:1250px){
-    .descripcion-precio h4{
+@media(min-width:1250px) {
+    .detalle-producto .descripcion-precio h4 {
         font-size: 38px;
     }
 }
 
-@media(max-width: 355px){
-    .tarjeta-envio{
+@media(max-width: 355px) {
+    .detalle-producto .tarjeta-envio {
         display: none;
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*ESTILOS DE MENU ACORDEON/ DESCRIPCION, FICHA TECNICA*/
-
-a:hover, a:focus{
-    text-decoration: none;
-    outline: none;
-}
-#accordion .panel{
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
-    margin-bottom: 15px;
-}
-#accordion .panel-heading{
-    padding: 0;
-    border-radius:0;
-    border: none;
-}
-#accordion .panel-title a{
-    display: block;
-    padding: 14px 30px 14px 70px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background: #F49B49;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.5s ease 0s;
-}
-#accordion .panel-title a.collapsed{
-    background: linear-gradient(to right, #22B1D0, #98cfdb, #c4eaf3);
-    color: #000000;
-}
-#accordion .panel-title a.collapsed:hover{
-    color: #000000;
-}
-#accordion .panel-title a:before{
-    content: "";
-    width: 55px;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 0;
-    left: -13px;
-    transform: skewX(-25deg);
-    transition: all 0.5s ease 0s;
-}
-#accordion .panel-title a.collapsed:hover:before{
-    background: #22B1D0;
-}
-#accordion .panel-title a:after{
-    content: "\f047";
-    font-family: FontAwesome;
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    color: #ffffff;
-    transform: translateY(-50%);
-}
-#accordion .panel-title a.collapsed:after{
-    color: #9f9f9f;
-}
-#accordion .panel-title a.collapsed:hover:after{
-    color: #ffffff;
-}
-#accordion .panel-body{
-    font-size: 14px;
-    color: #5a3245;
-    line-height: 25px;
-    padding: 20px 15px 20px 40px;
-    position: relative;
-    border: none;
-    transition: all 0.5s ease 0s;
-}
-#accordion .panel-body:before{
-    content: "";
-    width: 5px;
-    height: 40px;
-    background: #F49B49;
-    position: absolute;
-    top: 30px;
-    left: 0;
-}
-#accordion .panel-body p{
-    margin-bottom: 0;
 }

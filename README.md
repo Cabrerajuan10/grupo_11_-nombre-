@@ -9,6 +9,7 @@
 - Juan Cabrera  
   22 años. Capital Federal(Bs. As.). Tecnico Mecanico Electricista. Estudiante de Programacion web.
 
+![Alt text](/path/to/logo-community-electro.svg)
 
 #### Descripcion de sitio
 - ¡Bienvenido a la compra online!
