@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --colorCeleste: #22B1D0;
+    --colorGris: #DCDCDC;
+    --colorNaranja: #F49B49;
+    --colorBlanco: #FFFFFF;
+}
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration:none;
+}

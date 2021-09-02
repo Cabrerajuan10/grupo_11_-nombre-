@@ -1,0 +1,113 @@
+main .contenedor {
+  background-color: var(--colorCeleste);
+  display: flex;
+  justify-content: space-around;
+}
+
+.detalle-carrito {
+  color: black;
+  font-weight: 700;
+}
+.cant a {
+  color: black;
+  font-weight: 700;
+}
+
+.cantidad .cantidad-precio {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  border: 1px solid #292323;
+  background-color: white;
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid #aaa;
+  font-weight: 700;
+}
+
+.total .cantidad-precio {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  background-color: white;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid #aaa;
+  margin-bottom: 10px;
+}
+
+main .boton .comprar {
+  background-color: var(--colorNaranja);
+  padding: 8px;
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #515157;
+}
+
+main .boton {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 5px;
+}
+
+.articulos .producto {
+  display: none;
+}
+
+.basado {
+  display: none;
+}
+
+@media (min-width: 670px) {
+  main .boton {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 20px;
+  }
+
+  main .boton .comprar:hover {
+    color: white;
+    transition: all 0.2s ease;
+    background-color: #d89353;
+    transform: scale(1.09);
+  }
+
+  .basado {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+  }
+  .articulos {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .articulos .producto {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 30%;
+    border: 1px solid #aaa;
+  }
+
+  .producto {
+    text-align: center;
+    font-size: 10px;
+    box-shadow: 0px 8px 15px -6px black;
+  }
+  .articulos .producto:hover {
+    transform: scale(1.09);
+  }
+}
+
+@media (min-width: 1024px) {
+  div.articulos .producto {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border: 1px solid #aaa;
+  }
+}
