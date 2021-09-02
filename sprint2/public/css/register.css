@@ -1,57 +1,70 @@
-main {
-  background-color:var(--colorGris);
-  font-family: "Montserrat", sans-serif;
-  width: 100%;
+.register main{
+    background-color: var(--colorGris);
+    padding-bottom: 30px;
 }
 
-.contenedor-registro {
-  margin-left: 25%;
-  text-align: center;
-  width: 160px;
+/* titulo del fomulario */
+.register main h4{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 17px;
 }
 
-.contenedor-registro .p {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  text-align: left;
-  font-weight: 500;
+/* contenedor formulario */
+.register main .box-contain {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 375px;
 }
 
-.button-registrate {
-  position: relative;
-  display: flex;
-  flex-direction: row-reverse;
-  padding: 5px;
-  border-radius: 8px;
-  margin-left: 220px;
+/* p input */
+.register main .box-contain p{
+    margin: 30px 0 3px ;
+    font-size: 12px;
 }
 
+/* input */
+.register main .box-contain input.text{
+    width: 100%;
+    border: none;
+}
 
+/* contenedor button */
+.register main .box-contain .box-button{
+    display: flex;
+    justify-content: flex-end;
+}
 
+/* button */
+.register main .box-contain .box-button .btn-registro{
+    background-color: var(--colorGrisOscuro);
+    border: none;
+    padding: 0px 15px;
+    margin-top: 20px;
+    border-radius: 15px;
+    font-size: 14px;
+}
 
-@media(min-width:670px){
-    .contenedor-registro {
-        margin-left: 25%;
-        text-align: center;
-        width:50%;
-      }
+@media (min-width: 768px){
+    
+    /* titulo del fomulario */
+    .register main h4{
+        font-size: 20px;
+    }
 
-       .contenedor-registro .p{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-        text-align: left;
-        font-weight: 500;
-       }
+    /* p input */
+    .register main .box-contain p{
+        font-size: 15px;
+    }
 
-       .button-registrate{
-           display:flex;
-           margin-left: 70%;
-           font-weight: 600;
-           
-       }
+    /* button */
+    .register main .box-contain .box-button .btn-registro{
+        background-color: var(--colorGrisOscuro);
+        border: none;
+        padding: 0px 15px;
+        margin-top: 20px;
+        border-radius: 15px;
+        font-size: 17px;
+    }
 
 }
