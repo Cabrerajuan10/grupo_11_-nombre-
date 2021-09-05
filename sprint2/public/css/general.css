@@ -8,7 +8,23 @@
     --colorGris: #DCDCDC;
     --colorNaranja: #F49B49;
     --colorBlanco: #FFFFFF;
+<<<<<<< HEAD
 }
 li {
     list-style: none;
 }
+=======
+    --colorGrisOscuro: #ABB7BA
+}
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration:none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+>>>>>>> develop
