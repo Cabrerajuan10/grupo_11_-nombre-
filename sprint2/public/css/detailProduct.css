@@ -5,6 +5,7 @@
     --colorGris: #DCDCDC;
     --colorNaranja: #F49B49;
     --colorBlanco: #FFFFFF;
+    --colorVerde:rgb(7, 114, 7);
 }
 
 * {
@@ -298,6 +299,38 @@
     background-size: cover;
 }
 
+
+
+.detalle-producto .articulo-recomendado{
+    width: 170px;
+    height: 370px;
+    border: solid 1px black;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 2px rgb(105, 102, 102);
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.detalle-producto .articulo-recomendado .titulo{
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.detalle-producto .articulo-recomendado .precio{
+    display: block;
+font-size: 22px;
+color: var(--colorNaranja);
+}
+
+.detalle-producto .articulo-recomendado .descuento-articulo{
+display: block;
+font-size: 20px;
+font-weight: 500;
+color: var(--colorVerde);
+padding: 2px;
+}
 
 
 
