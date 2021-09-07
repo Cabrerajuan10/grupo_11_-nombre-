@@ -26,7 +26,7 @@ new Glider(document.querySelector('.glider'), {
             breakpoint: 769,
             settings: {
               // Set to `auto` and provide item width to adjust to viewport
-              slidesToShow: 'auto',
+              slidesToShow: 3,
               slidesToScroll: 'auto',
               itemWidth: 150,
               duration: 0.25
