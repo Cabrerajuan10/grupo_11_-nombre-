@@ -8,6 +8,12 @@
     --colorGris: #DCDCDC;
     --colorNaranja: #F49B49;
     --colorBlanco: #FFFFFF;
+<<<<<<< HEAD
+}
+li {
+    list-style: none;
+}
+=======
     --colorGrisOscuro: #ABB7BA
 }
 li {
@@ -21,3 +27,4 @@ a{
 button:hover{
     cursor: pointer;
 }
+>>>>>>> develop
