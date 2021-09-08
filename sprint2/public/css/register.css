@@ -43,7 +43,13 @@
     margin-top: 20px;
     border-radius: 15px;
     font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 5px 1px black;
 }
+.register main .box-contain .box-button .btn-registro:hover {
+    transform: scale(1.09);
+  }
+
 
 @media (min-width: 768px){
     
