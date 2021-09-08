@@ -1,8 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root{
+    --colorNaranja:#F49B49;
+    --colorBlanco:#ffffff;
+    --colorCeleste: #22B1D0;
+}
+
 footer{
-    width: 100vw;
-    border: solid 1px #dcdcdc;
-    margin-top: 50px;
-    background-color: #F49B49;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    max-width: 100vw;
+    overflow-x: hidden;
+    border: solid 1px var(--colorBlanco);
+    background-color: var(--colorNaranja);
+
 }
 
 footer .redes-sociales{
@@ -10,13 +23,13 @@ footer .redes-sociales{
     width: 100%;
     height: 50px;
     margin-top: 40px;
-    background-color: #ffffff;
+    background-color: var(--colorBlanco);
     justify-content: center;
     align-items: center;
 }
 
 footer .seguinos{
-    color:#22B1D0;
+    color: var(--colorCeleste);
     font-weight: 500;
     font-size:22px;
     margin-right: 20px;
@@ -46,11 +59,11 @@ footer .atencion-cliente{
 }
 
 
-footer .contacto-footer{
+footer .contacto{
     width: 70%;
     margin-top: 20px;
     margin-bottom: 30px;
-    color: #ffffff;
+    color: var(--colorBlanco);
     font-size: 22px;
     
 }
@@ -58,7 +71,7 @@ footer .contacto-footer{
 footer .atencion{
     width:70%;
     font-size:22px;
-    color: #ffffff;
+    color: var(--colorBlanco);
 }
 
 footer .atencion a{
@@ -67,7 +80,7 @@ footer .atencion a{
 footer .telefono{
     font-size:22px;
     margin-top: 35px;
-    color: #ffffff;
+    color: var(--colorBlanco);
 }
 footer .telefono a{
     font-size: 18px;
@@ -87,7 +100,7 @@ footer .copy{
     width:100%;
     text-align:center;
     font-size: 12px;
-    color:#ffffff;
+    color: var(--colorBlanco);
 }
 
 
@@ -109,10 +122,10 @@ footer .copy{
            
         }
     
-        footer .contacto-footer{
+        footer .contacto{
             float: left;
             width: 25%;
-            color: #ffffff;
+            color: var(--colorBlanco);
             font-size: 17px; 
             margin-left: 15px;
         }
@@ -121,7 +134,7 @@ footer .copy{
             display: inline-block;
             margin: 0 auto;
             width: 25%;
-            color: #ffffff;
+            color: var(--colorBlanco);
             font-size:17px;
     
         }
@@ -135,7 +148,7 @@ footer .copy{
             width: 25%;
             font-size:17px;
             margin-bottom: 32px;
-            color: #ffffff;
+            color: var(--colorBlanco);
         }
     
         footer .telefono a{
@@ -166,10 +179,10 @@ footer .copy{
        
     }
 
-    footer .contacto-footer{
+    footer .contacto{
         float: left;
         width: 25%;
-        color: #ffffff;
+        color: var(--colorBlanco);
         font-size: 25px; 
         margin-left: 15px;
     }
@@ -178,7 +191,7 @@ footer .copy{
         display: inline-block;
         margin: 0 auto;
         width: 25%;
-        color: #ffffff;
+        color: var(--colorBlanco);
         font-size:25px;
         margin-bottom: 25px;
 
@@ -193,7 +206,7 @@ footer .copy{
         width: 25%;
         font-size:25px;
         margin-bottom: 70px;
-        color: #ffffff;
+        color: var(--colorBlanco);
     }
 
     footer .telefono a{

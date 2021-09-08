@@ -26,7 +26,7 @@ new Glider(document.querySelector('.glider'), {
             breakpoint: 769,
             settings: {
               // Set to `auto` and provide item width to adjust to viewport
-              slidesToShow: 'auto',
+              slidesToShow: 3,
               slidesToScroll: 'auto',
               itemWidth: 150,
               duration: 0.25
@@ -35,7 +35,7 @@ new Glider(document.querySelector('.glider'), {
             // screens greater than >= 1024px
             breakpoint: 1024,
             settings: {
-              slidesToShow: 6,
+              slidesToShow: 5,
               slidesToScroll: 1,
               itemWidth: 150,
               duration: 0.25
@@ -50,17 +50,17 @@ new Glider(document.querySelector('.glider'), {
 
 
 document.getElementById('img-prev1').addEventListener('click', () =>{
-        document.getElementById('img-principal').setAttribute('src', '../public/img/detailProduct/smartv-43-samsung-img1.png')
+        document.getElementById('img-principal').setAttribute('src', '/img/detailProduct/smartv-43-samsung-img1.png')
 })
 
 
 document.getElementById('img-prev2').addEventListener('click', () =>{
-        document.getElementById('img-principal').setAttribute('src', '../public/img/detailProduct/smartv-43-samsung-img2.png')
+        document.getElementById('img-principal').setAttribute('src', 'img/detailProduct/smartv-43-samsung-img2.png')
 })
 
 
 document.getElementById('img-prev3').addEventListener('click', () =>{
-        document.getElementById('img-principal').setAttribute('src', '../public/img/detailProduct/smartv-43-samsung-img3.png')
+        document.getElementById('img-principal').setAttribute('src', '/img/detailProduct/smartv-43-samsung-img3.png')
 })
 
 

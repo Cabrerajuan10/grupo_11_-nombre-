@@ -10,6 +10,8 @@ padding: 5px;
   margin: auto;
   display:inline-flex;
   justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
 }
 .detalle-carrito article.box-2{
  display:flex;

@@ -40,10 +40,14 @@ header .buscador  .search button{
     border-radius: 0 5px 5px 0;
 }
 
+header .menu-head{
+    display: flex;
+}
 
 header .menu-head a{
-    margin: 0 8px;
+    margin-right: 15px;
     font-size: 18px;
+    
 }
 
 header .menu-head .user-head{
@@ -54,16 +58,13 @@ header a {
    color: var(--colorBlanco);
 }
 
-header .nav-menu-header{
-    display: flex;
-    display: none;
-}
+
 
 header .searh-header{
     display: flex;
     flex-direction: column;
     flex-grow: .7;
-    
+    margin-right: 15px;
 }
 
 
@@ -78,7 +79,7 @@ header .menu-bar ul{
         display: inline-block;
     } 
     header .menu-head a{
-        margin: 0 15px;
+        margin: 0 20px;
         
     }
 
@@ -88,12 +89,16 @@ header .menu-bar ul{
 }
 
 @media(min-width:1024px){
+    header{
+        height: 100px;
+    }
+
     header .logo img{
         width: 90px;
     }
 
     header .menu-head a{
-        margin: 0 35px;
+        margin: 0 40px;
     }
     
     header .menu-head .menu-burguer{
@@ -118,14 +123,15 @@ header .menu-bar ul{
     }    
     
     header .menu-head{
-    padding-top: 31px;
+    padding-top: 34px;    
     }
 
     header .menu-bar ul{
         display: flex;
         justify-content: space-around;
-        padding-top: 5px;
+        padding-top: 10px;
         font-size: 18px;
+        
     }
 
     header .nav-search-header {
