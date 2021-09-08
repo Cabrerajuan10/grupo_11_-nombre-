@@ -1,7 +1,7 @@
 .login main{
-  background-image: url('/img/login/fondo-login.jpg');
+  background-color: #DCDCDC;
   padding-bottom: 30px;
-  width: 80%;
+  width: 90%;
  margin: 0 auto;
 }
 
@@ -11,7 +11,7 @@
   text-align: center;
   font-size: 17px;
   font-weight: 600;
-  color: white;
+  color:black;
 }
 
 /* contenedor formulario */
@@ -26,7 +26,7 @@
   margin: 30px 0 3px ;
   font-size: 12px;
   font-weight:800;
-  color: white;
+  color: black;
 }
 
 /* input */
@@ -37,28 +37,75 @@
 
 /* contenedor button */
 .login main .box-contain .box-button{
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100%;
+ 
+}
+.login main .box-contain .box-button{
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  justify-content:flex-start;
+  padding-bottom: 20px;
+}
+.login main .box-contain .box-button2{
+  display: flex;
+  width: 100%;
+  justify-content:flex-end;
 }
 
+
 /* button */
-.login main .box-contain .box-button .btn-registro ,.btn-ingresar{  
+.login main .btn-registro {
+
   border: none;
-  padding: 0px 15px;
+  padding: 0px 10px;
   margin-top: 20px;
-  border-radius: 15px;
+ border-radius: 8px;
   font-size: 14px;
-  color: white;
+  color: black;
   font-weight: 700;
 }
 
+
+
+
+
 .login main .box-contain .box-button .btn-registro{
-  background-color: var(--colorGrisOscuro);
+  
+  background-color:#DCDCDC;
+  box-shadow: 0px 0px 7px 1px black;
 }
 
-.login main .box-contain .box-button .btn-ingresar{
+/*Efecto */
+.login main .box-contain .box-button:hover{
+  color: white;
+    transition: all 0.2s ease;
+    transform: scale(1.09);
+}
+.login main .box-contain .box-button2 .btn-ingresar{ 
+  margin-right: -20px;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 2px;
+  font-size: 14px;
+  color: black;
+  font-weight: 700;
+}
+
+/*Efecto */
+.login main .box-contain .box-button2:hover{
+  color: white;
+    transition: all 0.2s ease;
+    transform: scale(1.09);
+}
+.login main .box-contain .box-button2 .btn-ingresar{
   background-color: var(--colorCeleste);
 }
+
+
+
+
 
 /* contenedor carrousel */
 .login main .box-carrousel{
@@ -85,6 +132,7 @@
   /* contenedor carrousel */
   .login main .box-carrousel {
     display: block;
+    justify-content:flex-end;
     width: 70%;
     margin: 30px auto 0;
 }
@@ -99,8 +147,9 @@
 @media (min-width: 1024px){
   .login main {
     display: flex;
+    flex-direction:row-reverse;
   }
-  
+
   /*img carrousel */
   .login main .box-carrousel .banner img{
     height: 200px;
