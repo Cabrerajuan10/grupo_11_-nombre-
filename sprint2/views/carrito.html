@@ -9,7 +9,7 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-  <link rel="stylesheet" href="../public/css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
@@ -50,54 +50,129 @@
   </header>
 <body class="carrito">
   <main class="vista-carrito">
-
     <div class="contenedor">
-      <section class=detalle-carrito-colum>
-       
-          <ul class="option">
-            <a class="detalle-carrito" href="">CARRITO</a>
-            <article>
-              <img src="/img/carrito/imagen1.jpg" alt="" width="100px" height="60px">
+
+      <section class=detalle-carrito>
+
+<!--Producto elegido para comprar-->
+            <article class="box-1">
               <div class="descripcion-producto">
-                <h5 class="detalle">Samsung a10</h5>
-                <h5 class="detalle">$15.000</h5>
+                <a href="">
+                  <img src="/img/carrito/imagen3.jpg" alt="" width="45px" height="28px">
+                  Producto
+                </a>
+                <div class="eliminar-stock">
+                  <a href="">Eliminar</a> 
+              </div>  
+              </div>
             </article>
-  
-            <article class="parlante">
-              <img src="/img/carrito/imgen2.jpg" alt="" width="100px" height="60px">
-              <div class="descripcion-producto">
-                <h5 class="detalle">Parlante portatil</h5>
-                <h5 class="detalle">$1.000</h5>
-            </article>  
+
+<!--Stock disponible y cantidad que se va a comprar-->
+            <article class="box-2"> 
+              <div class="cantidad">
+                <a href="">Cantidad</a>
+              </div>
+              <div class="cant-select"> 
+                <a href="">- 1 +</a>
+              </div>
+              <div class="stock">
+                <a href="">Stock (3)</a>
+              </div>
+            </article>
+<!--Precio de lo que se va a comprar-->
+
+            <article class="box-3">
+              <div class="precio">
+                <a href="">$00.000</a>
+              </div>
+            </article>
+      
           </section> 
-          <div class="cantidad">
-          <li class="cant"><a href="">CANTIDAD</a></li>
-          <div class="cantidad-precio">
-            <li class="cant">- 1 +</li>
-          </div>
-          <div class="cantidad-precio">
-            <li class="cant">- 2 +</li>
-          </div>
+          <section class=detalle-carrito>
+            <!--Producto elegido para comprar-->
+            <article class="box-1">
+              <div class="descripcion-producto">
+                <a href="">
+                  <img src="/img/carrito/imagen1.jpg" alt="" width="45px" height="28px">
+                  Producto 
+                </a>
+                <div class="eliminar-stock">
+               <a href="">Eliminar</a> 
+              </div>  
+              </div>
+            </article>
+
+<!--Stock disponible y cantidad que se va a comprar-->
+            <article class="box-2"> 
+              <div class="cantidad">
+                <a href="">Cantidad</a>
+              </div>
+              <div class="cant-select"> 
+                <a href="">- 1 +</a>
+              </div>
+              <div class="stock">
+                <a href="">Stock (3)</a>
+              </div>
+            </article>
+<!--Precio de lo que se va a comprar-->
+
+            <article class="box-3">
+              <div class="precio">
+                <a href="">$00.000</a>
+              </div>
+            </article>
+          </section>
+          <section class=detalle-carrito>
+            <!--Producto elegido para comprar-->
+            <article class="box-1">
+              <div class="descripcion-producto">
+                <a href="">
+                  <img src="/img/carrito/imgen2.jpg" alt="" width="45px" height="28px">
+                  Producto 
+                </a>
+                <div class="eliminar-stock">
+                  <a href="">Eliminar</a> 
+              </div>  
+              </div>
+            </article>
+
+<!--Stock disponible y cantidad que se va a comprar-->
+            <article class="box-2"> 
+              <div class="cantidad">
+                <a href="">Cantidad</a>
+              </div>
+              <div class="cant-select"> 
+                <a href="">- 1 +</a>
+              </div>
+              <div class="stock">
+                <a href="">Stock (3)</a>
+              </div>
+            </article>
+<!--Precio de lo que se va a comprar-->
+
+            <article class="box-3">
+              <div class="precio">
+                <a href="">$00.000</a>
+              </div>
+            </article>
+
+          </section>
+          <section>
+            <div class="total">
+              <a href="">Total $000.000</a>
+            </div>
+          </section>
           
+
         </div>
-        <div class="total">
-          <li class="cant"><a href="">TOTAL</a></li>
-          <div class="cantidad-precio">
-            <li class="cant">$15.000</li>
-          </div>
-          <div class="cantidad-precio">
-            <li class="cant">$2.000</li>
-          </div>
-          <div class="cantidad-precio">
-            <li class="cant">$17.000</li>
-          </div>
-        </div>
-          </div>
-        </div>
+        
+      <!--Boton comprar-->
         <div class="boton">
-<button class="comprar">Comprar</button></div>
+<button class="comprar">Comprar</button>
+</div>
 
       </section>
+      
 
     </div>
 
@@ -107,7 +182,6 @@
       <div class="producto">
       <article>
           <img src="/img/carrito/imagen5.jpg" alt="" width="100" height="100" />
-          <h4 class="precio">$23.200</h4>
           <h5 class="detalle">Samsung a12</h4>
       </article>
     </div>
@@ -115,7 +189,6 @@
     <div class="producto">
       <article>
      <img src="/img/carrito/imagen4.jpg" alt="" width="100" height="100" />
-          <h4 class="precio">$3.200</h4>
           <h5 class="detalle">Afeitadora Gama</h4>
       </article>
     </div>
@@ -127,14 +200,46 @@
       </article>
     </div>
 
-
-
-
-
   </main>
-</body>
-  <footer>
 
+
+
+  <footer>
+   
+    <div class="redes-sociales">
+      <span class="seguinos">¡Seguinos!</span>
+    
+    <div class="img">
+      <a  href="#"><img class="instagram" src="/img/redes-sociales/instagram-f.png" alt="Instagram Community Electro"></a>
+      <a  href="#"><img class="facebook"  src="/img/redes-sociales/facebook-f.png" alt=" Facebook Community Electro"></a>
+      <a  href="#"><img class="twitter"  src="/img/redes-sociales/twitter-f.png" alt="Twitter Community Electro"></a>
+    </div>
+    </div>
+    
+    <div class="atencion-cliente">
+    
+    <div class="contacto">
+      <p>¿Tenes alguna duda?</p>
+      <p>Nosotros te ayudamos</p>
+    </div>
+    <div class="atencion">
+         <p><i class="fas fa-paper-plane"></i>Atencion al cliente</p>
+         <a href="#">communityElectro@gmail.com</a>
+    </div>
+    <div class="telefono">
+      <p><i class="fas fa-phone-alt"></i>Venta telefonica</p>
+         <a href="#">1191234567</a>
+         
+    </div>
+    </div>
+    
+    <div class="logo-copy">
+      <img class="logo" src="/img/home/Logo C-E.png" alt="Logo Community Electro">
+      <p class="copy">Los precios expresados incluyen IVA - Las fotografias son a modo ilustrativo - CommunityElectro se reserva el derecho de modificar los precios promocionados.</p>
+      <p class="copy"><i class="far fa-copyright"></i>COMMUNITY ELECTRO 2021. Todos los derechos reservados.</p>
+    </div>
+    </div>
+    
   </footer>
 
 
