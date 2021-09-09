@@ -8,12 +8,11 @@
     --colorGris: #DCDCDC;
     --colorNaranja: #F49B49;
     --colorBlanco: #FFFFFF;
-    --colorGrisOscuro: #ABB7BA
+    --colorGrisOscuro:#ABB7BA;
 }
 li {
     list-style: none;
 }
-
 a{
     text-decoration:none;
 }
