@@ -1,8 +1,6 @@
 .login main{
-  background-color: #DCDCDC;
+  background-color: var(--colorGris);
   padding-bottom: 30px;
-  width: 90%;
- margin: 0 auto;
 }
 
 /* titulo del fomulario */
@@ -10,8 +8,6 @@
   padding-top: 30px;
   text-align: center;
   font-size: 17px;
-  font-weight: 600;
-  color:black;
 }
 
 /* contenedor formulario */
@@ -25,8 +21,6 @@
 .login main .box-contain p{
   margin: 30px 0 3px ;
   font-size: 12px;
-  font-weight:800;
-  color: black;
 }
 
 /* input */
@@ -37,75 +31,26 @@
 
 /* contenedor button */
 .login main .box-contain .box-button{
-  display: inline-flex;
-  justify-content: space-around;
-  width: 100%;
- 
-}
-.login main .box-contain .box-button{
   display: flex;
-  width: 100%;
-  justify-content:flex-start;
-  padding-bottom: 20px;
+  justify-content: space-between;
 }
-.login main .box-contain .box-button2{
-  display: flex;
-  width: 100%;
-  justify-content:flex-end;
-}
-
 
 /* button */
-.login main .btn-registro {
-
+.login main .box-contain .box-button .btn-registro ,.btn-ingresar{  
   border: none;
-  padding: 0px 10px;
+  padding: 0px 15px;
   margin-top: 20px;
- border-radius: 8px;
+  border-radius: 15px;
   font-size: 14px;
-  color: black;
-  font-weight: 700;
 }
-
-
-
-
 
 .login main .box-contain .box-button .btn-registro{
-  
-  background-color:#DCDCDC;
-  box-shadow: 0px 0px 7px 1px black;
+  background-color: var(--colorGrisOscuro);
 }
 
-/*Efecto */
-.login main .box-contain .box-button:hover{
-  color: white;
-    transition: all 0.2s ease;
-    transform: scale(1.09);
-}
-.login main .box-contain .box-button2 .btn-ingresar{ 
-  margin-right: -20px;
-  border: none;
-  padding: 5px 20px;
-  border-radius: 2px;
-  font-size: 14px;
-  color: black;
-  font-weight: 700;
-}
-
-/*Efecto */
-.login main .box-contain .box-button2:hover{
-  color: white;
-    transition: all 0.2s ease;
-    transform: scale(1.09);
-}
-.login main .box-contain .box-button2 .btn-ingresar{
+.login main .box-contain .box-button .btn-ingresar{
   background-color: var(--colorCeleste);
 }
-
-
-
-
 
 /* contenedor carrousel */
 .login main .box-carrousel{
@@ -132,7 +77,6 @@
   /* contenedor carrousel */
   .login main .box-carrousel {
     display: block;
-    justify-content:flex-end;
     width: 70%;
     margin: 30px auto 0;
 }
@@ -147,9 +91,8 @@
 @media (min-width: 1024px){
   .login main {
     display: flex;
-    flex-direction:row-reverse;
   }
-
+  
   /*img carrousel */
   .login main .box-carrousel .banner img{
     height: 200px;
