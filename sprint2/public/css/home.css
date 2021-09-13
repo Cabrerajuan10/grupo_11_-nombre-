@@ -70,6 +70,10 @@
     margin-left: 10px;
 }
 
+.home .product{
+    padding: 10px;
+}
+
 .home .descripcion .precio{
     font-size: 24px;
     margin-bottom: 5px;
