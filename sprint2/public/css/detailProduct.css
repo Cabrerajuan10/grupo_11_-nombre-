@@ -5,7 +5,7 @@
     --colorGris: #DCDCDC;
     --colorNaranja: #F49B49;
     --colorBlanco: #FFFFFF;
-    --colorVerde: rgb(7, 114, 7);
+    --colorVerde:rgb(7, 114, 7);
 }
 
 * {
@@ -190,7 +190,11 @@
     justify-content: space-around;
     align-items: center;
     border-top: solid 1px black;
+    margin-left: 5px;
     border-bottom: solid 1px black;
+    border: solid 1px black;
+    background-color: var(--colorBlanco);
+    padding-left: 15px;
     font-size: 15px;
 
 }
@@ -272,7 +276,7 @@
 
 .detalle-producto .fichaTecnica-descripcion {
     width: 90%;
-    margin-top: 100px;
+    margin-top: 60px;
     margin-left: 10px;
 }
 
@@ -317,6 +321,25 @@
     font-weight: 700;
 }
 
+/*ETIQUETAS ARTICULOS RECOMENDADOS*/
+
+.detalle-producto .articulo-recomendado{
+    width: 180px;
+    height: 370px;
+    border: solid 1px black;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 2px rgb(105, 102, 102);
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.detalle-producto .articulo-recomendado .titulo{
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+}
+
 .detalle-producto .articulo-recomendado .precio{
     display: block;
 font-size: 22px;
@@ -331,6 +354,68 @@ color: var(--colorVerde);
 padding: 2px;
 }
 
+
+
+/* TABLA DE CUOTAS*/
+
+
+.detalle-producto .tabla-cuotas{
+    width: 330px;
+    height: 350px;
+    margin-top:40px;
+    border: solid 1px black;
+    text-align: start;
+    font-weight: 600;
+    background-color: var(--colorBlanco);
+
+}
+
+.detalle-producto .tabla-cuotas, .fila2, .fila3, .fila4, .fila5{
+    height: 60px;
+  
+}
+
+.detalle-producto .tabla-cuotas th{
+    height: 20px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    padding: 6px;
+    background: linear-gradient(to bottom, #22B1D0, #61d3ec, #8fdbec) ;
+}
+
+.detalle-producto .tabla-cuotas img{
+    width: 45px;
+    height: 45px;
+}
+.detalle-producto .tabla-cuotas .visa{
+    width: 80px;
+    height: 60px;
+}
+
+.detalle-producto .tabla-cuotas .mastercard{
+    width: 50px;
+    height: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.detalle-producto .tabla-cuotas .naranja{
+    width: 52px;
+    height: 47px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.detalle-producto .tabla-cuotas .american-express{
+    width: 77px;
+    height: 60px;
+    margin-left: 4px;
+}
+
+.detalle-producto .tabla-cuotas tr{
+    border: solid 1px black;
+}
 
 
 
@@ -393,6 +478,13 @@ padding: 2px;
         font-size: 17px;
     }
 
+    .detalle-producto .tabla-cuotas{
+        text-align: center;
+        width: 420px;
+        height: 370px;
+       margin-left: 10px;
+       font-size: 20px;
+    }
 }
 
 
@@ -412,7 +504,7 @@ padding: 2px;
 
     .detalle-producto .descripcion {
         width: 50%;
-        margin-top: 60px;
+        margin-top: 50px;
         margin-left: 30px;
     }
 
@@ -463,6 +555,7 @@ padding: 2px;
     }
 
     .detalle-producto .tarjeta-envio {
+        width: 70%;
         font-size: 15px;
     }
 
@@ -516,6 +609,17 @@ padding: 2px;
         transform: scale(1.2);
     }
 
+    .detalle-producto .tabla-cuotas{    
+        width: 350px;
+        height: 300px;
+        margin-top:50px;
+        border: solid 1px black;
+        text-align: start;
+        font-weight: 600;
+        font-size: 16px;
+        background-color: var(--colorBlanco);
+    
+    }
 
 }
 

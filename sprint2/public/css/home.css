@@ -70,6 +70,10 @@
     margin-left: 10px;
 }
 
+.home .product{
+    padding: 10px;
+}
+
 .home .descripcion .precio{
     font-size: 24px;
     margin-bottom: 5px;
@@ -147,7 +151,7 @@
     }
 
     .home h4 {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
 
     .home .box-product-interes{

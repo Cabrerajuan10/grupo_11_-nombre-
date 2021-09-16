@@ -1,42 +1,97 @@
 main .contenedor {
   background-color: var(--colorCeleste);
-  display: flex;
+padding: 5px;
+ width: 95%;
+ margin: auto;
+}
+
+.contenedor .detalle-carrito{
+  width:100%;
+  margin: auto;
+  display:inline-flex;
   justify-content: space-around;
   width: 90%;
   margin: 0 auto;
 }
+.detalle-carrito article.box-2{
+ display:flex;
+ flex-direction:column;
+ align-items: center;
+ font-size: 10px;
+ font-weight: 600;
 
-.detalle-carrito {
+}
+.detalle-carrito article.box-2 .cantidad a{
+  
+  font-size:12px;
   color: black;
-  font-weight: 700;
 }
-.cant a {
+
+.detalle-carrito article.box-2 .cant-select a{
+  padding: 1px 4px 1px 4px;
+  background-color:white;
   color: black;
-  font-weight: 700;
 }
 
-.cantidad .cantidad-precio {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  border: 1px solid #292323;
-  background-color: white;
-  font-size: 15px;
-  text-align: center;
-  border: 1px solid #aaa;
-  font-weight: 700;
+.detalle-carrito article.box-2 .stock a{
+ 
+  color: black;
 }
 
-.total .cantidad-precio {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  background-color: white;
-  font-size: 20px;
-  text-align: center;
-  border: 1px solid #aaa;
-  margin-bottom: 10px;
+.detalle-carrito article.box-3 .precio a{
+  font-size:12px;
+  color: white;
 }
+
+
+div .carrito-guardar a{
+  justify-content: space-around;
+  color: black;
+}
+
+.eliminar-stock {
+  margin: 5px;;
+  font-size: 10px;
+  color: black;
+}
+
+
+.producto-carrito{
+  width: 100%;
+  padding: 10px;
+}
+
+.box-1 .descripcion-producto a{
+
+ color:black;
+ font-weight: 800;
+ font-size: 10px;
+ 
+ 
+}
+
+.cantidad-producto a{
+  background-color:white;
+ color: black;
+ font-weight: 700;
+}
+
+.precio-producto a{
+  color: black;
+}
+.total a{
+  color: black;
+}
+
+.total {
+   display:flex;
+   justify-content: end;
+   font-weight: 800;
+   margin: 18px;
+}
+
+
+
 
 main .boton .comprar {
   background-color: var(--colorNaranja);
@@ -76,8 +131,7 @@ main .boton {
     background-color: #d89353;
     transform: scale(1.09);
   }
-
-  .basado {
+ .basado {
     display: flex;
     justify-content: center;
     font-weight: 500;
@@ -103,13 +157,21 @@ main .boton {
   .articulos .producto:hover {
     transform: scale(1.09);
   }
-}
 
-@media (min-width: 1024px) {
+
   div.articulos .producto {
     display: flex;
     flex-direction: column;
     width: 30%;
     border: 1px solid #aaa;
   }
+ 
+  
+}
+
+@media (min-width: 1020px) {
+  
+
+
+ 
 }

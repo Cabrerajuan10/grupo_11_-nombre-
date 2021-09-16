@@ -1,8 +1,6 @@
 .login main{
-  background-image: url('/img/login/fondo-login.jpg');
+  background-color: var(--colorGris);
   padding-bottom: 30px;
-  width: 80%;
- margin: 0 auto;
 }
 
 /* titulo del fomulario */
@@ -10,8 +8,8 @@
   padding-top: 30px;
   text-align: center;
   font-size: 17px;
-  font-weight: 600;
-  color: white;
+  color: black;
+  font-weight: 700;
 }
 
 /* contenedor formulario */
@@ -25,8 +23,8 @@
 .login main .box-contain p{
   margin: 30px 0 3px ;
   font-size: 12px;
-  font-weight:800;
-  color: white;
+  color: black;
+  font-weight: 700;
 }
 
 /* input */
@@ -48,16 +46,18 @@
   margin-top: 20px;
   border-radius: 15px;
   font-size: 14px;
-  color: white;
-  font-weight: 700;
 }
 
 .login main .box-contain .box-button .btn-registro{
   background-color: var(--colorGrisOscuro);
+  color: black;
+  font-weight: 700;
 }
 
 .login main .box-contain .box-button .btn-ingresar{
   background-color: var(--colorCeleste);
+  color: black;
+  font-weight: 700;
 }
 
 /* contenedor carrousel */
@@ -99,11 +99,12 @@
 @media (min-width: 1024px){
   .login main {
     display: flex;
+    flex-direction:row-reverse
   }
   
   /*img carrousel */
   .login main .box-carrousel .banner img{
-    height: 200px;
+    height: 250px;
   }
 
   /* contenedor carrousel */
