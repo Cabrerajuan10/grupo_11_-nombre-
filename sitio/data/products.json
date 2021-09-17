@@ -1,0 +1,216 @@
+[
+   {
+      "id": 2,
+      "name": "Notebook celeron",
+      "description": "Notebook Exo 14,1 Celeron N4020 500GB 4GB M-48 PLUS",
+      "price": 69.999,
+      "discount": 5,
+      "category": "gratis",
+      "image": "D_NQ_NP_894561-MLA44774447406_022021-O-removebg-preview.png",
+      "features": []
+   },
+   {
+      "id": 3,
+      "name": " Smart TV 50 UHD4K Philips",
+      "description": "El Smart TV Philips 50 pulgadas 50PUD6654/77 cuenta con una pantalla de visualización LED de 16:9 y resolución Ultra HD 4K 3840 x 2160 píxeles que brinda una gran calidad de imagen y contraste.",
+      "category": "oferta",
+      "price": 59.999,
+      "discount": 15,
+      "image": "smart-tv-50-uhd-4k-philips-50pud6654-77-removebg-preview.png",
+      "features": [
+         "Pantalla: 5.1'",
+         "Camara: 16mpx",
+         "Memoria: 64gb"
+      ]
+   },
+   {
+      "id": 4,
+      "name": "Monitor Samsung LF22T350FHLXZB 22",
+      "description": "Mediante su entrada PC In podrás conectar tu PC o Notebook. Además, también ofrece la posibilidad de conectarse a través de HDMI. El LED no tiene sistema de audio incorporado",
+      "category": "nuevo",
+      "price": 25.999,
+      "discount": 10,
+      "image": "ba5a66fe2d29273ed1e7244f3e60-removebg-preview.png",
+      "features": [
+         "Pantalla: 6.1'",
+         "Camara: 12mpx",
+         "Memoria: 32gb"
+      ]
+   },
+   {
+      "id": 5,
+      "name": "Tablet Samsung Galaxy Tab S7 Negro",
+      "description": "Posee sistema operativo Android y procesador Octa-Core, que te permitirán mejorar el rendimiento. Además, gracias a la memoria interna de 128 GB podrás utilizar tus aplicaciones favoritas, manejar tus redes sociales, llevar tus juegos preferidos, guardar tu música y fotos. Incluso, tendrás la posibilidad de expandirla con una tarjeta microSD en hasta 1TB",
+      "price": 106.999,
+      "discount": 10,
+      "category": "nuevo",
+      "image": "tablet-samsungGalaxy-2.png",
+      "features": []
+   },
+   {
+      "id": 6,
+      "name": "Impresora Multifunción HP",
+      "description": "Con la impresora multifunción HP Deskjet Ink Advantage 3775 podrás imprimir, escanear y copiar de manera inalámbrica. Tiene un diseño compacto, pensado para ahorrar espacio y que quepa en un escritorio, un estante o en el lugar de tu hogar que necesites. Además, cuenta con un modo silencioso que evita ruidos molestas excesivos",
+      "category": "oferta",
+      "price": 14.499,
+      "discount": 10,
+      "image": "J9V87A-1_T1601584716-removebg-preview.png",
+      "features": [
+         "Pantalla: 5.1'",
+         "Camara: 12mpx",
+         "Memoria: 32gb"
+      ]
+   },
+   {
+      "id": 7,
+      "name": "Parlante Bluetooth Noblex",
+      "description": "El parlante Noblex MNT390 tiene un diseño compacto y liviano. Llevalo con vos donde vayas gracias a sus medidas: 62,5 cm x 25 cm 26 cm y su peso de 7,47 kg. Además, cuenta con efectos de iluminación Led Flashing Lights y True Wireles Stereo, que permite la conexión simultánea de dos unidades logrando estéreo real y una mayor potencia.",
+      "category": "nuevo",
+      "price": 29.999,
+      "discount": 10,
+      "image": "mnt390-5_1_fkwfurkcbs9aamde-removebg-preview.png",
+      "features": [
+         "Pantalla: 5.1'",
+         "Camara: 12mpx",
+         "Memoria: 32gb"
+      ]
+   },
+   {
+      "id": 8,
+      "name": "Heladera wirlpool",
+      "description": "consectetuer adipiscing elit proin risus",
+      "price": 34999,
+      "discount": 15,
+      "category": "nuevo",
+      "image": "default.jpg",
+      "features": [
+         "Pantalla: 5.1'",
+         "Camara: 12mpx",
+         "Memoria: 32gb"
+      ]
+   },
+   {
+      "id": 9,
+      "name": "microondas bgh",
+      "description": "vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl",
+      "price": 19999,
+      "discount": 5,
+      "category": "nuevo",
+      "image": "default.jpg",
+      "features": [
+         "Pantalla: 5.1'",
+         "Camara: 12mpx",
+         "Memoria: 32gb"
+      ]
+   },
+   {
+      "id": 10,
+      "name": "Equipo de musica - Sony",
+      "description": "pede posuere nonummy integer non velit donec",
+      "price": 28999,
+      "discount": 10,
+      "category": "gratis",
+      "image": "default.jpg",
+      "features": [
+         "Pantalla: 5.1'",
+         "Camara: 12mpx",
+         "Memoria: 32gb"
+      ]
+   },
+   {
+      "id": 11,
+      "name": "Monitor Asus 4k",
+      "description": "rutrum nulla nunc purus phasellus",
+      "price": 35999,
+      "discount": 10,
+      "category": "nuevo",
+      "image": "default.jpg",
+      "features": [
+         "Pantalla: 5.1'",
+         "Camara: 12mpx",
+         "Memoria: 32gb"
+      ]
+   },
+   {
+      "id": 12,
+      "name": "Heladera Patrick",
+      "description": "duis bibendum morbi non quam nec dui",
+      "price": 47999,
+      "discount": 15,
+      "category": "nuevo",
+      "image": "default.jpg",
+      "features": [
+         "Pantalla: 5.1'",
+         "Camara: 12mpx",
+         "Memoria: 32gb"
+      ]
+   },
+   {
+      "id": 13,
+      "name": "Tv sony bravia 4k 50'",
+      "description": "est risus auctor sed tristique in tempus",
+      "price": 74999,
+      "discount": 10,
+      "category": "oferta",
+      "image": "default.jpg",
+      "features": [
+         "Pantalla: 5.1'",
+         "Camara: 32mpx",
+         "Memoria: 128gb"
+      ]
+   },
+   {
+      "id": 14,
+      "name": "Notebook samsung 15'",
+      "description": "donec quis orci eget orci vehicula condimentum curabitur in libero",
+      "price": 54999,
+      "discount": 20,
+      "category": "oferta",
+      "image": "default.jpg",
+      "features": [
+         "Pantalla: 4.1'",
+         "Camara: 12mpx",
+         "Memoria: 2gb"
+      ]
+   },
+   {
+      "id": 17,
+      "name": "Samsumg A52",
+      "description": "Celular 4G LTE. Procesador Octa Core. Pantalla 6.5\" FHD + Super Amoled. Cuadruple camara trasera 64MP + 12MP + 5MP + 5MP. Camara frontal 32MP. Memoria RAM 6GB.",
+      "price": 60000,
+      "discount": 5,
+      "category": "oferta",
+      "image": "default.jpg",
+      "features": []
+   },
+   {
+      "id": 18,
+      "name": "Motorola G100",
+      "description": "Celular 4G. Procesador Octa Core. Pantalla LPTS 6.7\". Triple camara posterior 64MP + 16MP + 2MP. Camara frontal 16MP. SO Android 11. Grabacion/Reproduccion de video. Wi Fo. NFC.",
+      "price": 70000,
+      "discount": 10,
+      "category": "oferta",
+      "image": "default.jpg",
+      "features": []
+   },
+   {
+      "id": 20,
+      "name": "Samsung s20",
+      "description": "Galaxy S20: pantalla de 6,7 pulgadas de 120 Hz QHD plus OLED, Snapdragon 865, 12 GB de RAM, 128/512 GB y microSD, 4500 mAh, cámaras de 12 + 64 + 12 MP + profundidad, cámara de selfie de 10 MP, IP68. Primer plano a las cámaras posteriores en el Galaxy S20, principal de 12 MP, F/1,8, 1/1,176 pulgadas. 64 MP 3X, F/2,0.",
+      "price": 100000,
+      "discount": 10,
+      "category": "nuevo",
+      "image": "default.jpg",
+      "features": []
+   },
+   {
+      "id": 21,
+      "name": "iphone 13",
+      "description": "Especificaciones del iPhone 13 Pro · 5G (sub‑6 GHz) · Gigabit LTE con MIMO 4x4 y LAA · Wi‑Fi 6 (802.11ax) con MIMO 2x2 · Tecnología inalámbrica Bluetooth 5.0",
+      "price": 300000,
+      "discount": 10,
+      "category": "nuevo",
+      "image": "default.jpg",
+      "features": []
+   }
+]
