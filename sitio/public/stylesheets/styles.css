@@ -1,11 +1,10 @@
-
-@import url('./stylesheets/general.css');
-@import url('./stylesheets/glider.css');
-@import url('./stylesheets/detailProduct.css');
-@import url('./stylesheets/home.css');
-@import url('./stylesheets/login.css');
-@import url('./stylesheets/register.css');
-@import url('./stylesheets/header.css');
-@import url('./stylesheets/footer.css');
-@import url('./stylesheets/carrito.css');
-
+@import url('./general.css');
+@import url('./glider.css');
+@import url('./detailProduct.css');
+@import url('./home.css');
+@import url('./login.css');
+@import url('./register.css');
+@import url('./header.css');
+@import url('./footer.css');
+@import url('./carrito.css');
+@import url('./admin.css');
