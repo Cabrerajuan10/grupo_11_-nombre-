@@ -7,3 +7,4 @@ module.exports = {
         return res.render('carrito')
     }
 }
+

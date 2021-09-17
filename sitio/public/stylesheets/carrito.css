@@ -5,6 +5,10 @@ padding: 5px;
  margin: auto;
 }
 
+.vista-carrito{
+  padding: 20px 0;
+}
+
 .contenedor .detalle-carrito{
   width:100%;
   margin: auto;
