@@ -11,14 +11,14 @@
           <div class="card-header">
             <div class="row">
               <div class="col-12 col-md-2">
-                <%= title %> 
+                <%= title %>
               </div>
               <div class="col-12 col-md-4">
                <form class="row" action="/product/search" method="GET">
                  <div class="col-9">
                   <input type="text" class="form-control" name="search" placeholder="Buscar producto...">
                  </div>
-                 <button  class="col-3 btn btn-outline-info" type="submit">Buscar</button>
+                 <button style="display:flex; justify-content: center;" class="col-3  btn btn-outline-info" type="submit">Buscar</button>
                </form>
                </div>
                <div class="col-12 col-md-4">
@@ -27,11 +27,11 @@
                  <select name="category" class="form-select">
                    <option value="" selected hidden>Filtrar por...</option>
                    <% categories.forEach(category => { %>
-                    <option value="<%= category %>"><%= category %></option>
+                    <option value="<%= category %>"><%= firstLetter(category) %></option>
                    <% }) %>
                  </select>
                 </div>
-                <button class="col-3 btn btn-outline-info" type="submit">Filtrar</button>
+                <button style="display:flex; justify-content: center;" class="col-3 btn btn-outline-info" type="submit">Filtrar</button>
               </form>
               </div>
               <div class="col-12 col-md-2 text-end">
@@ -41,9 +41,9 @@
               </div>
             </div>
           </div>
-          <div class="card-body">
-            <table class="table table-responsive table-hover">
-              <thead>
+          <div class="table-responsive" class="card-body">
+            <table class="table table-hover">
+              <thead class="table-dark">
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Imagen</th>
