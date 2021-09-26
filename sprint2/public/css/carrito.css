@@ -4,7 +4,7 @@ padding: 5px;
  width: 95%;
  margin: auto;
 }
-
+/**/
 .contenedor .detalle-carrito{
   width:100%;
   margin: auto;
@@ -170,7 +170,18 @@ main .boton {
 }
 
 @media (min-width: 1020px) {
-  
+  .contenedor .detalle-carrito .box-1 a{
+    font-size:15px;
+  }
+
+   .contenedor .detalle-carrito .box-2{
+    font-size:20px;
+  }
+
+   .contenedor article .box-3{
+    font-size:70px;
+  }
+
 
 
  

@@ -299,7 +299,7 @@
 }
 
 .detalle-producto .accordion-body {
-    background-image: url(../img/detailProduct/imagenFondo-descripcion.jpg);
+    background-image: url(../images/detailProduct/imagenFondo-descripcion.jpg);
     background-size: cover;
 }
 
