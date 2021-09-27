@@ -7,7 +7,12 @@ const firstLetter = require('../utils/firstLetter');
 
 module.exports = {
     detail : (req,res) =>{
+
+        let product = products.find(product => product.id === +req.params.id);
+
         return res.render('detailProduct', {
+             product,
+             products : products.filter(p => p.category === product.category),
             title: 'Detalle del producto'
         })
     },
@@ -27,6 +32,8 @@ module.exports = {
 
     store : (req,res) => {
 
+        let images = req.files.map(image => image.filename);
+
         const {name,description,price,discount,category} = req.body;
 
         let product = {
@@ -36,7 +43,7 @@ module.exports = {
             price : +price,
             discount : +discount,
             category,
-            image : 'default.jpg',
+            image : req.files.length != 0 ? images : ['default.jpg'],
             features : []
         }
 

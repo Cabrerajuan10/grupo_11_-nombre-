@@ -13,7 +13,7 @@
                         <h4>Agregar producto</h4>
                     </div>
                     <div class="card-body">
-                        <form class="row" method="POST">
+                        <form class="row" method="POST" enctype="multipart/form-data">
                                 <div class="col-12">
                                     <div class="form-floating mb-3">
                                         <input type="text" class="form-control" id="name" placeholder="Nombre del producto" name="name">
@@ -52,7 +52,7 @@
                                <div class="col-12 col-md-6">
                                 <div class="mb-3">
                                     <label for="image" class="btn btn-outline-secondary w-100 mt-2">Subir imagen</label>
-                                    <input hidden class="form-control" type="file" id="image" name="image">
+                                    <input hidden class="form-control" type="file" id="image" name="image" multiple>
                                   </div>
                                </div>
                                 <div class="col-12 mt-5">

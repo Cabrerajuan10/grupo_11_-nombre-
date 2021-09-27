@@ -6,7 +6,9 @@
       "price": 69.999,
       "discount": 5,
       "category": "gratis",
-      "image": "D_NQ_NP_894561-MLA44774447406_022021-O-removebg-preview.png",
+      "image": [
+         "D_NQ_NP_894561-MLA44774447406_022021-O-removebg-preview.png"
+      ],
       "features": []
    },
    {
@@ -16,9 +18,11 @@
       "category": "oferta",
       "price": 59.999,
       "discount": 15,
-      "image": "smart-tv-50-uhd-4k-philips-50pud6654-77-removebg-preview.png",
+      "image": [
+         "smart-tv-50-uhd-4k-philips-50pud6654-77-removebg-preview.png"
+      ],
       "features": [
-         "Pantalla: 5.1'",
+         "P]antalla: 5.1'",
          "Camara: 16mpx",
          "Memoria: 64gb"
       ]
@@ -30,9 +34,11 @@
       "category": "nuevo",
       "price": 25.999,
       "discount": 10,
-      "image": "ba5a66fe2d29273ed1e7244f3e60-removebg-preview.png",
+      "image": [
+         "ba5a66fe2d29273ed1e7244f3e60-removebg-preview.png"
+      ],
       "features": [
-         "Pantalla: 6.1'",
+         "P]antalla: 6.1'",
          "Camara: 12mpx",
          "Memoria: 32gb"
       ]
@@ -44,7 +50,9 @@
       "price": 106.999,
       "discount": 10,
       "category": "nuevo",
-      "image": "tablet-samsungGalaxy-2.png",
+      "image": [
+         "tablet-samsungGalaxy-2.png"
+      ],
       "features": []
    },
    {
@@ -54,7 +62,9 @@
       "category": "oferta",
       "price": 14.499,
       "discount": 10,
-      "image": "J9V87A-1_T1601584716-removebg-preview.png",
+      "image": [
+         "J9V87A-1_T1601584716-removebg-preview.png"
+      ],
       "features": [
          "Pantalla: 5.1'",
          "Camara: 12mpx",
@@ -68,7 +78,9 @@
       "category": "nuevo",
       "price": 29.999,
       "discount": 10,
-      "image": "mnt390-5_1_fkwfurkcbs9aamde-removebg-preview.png",
+      "image": [
+         "mnt390-5_1_fkwfurkcbs9aamde-removebg-preview.png"
+      ],
       "features": [
          "Pantalla: 5.1'",
          "Camara: 12mpx",
@@ -82,7 +94,9 @@
       "price": 34999,
       "discount": 15,
       "category": "nuevo",
-      "image": "default.jpg",
+      "image": [
+         "default.jpg"
+      ],
       "features": [
          "Pantalla: 5.1'",
          "Camara: 12mpx",
@@ -96,7 +110,9 @@
       "price": 19999,
       "discount": 5,
       "category": "nuevo",
-      "image": "default.jpg",
+      "image": [
+         "default.jpg"
+      ],
       "features": [
          "Pantalla: 5.1'",
          "Camara: 12mpx",
@@ -110,7 +126,9 @@
       "price": 28999,
       "discount": 10,
       "category": "gratis",
-      "image": "default.jpg",
+      "image": [
+         "default.jpg"
+      ],
       "features": [
          "Pantalla: 5.1'",
          "Camara: 12mpx",
@@ -124,7 +142,9 @@
       "price": 35999,
       "discount": 10,
       "category": "nuevo",
-      "image": "default.jpg",
+      "image": [
+         "default.jpg"
+      ],
       "features": [
          "Pantalla: 5.1'",
          "Camara: 12mpx",
@@ -138,7 +158,9 @@
       "price": 47999,
       "discount": 15,
       "category": "nuevo",
-      "image": "default.jpg",
+      "image": [
+         "default.jpg"
+      ],
       "features": [
          "Pantalla: 5.1'",
          "Camara: 12mpx",
@@ -152,7 +174,9 @@
       "price": 74999,
       "discount": 10,
       "category": "oferta",
-      "image": "default.jpg",
+      "image": [
+         "default.jpg"
+      ],
       "features": [
          "Pantalla: 5.1'",
          "Camara: 32mpx",
@@ -166,7 +190,9 @@
       "price": 54999,
       "discount": 20,
       "category": "oferta",
-      "image": "default.jpg",
+      "image": [
+         "default.jpg"
+      ],
       "features": [
          "Pantalla: 4.1'",
          "Camara: 12mpx",
@@ -180,7 +206,9 @@
       "price": 60000,
       "discount": 5,
       "category": "oferta",
-      "image": "default.jpg",
+      "image": [
+         "default.jpg"
+      ],
       "features": []
    },
    {
@@ -190,7 +218,9 @@
       "price": 70000,
       "discount": 10,
       "category": "oferta",
-      "image": "default.jpg",
+      "image": [
+         "default.jpg"
+      ],
       "features": []
    },
    {
@@ -200,7 +230,9 @@
       "price": 100000,
       "discount": 10,
       "category": "nuevo",
-      "image": "default.jpg",
+      "image": [
+         "default.jpg"
+      ],
       "features": []
    },
    {
@@ -210,7 +242,21 @@
       "price": 300000,
       "discount": 10,
       "category": "nuevo",
-      "image": "default.jpg",
+      "image": [
+         "default.jpg"
+      ],
+      "features": []
+   },
+   {
+      "id": 22,
+      "name": "gfddfgdfg",
+      "description": "dfgdfg",
+      "price": 5000,
+      "discount": 6,
+      "category": "nuevo",
+      "image": [
+         "img-product1632729917696.png"
+      ],
       "features": []
    }
 ]

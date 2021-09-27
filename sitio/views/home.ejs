@@ -87,80 +87,22 @@
     <div class="box-articles">
       <div class="glider-contain">
         <div class="glider1">
-          <div>
-            <article>
-              <div class="product">
-                <img width="100%" src="/images/home/LD0005344688_2-removebg-preview.png" alt="">
-              </div>
-              <div class="descripcion">
-                <h4>Smart TV Sony</h4>
-                <p class="precio">$50.500</p>
-                <p class="descuento">10% OFF</p>
-              </div>
-            </article>
-          </div>
-          <div>
-            <article>
-              <div class="product">
-                <img width="100%"
-                  src="/images/home/hipertextual-enesimo-smartphone-xiaomi-es-redmi-note-8t-que-fortalece-su-gama-media-baja-2019334632-removebg-preview.png"
-                  alt="">
-              </div>
-              <div class="descripcion">
-                <h4>Samsung A30s</h4>
-                <p class="precio">$49.999</p>
-                <p class="descuento">10% OFF</p>
-              </div>
-            </article>
-          </div>
-          <div>
-            <article>
-              <div class="product">
-                <img width="100%" src="/images/home/WhatsApp-Image-2021-04-13-at-4.17.14-PM-1-removebg-preview.png" alt="">
-              </div>
-              <div class="descripcion">
-                <h4>Notebook LG</h4>
-                <p class="precio">$59.999</p>
-                <p class="descuento">20% OFF</p>
-              </div>
-            </article>
-          </div>
-          <div>
-            <article>
-              <div class="product">
-                <img width="100%" src="/images/home/grilla-lavarropas-removebg-preview.png" alt="">
-              </div>
-              <div class="descripcion">
-                <h4>Lavarropas LG</h4>
-                <p class="precio">$79.999</p>
-                <p class="descuento">15% OFF</p>
-              </div>
-            </article>
-          </div>
-          <div>
-            <article>
-              <div class="product">
-                <img width="100%" src="/images/home/aire-acondicionado-inverter-bgh-1-removebg-preview.png" alt="">
-              </div>
-              <div class="descripcion">
-                <h4>Aire Acond. LG</h4>
-                <p class="precio">$79.999</p>
-                <p class="descuento">15% OFF</p>
-              </div>
-            </article>
-          </div>
-          <div>
-            <article>
-              <div class="product">
-                <img width="100%" src="/images/home/WhatsApp-Image-2021-04-13-at-4.17.14-PM-1-removebg-preview.png" alt="">
-              </div>
-              <div class="descripcion">
-                <h4>Notebook LG</h4>
-                <p class="precio">$59.999</p>
-                <p class="descuento">20% OFF</p>
-              </div>
-            </article>
-          </div>
+          <% products.forEach(product => { %>
+           <a href="/product/detailProduct/<%= product.id %>">
+            <div>
+              <article>
+                <div class="product">
+                  <img width="100%" src="/images/detailProduct/<%= product.image[0] %>" alt="">
+                </div>
+                <div class="descripcion">
+                  <h4><%= product.name %></h4>
+                  <p class="precio">$<%= product.price %></p>
+                  <p class="descuento"><%= product.discount %>%OFF</p>
+                </div>
+              </article>
+            </div>
+           </a>
+          <% }) %>
         </div>
         <button aria-label="Previous" class="glider-prev">«</button>
         <button aria-label="Next" class="glider-next">»</button>
