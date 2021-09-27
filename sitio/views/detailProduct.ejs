@@ -217,63 +217,22 @@
         <!--SLIDER DE GLIDER-->
         <div class="glider-contain">
           <div class="glider-detail">
-            <div>
+            <% products.forEach(product => { %>
               <article class="articulo-recomendado">
-                <img src="/images/detailProduct/samsung smart tv.png" alt="">
-                <h4 class="titulo">Smart TV 4K UHD 55” Philco </h4>
-                <p class="precio">$ 78.999</p>
-                <p class="descuento-articulo">20%</p>
+                <div class="item-carousel">
+                  <a href="/product/detailProduct/<%= product.id %> ">
+                    <img src="/images/detailProduct/<%= product.image[0] %>" alt="">
+                     <h4 class="titulo"><%= product.name %> </h4>
+                      <p class="precio">$<%= product.price %> </p>
+                      <p class="descuento-articulo"><%= product.discount %>OFF%</p>
+                  </a>
+                </div>
               </article>
-            </div>
-            <div>
-             <article class="articulo-recomendado smartv-philips">
-               <img class="smartv-philips" src="/images/detailProduct/smart-tv-50-uhd-4k-philips-50pud6654-77-removebg-preview.png" alt="">
-               <h4 class="titulo"> Smart TV 50" UHD 4K Philips</h4>
-               <p class="precio">$ 75.999</p>
-               <p class="descuento-articulo"> 30%</p>
-             </article>
-           </div>
-           <div>
-             <article class="articulo-recomendado">
-               <img src="/images/detailProduct/tablet-samsungGalaxy-1.png" alt="">
-               <h4 class="titulo">Tablet Samsung Galaxy Tab S7</h4>
-               <p class="precio">$ 106.999</p>
-               <p class="descuento-articulo"> 10%</p>
-             </article>
-           </div>
-           <div>
-             <article class="articulo-recomendado notebook-celeron">
-               <img src="/images/detailProduct/notebook-exo-141-celeron-n4020-500gb-4gb-m-48-plus-removebg-preview.png" alt="">
-               <h4 class="titulo">Notebook Exo 14,1" Celeron 500Gb</h4>
-               <p class="precio">$ 69.9999</p>
-               <p class="descuento-articulo">30%</p>
-             </article>
-           </div>
-           <div>
-             <article class="articulo-recomendado monitor-lg">
-               <img src="/images/detailProduct/D_NQ_NP_740892-MLA46837552743_072021-O-removebg-preview.png" alt="">
-               <h4 class="titulo">Monitor Gamer IPS 22 Full HD LG</h4>
-               <p class="precio">$ 29.999</p>
-               <p class="descuento-articulo">15%</p>
-             </article>
-           </div>
-           <div>
-             <article class="articulo-recomendado">
-               <img src="/images/detailProduct/mnt390-5_1_fkwfurkcbs9aamde-removebg-preview.png" alt="">
-               <h4 class="titulo">Parlante Bluetooth Noblex MNT390</h4>
-               <p class="precio">$ 29.999</p>
-               <p class="descuento-articulo">30%</p>
-             </article>
-           </div>
-           <div>
-             <article class="articulo-recomendado">
-               <img src="/images/detailProduct/samsung smart tv.png" alt="">
-               <h4 class="titulo">Smart TV 4K UHD 55” Philco</h4>
-               <p class="precio">$ 78.999</p>
-               <p class="descuento-articulo"> 10%</p>
-             </article>
-           </div>
- 
+          <% }) %>
+       
+             
+              
+          
           </div>
           <button aria-label="Previous" class="glider-prev">«</button>
           <button aria-label="Next" class="glider-next">»</button>
