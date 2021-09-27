@@ -133,6 +133,39 @@
       </div>
     </div>
 
+    <!--OFERTAS-->
+    <h4 class="ofertas-home">OFERTAS IMPERDIBLES</h4>
+    <div class="box-articles">
+      <div class="glider-contain">
+        <div class="glider-ofertas">
+          <% products.forEach(product => { %>
+           <a href="/product/detailProduct/<%= product.id %>">
+            <div>
+              <article>
+                <div class="product">
+                  <img width="100%" src="/images/detailProduct/<%= product.image[0] %>" alt="">
+                </div>
+                <div class="descripcion">
+                  <h4><%= product.name %></h4>
+                  <p class="precio">$<%= product.price %></p>
+                  <p class="descuento"><%= product.discount %>%OFF</p>
+                </div>
+              </article>
+            </div>
+           </a>
+          <% }) %>
+        </div>
+        <button aria-label="Previous" class="glider-prev">«</button>
+        <button aria-label="Next" class="glider-next">»</button>
+        <div role="tablist" class="dots1" id="dots1"></div>
+      </div>
+    </div>
+
+
+
+
+
+
     <!--   productos de interes -->
     <h4 class="section">TE PUEDEN INTERESAR</h4>
     <div class="box-product-interes">
