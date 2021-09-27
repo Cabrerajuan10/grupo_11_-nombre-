@@ -49,9 +49,10 @@ new Glider(document.querySelector('.glider-detail'), {
 /* FUNCIONALIDAD QUE PERMITE HACER CLICK EN IMG MINIATURA Y QUE SE MUESTRE COMO IMG PRINCIPAL */
 
 
-document.getElementById('img-prev1').addEventListener('click', () =>{
+/* document.getElementById('img-prev1').addEventListener('click', () =>{
         document.getElementById('img-principal').setAttribute('src', '/images/detailProduct/smartv-43-samsung-img1.png')
 })
+
 
 
 document.getElementById('img-prev2').addEventListener('click', () =>{
@@ -62,5 +63,5 @@ document.getElementById('img-prev2').addEventListener('click', () =>{
 document.getElementById('img-prev3').addEventListener('click', () =>{
         document.getElementById('img-principal').setAttribute('src', '/images/detailProduct/smartv-43-samsung-img3.png')
 })
-
+ */
 

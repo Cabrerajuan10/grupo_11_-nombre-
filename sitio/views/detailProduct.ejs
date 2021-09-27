@@ -66,7 +66,7 @@
         <!--IMAGEN PRINCIPAL DEL PRODUCTO EN DESKTOP-->
         
         <div class="imagen-principal">
-          <img id="img-principal" src="/images/detailProduct/<%= product.image[0] %>" alt="Samsung Smart TV Crystal 43' 4K -img1">
+          <img id="img-principal" src="/images/detailProduct/<%= product.image[0] %>" alt="">
           <div class="descuento">
             <p><%= product.discount %>OFF%</p>
           </div>
@@ -74,12 +74,9 @@
 
          <!--GALERIA DE IMAGENES SMALL ITEM DEL DESKTOP-->
         <div class="img-items">
-          <div><img class="item" id="img-prev1" src="/images/detailProduct/<%= product.image[1] %>" alt="Samsung Smart TV Crystal 43' 4K -img1">
-          </div>
-          <div><img class="item" id="img-prev2" src="/images/detailProduct/<%= product.image[2] %>" alt="Samsung Smart TV Crystal 43' 4K -img2">
-          </div>
-          <div><img class="item" id="img-prev3" src="/images/detailProduct/<%= product.image[3] %>" alt="Samsung Smart TV Crystal 43' 4K -img3">
-          </div>
+            <% product.image.forEach(image => { %>
+                <img id="img-prev1" src="/images/detailProduct/<%= image %>" alt="" onclick="document.getElementById('img-principal').setAttribute('src','/images/detailProducts/<%=image%>')">
+            <% }) %>
         </div>
       </div>
 
