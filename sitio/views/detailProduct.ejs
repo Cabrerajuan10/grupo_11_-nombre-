@@ -74,11 +74,14 @@
 
          <!--GALERIA DE IMAGENES SMALL ITEM DEL DESKTOP-->
         <div class="img-items">
-            <% product.image.forEach(image => { %>
-                <img id="img-prev1" src="/images/detailProduct/<%= image %>" alt="" onclick="document.getElementById('img-principal').setAttribute('src','/images/detailProducts/<%=image%>')">
-            <% }) %>
+
+        <%product.image.forEach(image => { %>
+          <img class="item" id="img-prev1" src="/images/detailProduct/<%= image %>" alt="" onclick="document.getElementById('img-principal').setAttribute('src','/images/detailProduct/<%=image%>')">
+        <%})%> 
+
         </div>
       </div>
+
 
 
       <!-- TITULO/PRECIOS/BOTONES DE COMPRAR Y CARRITO/MEDIOS DE ENVIO Y METODO DE PAGO-->

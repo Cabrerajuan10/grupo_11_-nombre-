@@ -1,14 +1,15 @@
 [
    {
       "id": 2,
-      "name": "Notebook celeron",
+      "name": "Notebook celeron 15'",
       "description": "Notebook Exo 14,1 Celeron N4020 500GB 4GB M-48 PLUS",
       "price": 69.999,
       "discount": 5,
       "category": "gratis",
       "image": [
          "D_NQ_NP_894561-MLA44774447406_022021-O-removebg-preview.png",
-         "e15-61-b0e4a0a45ae14a07e616230964203273-1024-1024-removebg-preview.png"
+         "e15-61-b0e4a0a45ae14a07e616230964203273-1024-1024-removebg-preview.png",
+         "ba5a66fe2d29273ed1e7244f3e60-removebg-preview.png"
       ],
       "features": []
    },
@@ -30,7 +31,7 @@
    },
    {
       "id": 4,
-      "name": "Monitor Samsung LF22T350FHLXZB 22",
+      "name": "Monitor Samsung 22",
       "description": "Mediante su entrada PC In podrás conectar tu PC o Notebook. Además, también ofrece la posibilidad de conectarse a través de HDMI. El LED no tiene sistema de audio incorporado",
       "category": "nuevo",
       "price": 25.999,
@@ -46,7 +47,7 @@
    },
    {
       "id": 5,
-      "name": "Tablet Samsung Galaxy Tab S7 Negro",
+      "name": "Tablet Samsung Galaxy S7",
       "description": "Posee sistema operativo Android y procesador Octa-Core, que te permitirán mejorar el rendimiento. Además, gracias a la memoria interna de 128 GB podrás utilizar tus aplicaciones favoritas, manejar tus redes sociales, llevar tus juegos preferidos, guardar tu música y fotos. Incluso, tendrás la posibilidad de expandirla con una tarjeta microSD en hasta 1TB",
       "price": 106.999,
       "discount": 10,
