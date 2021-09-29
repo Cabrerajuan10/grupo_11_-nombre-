@@ -6,7 +6,7 @@ const shuffle = array => array.sort(() => Math.random() - 0.5);
 
 module.exports = {
 
-    home : (req,res) =>{
+    home : (req,res) => {
         return res.render('home', {  
             title : "Community Electro",
             ofertas : shuffle(products.filter(product => product.category === 'oferta')).splice(0,4),

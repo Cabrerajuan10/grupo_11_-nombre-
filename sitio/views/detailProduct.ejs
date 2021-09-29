@@ -218,16 +218,30 @@
         <div class="glider-contain">
           <div class="glider-detail">
             <% products.forEach(product => { %>
-              <article class="articulo-recomendado">
-                <div class="item-carousel">
-                  <a href="/product/detailProduct/<%= product.id %> ">
-                    <img src="/images/detailProduct/<%= product.image[0] %>" alt="">
-                     <h4 class="titulo"><%= product.name %> </h4>
-                      <p class="precio">$<%= product.price %> </p>
-                      <p class="descuento-articulo"><%= product.discount %>OFF%</p>
-                  </a>
-                </div>
-              </article>
+              <a href="/product/detailProduct/<%= product.id %>">
+                <div class="container">
+                  <article class="tarjeta">
+                      <figure>
+                          <img src="/images/detailProduct/<%= product.image[0] %>">
+                      </figure>
+                    
+                      <div class="contenido">
+                        <h3><%= product.name %></h3>
+                        <p class="precio-regular">Precio regular $24.999</p>
+                        <p class="precio">$<%= product.price %></p>
+                        <div class="envio-gratis">
+                          <p><i class="fas fa-truck"></i>Envio <b>GRATIS</b> a CABA Y GBA</p>
+                        </div>
+                        
+    
+                        <div class="descuento">
+                        <p><%= product.discount %>%OFF</p>
+                      </div>
+    
+                      </div>
+                  </article>
+                 </div>
+               </a>
           <% }) %>
        
              

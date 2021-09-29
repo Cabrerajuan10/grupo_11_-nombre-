@@ -35,7 +35,6 @@
     </section>
 
     <!-- medios de pago -->
-    <h4 class="section">MEDIOS DE PAGO</h4>
     <div class="box-medios-de-pago">
       <div class="glider-contain">
         <div class="glider">
@@ -89,18 +88,28 @@
         <div class="glider1">
           <% products.forEach(product => { %>
            <a href="/product/detailProduct/<%= product.id %>">
-            <div>
-              <article>
-                <div class="product">
-                  <img width="100%" src="/images/detailProduct/<%= product.image[0] %>" alt="">
-                </div>
-                <div class="descripcion">
-                  <h4><%= product.name %></h4>
-                  <p class="precio">$<%= product.price %></p>
-                  <p class="descuento"><%= product.discount %>%OFF</p>
-                </div>
+            <div class="container">
+              <article class="tarjeta">
+                  <figure>
+                      <img src="/images/detailProduct/<%= product.image[0] %>">
+                  </figure>
+                
+                  <div class="contenido">
+                    <h3><%= product.name %></h3>
+                    <p class="precio-regular">Precio regular $24.999</p>
+                    <p class="precio">$<%= product.price %></p>
+                    <div class="envio-gratis">
+                      <p><i class="fas fa-truck"></i>Envio <b>GRATIS</b> a CABA Y GBA</p>
+                    </div>
+                    
+
+                    <div class="descuento">
+                    <p><%= product.discount %>%OFF</p>
+                  </div>
+
+                  </div>
               </article>
-            </div>
+             </div>
            </a>
           <% }) %>
         </div>
@@ -134,26 +143,37 @@
     </div>
 
     <!--OFERTAS-->
-    <h4 class="ofertas-home">OFERTAS IMPERDIBLES</h4>
+    <h4 class="section">OFERTAS IMPERDIBLES</h4>
     <div class="box-articles">
       <div class="glider-contain">
         <div class="glider-ofertas">
           <% ofertas.forEach(product => { %>
            <a href="/product/detailProduct/<%= product.id %>">
-            <div>
-              <article>
-                <div class="product">
-                  <img width="100%" src="/images/detailProduct/<%= product.image[0] %>" alt="">
-                </div>
-                <div class="descripcion">
-                  <h4><%= product.name %></h4>
-                  <p class="precio">$<%= product.price %></p>
-                  <p class="descuento"><%= product.discount %>%OFF</p>
-                </div>
+            <div class="container">
+              <article class="tarjeta">
+                  <figure class="img-producto">
+                      <img src="/images/detailProduct/<%= product.image[0] %>">
+                  </figure>
+                
+                  <div class="contenido">
+                    <h3><%= product.name %></h3>
+                    <p class="precio-regular">Precio regular $24.999</p>
+                    <p class="precio">$<%= product.price %></p>
+                    <div class="envio-gratis">
+                      <p><i class="fas fa-truck"></i>Envio <b>GRATIS</b> a CABA Y GBA</p>
+                    </div>
+                    
+
+                    <div class="descuento">
+                    <p><%= product.discount %>%OFF</p>
+                  </div>
+
+                  </div>
               </article>
-            </div>
-           </a>
-          <% }) %>
+             </div>
+            </a>
+           <% }) %>
+
         </div>
         <button aria-label="Previous" class="glider-prev">«</button>
         <button aria-label="Next" class="glider-next">»</button>

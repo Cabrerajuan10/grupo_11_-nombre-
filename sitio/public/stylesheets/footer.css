@@ -13,7 +13,6 @@ footer{
     font-family: 'Montserrat';
     max-width: 100vw;
     overflow-x: hidden;
-    border: solid 1px var(--colorBlanco);
     background-color: var(--colorNaranja);
 
 }

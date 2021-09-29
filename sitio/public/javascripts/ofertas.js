@@ -15,7 +15,7 @@ new Glider(document.querySelector('.glider-ofertas'), {
           breakpoint: 480,
          settings: {
            // Set to `auto` and provide item width to adjust to viewport
-           slidesToShow: 'auto',
+           slidesToShow: '2',
            slidesToScroll: 'auto',
           itemWidth: 150,
          duration: 0.25
@@ -35,7 +35,7 @@ new Glider(document.querySelector('.glider-ofertas'), {
         // screens greater than >= 1024px
         breakpoint: 1024,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: '4',
           slidesToScroll: 1,
           itemWidth: 150,
           duration: 0.25
