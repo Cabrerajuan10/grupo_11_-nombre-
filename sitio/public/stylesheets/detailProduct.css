@@ -308,7 +308,7 @@
 
 
 
-/*TARJETAS ARTICULOS RECOMENDADOS*/
+/*!TARJETAS ARTICULOS RECOMENDADOS*/
 .detalle-producto .container{
     width: 100%;
     display: flex;
@@ -415,7 +415,9 @@
     color: var(--colorVerde);
     border: solid 1px black;
     border-radius: 50%;
-    padding: 3px;
+    padding: 5px;
+    width:24px;
+    height:24px;
 }
 
 .detalle-producto .precio-regular{

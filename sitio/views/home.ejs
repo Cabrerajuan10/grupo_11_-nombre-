@@ -86,7 +86,8 @@
     <div class="box-articles">
       <div class="glider-contain">
         <div class="glider1">
-          <% products.forEach(product => { %>
+          <% products.forEach(product => { %> 
+            <% product.length <= 12 %>  
            <a href="/product/detailProduct/<%= product.id %>">
             <div class="tarjeta-contenedor">
               <article class="tarjeta">
@@ -113,9 +114,9 @@
            </a>
           <% }) %>
         </div>
-        <button aria-label="Previous" class="glider-prev">«</button>
-        <button aria-label="Next" class="glider-next">»</button>
-        <div role="tablist" class="dots1" id="dots1"></div>
+        <button aria-label="Previous" class="glider-prev" id="prev">«</button>
+        <button aria-label="Next" class="glider-next" id="next">»</button>
+        <div role="tablist" class="dots-products" id="dots-products"></div>
       </div>
     </div>
 
@@ -138,7 +139,7 @@
         </div>
         <button aria-label="Previous" class="glider-prev">«</button>
         <button aria-label="Next" class="glider-next">»</button>
-        <div role="tablist" class="dots2" id="dots2"></div>
+        <div role="tablist" class="dots-ofertas" id="dots-ofertas"></div>
       </div>
     </div>
 
@@ -175,9 +176,9 @@
            <% }) %>
 
         </div>
-        <button aria-label="Previous" class="glider-prev">«</button>
-        <button aria-label="Next" class="glider-next">»</button>
-        <div role="tablist" class="dots1" id="dots1"></div>
+        <button aria-label="Previous" class="glider-prev" id="prev">«</button>
+        <button aria-label="Next" class="glider-next" id="next">»</button>
+        <div role="tablist" class="dots-of" id="dots-of"></div>
       </div>
     </div>
 

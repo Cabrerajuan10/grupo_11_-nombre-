@@ -140,6 +140,7 @@
     flex-wrap: wrap;
     padding-top: 20px;
     padding-bottom: 10px;
+
    
 }
 
@@ -243,6 +244,8 @@
     border: solid 1px black;
     border-radius: 50%;
     padding: 3px;
+    width:23px;
+    height:23px;
 }
 
 .home .precio-regular{

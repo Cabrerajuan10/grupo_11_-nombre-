@@ -24,7 +24,7 @@
          "smart-tv-50-uhd-4k-philips-50pud6654-77-removebg-preview.png"
       ],
       "features": [
-         "P]antalla: 5.1'",
+         "Pantalla: 5.1'",
          "Camara: 16mpx",
          "Memoria: 64gb"
       ]
@@ -40,7 +40,7 @@
          "ba5a66fe2d29273ed1e7244f3e60-removebg-preview.png"
       ],
       "features": [
-         "P]antalla: 6.1'",
+         "Pantalla: 6.1'",
          "Camara: 12mpx",
          "Memoria: 32gb"
       ]
@@ -77,9 +77,9 @@
       "id": 7,
       "name": "Parlante Bluetooth Noblex",
       "description": "El parlante Noblex MNT390 tiene un diseño compacto y liviano. Llevalo con vos donde vayas gracias a sus medidas: 62,5 cm x 25 cm 26 cm y su peso de 7,47 kg. Además, cuenta con efectos de iluminación Led Flashing Lights y True Wireles Stereo, que permite la conexión simultánea de dos unidades logrando estéreo real y una mayor potencia.",
-      "category": "nuevo",
       "price": 29.999,
       "discount": 10,
+      "category": "nuevo",
       "image": [
          "mnt390-5_1_fkwfurkcbs9aamde-removebg-preview.png"
       ],
@@ -241,23 +241,11 @@
       "id": 21,
       "name": "iphone 13",
       "description": "Especificaciones del iPhone 13 Pro · 5G (sub‑6 GHz) · Gigabit LTE con MIMO 4x4 y LAA · Wi‑Fi 6 (802.11ax) con MIMO 2x2 · Tecnología inalámbrica Bluetooth 5.0",
-      "price": 300000,
+      "price": 350000,
       "discount": 10,
       "category": "nuevo",
       "image": [
          "default.jpg"
-      ],
-      "features": []
-   },
-   {
-      "id": 22,
-      "name": "gfddfgdfg",
-      "description": "dfgdfg",
-      "price": 5000,
-      "discount": 6,
-      "category": "nuevo",
-      "image": [
-         "img-product1632729917696.png"
       ],
       "features": []
    }

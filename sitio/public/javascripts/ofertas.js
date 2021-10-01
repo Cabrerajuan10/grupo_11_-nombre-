@@ -4,10 +4,10 @@ new Glider(document.querySelector('.glider-ofertas'), {
     slidesToShow: 'auto',
     slidesToScroll: 1,
     scrollLock: true,
-    dots: 'dots',
+    dots: 'dots-of',
     arrows: {
-      prev: '.glider-prev',
-      next: '.glider-next'
+      prev: '#prev',
+      next: '#next'
     },
     responsive: [
             {
