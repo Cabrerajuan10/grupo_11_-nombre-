@@ -88,7 +88,7 @@
           <div class="descripcion">
           <p class="titulo"><%= product.name %> </p>
           <div class="descripcion-precio">
-          <span class="precio-regular">Precio regular: <span><%= product.priceRegular %>$</span></span>
+          <span class="precio-regular">Precio regular:$<span><%= product.priceRegular %></span></span>
           <span class="precio-online">Precio online:</span>
           <span class="precio">$<%= product.price %></span>
         </div>
@@ -175,31 +175,9 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <ul>
-                <li><b>Imagen</b>:
-                Tamaño de Pantalla
-                43"</li>
-                <li><b>Tipo de resolución</b>:
-                4K UHD</li>
-                <li><b>Resolución</b>:
-                3840 x 2160p</li>
-                <li><b>Formato de pantalla:</b> Plano</li>
-                <li><b>Tipo de pantalla:</b>
-                LED 4K Ultra HD</li>
-                <li><b>Caracteristicas generales:</b>Smart TV</li>
-                <li><b>Caracteristicas Smart:</b></li>
-                <li><b> Youtube:</b> si</li>
-                <li><b>Netflix:</b> si</li>
-                <li><b>Entradas hdmi:</b>2</li>
-                <li><b>Entradas usb:</b>1</li>
-                <li><b>Conexion a internet:</b>si</li>
-                <li><b>Control remoto:</b>si</li>
-                <li><b>Dimenciones:</b></li>
-                <li><b>Alto</b>: 57,2cm</li>
-                <li><b>Ancho:</b>97,9cm</li>
-                <li><b> Profundidad:</b> 7,7cm</li>
-                <li><b> Peso:</b> 8,3kg</li>
-                <li><b>Modelo:</b>UN43TU7000</li>
-                <li><b>Origen:</b>Argentina</li>
+                <% product.features.forEach(feature => { %>
+                    <li><%= feature %></li>
+                <% }) %>               
               </ul>
             </div>
           </div>
@@ -227,7 +205,7 @@
                     
                       <div class="contenido">
                         <h3><%= product.name %></h3>
-                        <p class="precio-regular">Precio regular $24.999</p>
+                        <p class="precio-regular">Precio regular: $<%= product.priceRegular %></p>
                         <p class="precio">$<%= product.price %></p>
                         <div class="envio-gratis">
                           <p><i class="fas fa-truck"></i>Envio <b>GRATIS</b> a CABA Y GBA</p>
