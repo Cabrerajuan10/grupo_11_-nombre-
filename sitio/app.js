@@ -1,3 +1,5 @@
+
+/*MODULOS REQUERIDOS DE EXPRESS*/
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -6,14 +8,22 @@ var logger = require('morgan');
 const methodOverride = require('method-override');
 const session = require('express-session');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+
+/* REQUIRIENDO ARCHIVOS DE MIDDLEWARES */
+const localUserCheck = require('./middlewares/localsUserCheck');
+const cookieCheck = require('./middlewares/cookieCheck');
+
+/* REQUIRIENDO ARCHIVOS DE RUTAS */
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
 const productRouter = require('./routes/product');
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
+
+/* CONFIGURANDO EJS COMO MOTOR DE PLANTILLAS*/
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
@@ -24,15 +34,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
 app.use(session({
-  secret : "CommunityElectro"
+  secret : "CommunityElectro",
+  resave: false,
+  saveUninitialized: true
 
 }));
 
+/* RUTAS*/
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/product',productRouter);
 
-// catch 404 and forward to error handler
+
+app.use(cookieCheck);
+app.use(localUserCheck);
+
+
+// ERROR 404 catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });

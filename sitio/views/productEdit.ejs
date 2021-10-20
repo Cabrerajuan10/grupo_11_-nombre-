@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head',{title : 'Agregar producto'}) %> 
+  <%- include('./partials/head',{title : 'Editar producto'}) %> 
 
 <body class="bg-light">
   <%- include('./partials/header') %> 
@@ -13,50 +13,59 @@
                         <h4>Editar producto</h4>
                     </div>
                     <div class="card-body">
-                        <form action="/product/update/<%= product.id %>?_method=PUT" class="row" method="POST">
-                                <div class="col-12">
-                                    <div class="form-floating mb-3">
-                                        <input name="name" type="text" class="form-control" id="name" placeholder="Nombre del producto" value="<%= product.name %>">
+                        <form action="/products/update/<%= product.id %>?_method=PUT" class="row" method="POST" >
+                                <div class="col-12 mb-3">
+                                    <div class="form-floating ">
+                                        <input type="text" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" id="name" placeholder="Nombre del producto" name="name" value="<%= product.name %>">
                                         <label for="name">Nombre del producto</label>
                                       </div>
+                                      <span class="text-danger small ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
                                 </div>
-                                <div class="col-12">
-                                    <div class="form-floating mb-3">
-                                        <textarea name="description" style="resize: none; height: 100px;" class="form-control" placeholder="Descripción del producto" id="floatingTextarea"><%= product.description %></textarea>
+                                <div class="col-12 mb-3">
+                                    <div class="form-floating ">
+                                        <textarea style="resize: none; height: 100px;" class="form-control <%= locals.errors && errors.description ? 'is-invalid' : null %>" placeholder="Descripción del producto" id="floatingTextarea" name="description"><%= product.description %></textarea>
                                         <label for="floatingTextarea">Descripción</label>
                                       </div>
+                                      <span class="text-danger small ms-2"><%= locals.errors && errors.description ? errors.description.msg : null%> </span>
+
                                 </div>
-                               <div class="col-12 col-md-6">
-                                <div class="form-floating mb-3">
-                                    <input name="price" type="number" class="form-control" id="price" value=<%= product.price %>>
+                               <div class="col-12 col-md-6 mb-3">
+                                <div class="form-floating ">
+                                    <input type="number" class="form-control <%= locals.errors && errors.price ? 'is-invalid' : null %>" id="price" name="price" value=<%= product.price %>>
                                     <label for="price">Precio</label>
                                   </div>
+                                  <span class="text-danger small ms-2"><%= locals.errors && errors.price ? errors.price.msg : null%> </span>
+
                                </div>
-                               <div class="col-12 col-md-6">
-                                <div class="form-floating mb-3">
-                                    <input name="discount" type="number" class="form-control" id="discount" value=<%= product.discount %> >
+                               <div class="col-12 col-md-6 mb-3">
+                                <div class="form-floating ">
+                                    <input type="number" class="form-control <%= locals.errors && errors.discount ? 'is-invalid' : null %>" id="discount" name="discount" value=<%= product.discount %>>
                                     <label for="discount">Descuento</label>
                                   </div>
+                                  <span class="text-danger small ms-2"><%= locals.errors && errors.discount ? errors.discount.msg : null%> </span>
+
                                </div>
-                               <div class="col-12 col-md-6">
+                               <div class="col-12 col-md-6 mb-3">
                                 <div class="form-floating">
-                                    <select name="category" class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                    <select class="form-select <%= locals.errors && errors.category ? 'is-invalid' : null %>" id="category" aria-label="Floating label select example" name="category">
+                                      <option value="" selected hidden>Selecciona la categoría</option>
                                       <% categories.forEach(category => { %>
-                                       <option value="<%= category %>" <%= category === product.category ? 'selected' : null %> ><%= firstLetter(category) %></option>
+                                       <option value="<%= category %>" <%= product.category === category ? 'selected' : null%> ><%= firstLetter(category) %></option>
                                       <% }) %>
                                     </select>
-                                    <label for="floatingSelect">Categoría</label>
+                                    <label for="category">Categoría</label>
                                   </div>
+                                  <span class="text-danger small ms-2"><%= locals.errors && errors.category ? errors.category.msg : null%> </span>
+
                                </div>
                                <div class="col-12 col-md-6">
                                 <div class="mb-3">
                                     <label for="image" class="btn btn-outline-secondary w-100 mt-2">Subir imagen</label>
-                                    <input name="image" hidden class="form-control" type="file" id="image">
+                                    <input hidden class="form-control" type="file" id="image" name="image">
                                   </div>
                                </div>
                                 <div class="col-12 mt-5">
                                     <button type="submit" class="btn btn-outline-dark w-100">Guardar</button>
-
                                 </div>
                            
                           </form>

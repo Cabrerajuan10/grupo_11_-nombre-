@@ -2,7 +2,7 @@
 <html lang="es">
 
 <!-- head -->
-<%-include('./partials/head') %>
+<%-include('./partials/head', {title : "Login"}) %>
 
 <body class="login">
 
@@ -29,7 +29,7 @@
 
                 <!-- Botones -->
                 <div class="box-button">
-                    <button class="btn-registro" type="submit">Registrate</button>
+                    <a href="/register"><button class="btn-registro" type="submit">Registrate</button></a>
                     <button class="btn-ingresar" type="submit">Iniciar sesión</button>
                 </div>
 
