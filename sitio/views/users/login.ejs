@@ -2,34 +2,46 @@
 <html lang="es">
 
 <!-- head -->
-<%-include('./partials/head') %>
+<%-include('../partials/head',{title: 'Login'}) %>
 
 <body class="login">
 
     <!-- header -->
-  <%-include('./partials/header') %>
+  <%-include('../partials/header') %>
 
     <main>
         <div class="box-contain">
             <h4>¡HOLA! PARA SEGUIR, INGRESÁ TU E-MAIL O USUARIO.</h4>
 
-            <form action="">
+            <form action="" method="POST">
 
                 <!-- email-usuario -->
                 <div class="container-input">
                     <p>E-mail o nombre de usuario</p>
-                    <input class="text" type="email" name="mail">
+                    <input class="text" type="email" name="email">
                 </div>
 
                 <!-- contraseña -->
                 <div class="container-input">
                     <p>Contraseña</p>
-                    <input class="text" type="password" name="pass" minlength="8">
+                    <input class="text" type="password" name="password" minlength="8">
                 </div>
+
+                <!-- recuerdame -->
+                <div class="box-check">
+                  <label for="remember">Recuerdame</label>
+                  <input type="checkbox" id="remember" name="remember">
+                </div>
+
+                <!-- errors -->
+                
+                <span class="text-danger"><%= locals.errores && errores.email ? errores.email.msg : null %></span>
+                
 
                 <!-- Botones -->
                 <div class="box-button">
-                    <button class="btn-registro" type="submit">Registrate</button>
+                  <a class="btn-registro" href="../users/register">Registrate</a>
+                    <!-- <button class="btn-registro" type="submit">Registrate</button> -->
                     <button class="btn-ingresar" type="submit">Iniciar sesión</button>
                 </div>
 
@@ -64,10 +76,10 @@
     </main>
 
     <!--footer-->
-  <%-include('./partials/footer') %>
+  <%-include('../partials/footer') %>
 
 <!--SCRIPTS-->
-  <%-include('./partials/scripts')%>
+  <%-include('../partials/scripts')%>
 </body>
 
 </html>
