@@ -31,6 +31,8 @@ module.exports =[
         .custom((value,{req}) =>{
             if(value !== req.body.password){
                 return false
-            }else true
+            }else{
+                return true
+            } 
         }).withMessage('Las contraseñas no coinciden'),
 ]

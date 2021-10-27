@@ -1,34 +1,58 @@
 [
-    {
-       "id": 1,
-       "name": "juan cabrera",
-       "email": "juanca41913651@gmail.com",
-       "password": "$2a$10$AEtdMOqAPM71u3kjCt5al.MFjp10kHxhn6NyTwnQpBy1/UFN6yyEq",
-       "avatar": "default.png",
-       "rol": "admin"
-    },
-    {
-       "id": 2,
-       "name": "pepito",
-       "email": "pepe@gmail.com",
-       "password": "$2a$10$as3xYH85LTHnFk9JKA6UduyH.jkzih2CJTLKoxa/W7wmP77LHKGs2",
-       "avatar": "default.png",
-       "rol": "user"
-    },
-    {
-       "id": 3,
-       "name": "juanpi",
-       "email": "juanca@gmail.com",
-       "password": "$2a$10$lpZKmj/wMw7pdWRHj4oqx.gnBcTqdDjhKrE5gMbPPMRhQ6CAltwNq",
-       "avatar": "avatar-default.jpg",
-       "rol": "user"
-    },
-    {
-       "id": 4,
-       "name": "messi",
-       "email": "lio@messi.com",
-       "password": "$2a$10$uF0WgXLODQfLvDsDW/kSH.5LnkJotoaCuhueyzLtdmoPeFWmKzsYy",
-       "avatar": "avatar-default.jpg",
-       "rol": "user"
-    }
- ]
+   {
+      "id": 1,
+      "name": "juan cabrera",
+      "email": "juanca41913651@gmail.com",
+      "password": "$2a$10$AEtdMOqAPM71u3kjCt5al.MFjp10kHxhn6NyTwnQpBy1/UFN6yyEq",
+      "avatar": "avatar-1635310335310.jpg",
+      "rol": "admin"
+   },
+   {
+      "id": 2,
+      "name": "pepito",
+      "email": "pepe@gmail.com",
+      "password": "$2a$10$as3xYH85LTHnFk9JKA6UduyH.jkzih2CJTLKoxa/W7wmP77LHKGs2",
+      "avatar": "avatar-default.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 3,
+      "name": "juanpi",
+      "email": "juanca@gmail.com",
+      "password": "$2a$10$lpZKmj/wMw7pdWRHj4oqx.gnBcTqdDjhKrE5gMbPPMRhQ6CAltwNq",
+      "avatar": "avatar-default.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 4,
+      "name": "messi",
+      "email": "lio@messi.com",
+      "password": "$2a$10$uF0WgXLODQfLvDsDW/kSH.5LnkJotoaCuhueyzLtdmoPeFWmKzsYy",
+      "avatar": "avatar-default.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 5,
+      "name": "juanca",
+      "email": "cabrerajug@gmail.com",
+      "password": "$2a$10$kOX1kMdQIXE67eoKVvkKjO29vvHnVg4w84gR5U7Toaq.mtxVqawVS",
+      "avatar": "avatar-default.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 6,
+      "name": "maxi rodriguez",
+      "email": "maxi@gmail.com",
+      "password": "$2a$10$DGDJIPpMMVcF8PRaUtK1TOfi82AaS3IR1WVKofiNv2qZkcnUJaJ26",
+      "avatar": "avatar-default.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 7,
+      "name": "matias",
+      "email": "mati@casla.com",
+      "password": "$2a$10$YDM.s5oko99OgOJzftDaFelkpxAo.JuaEBSnGQHlTWPllIQuGRX/C",
+      "avatar": "avatar-default.jpg",
+      "rol": "user"
+   }
+]
