@@ -18,24 +18,63 @@
         </ul>
       </div>
     </div>
-    <div class="menu-head">
- <% if (locals.userLogin) { %>
-          
-          <li><a class="user-head" href="/users/profile"><img width="30" height="30" class="rounded-circle" src="/images/users/<%= locals.userLogin.avatar %>" alt="">  <%= locals.userLogin.name %></a></li>
-          <li><a class="user-head" href="/users/logout">Cerrar sesión</a></li>
-          <a class="carrito-head" href="../product/carrito"><i class="fas fa-shopping-cart"></i></a>
-          <% if (locals.userLogin.rol === 'admin') { %>
-            <a class="icon-admin" href="../admin"><i class="fas fa-users-cog"></i></a>
-          <% } %> 
-        <% }else{ %>
-        <a class="user-head" href="../users/login"><i class="fas fa-user"></i></a>
-        <a class="menu-burguer" href=""><i class="fas fa-bars"></i></a>
-        <a class="carrito-head" href="../product/carrito"><i class="fas fa-shopping-cart"></i></a>
-        <% } %>
 
-   
-            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="menu-head">
+ 
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+      <% if (locals.userLogin) { %>
+        <img width="30" height="30" class="rounded-circle" src="/images/users/<%= locals.userLogin.avatar %>" alt="">  <%= locals.userLogin.name %>
+       <% } else { %>    
+          <i class="fas fa-user"></i>Mi cuenta
+          <% } %>
+
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <% if (locals.userLogin) { %>
+      <li><a class="dropdown-item" href="/users/profile">Mi perfil</a></li>
+      <% } else { %>
+      <li><a class="dropdown-item" href="/users/login">Iniciar sesion</a></li>
+      <% } %>
+      <% if (locals.userLogin) { %>
+      <li><a class="dropdown-item" href="/users/logout">Cerrar sesion</a></li>
+      <% } else { %>
+        <li><a class="dropdown-item" href="/users/register">Registrate</a></li>
+        <% } %>
+        <% if (locals.userLogin && locals.userLogin.rol === 'admin') { %>
+          <li><a class="dropdown-item" href="/admin">Administrador</a></li>
+          <% } %>
+    </ul>
+    <a class="menu-burguer" href=""><i class="fas fa-bars"></i></a>
+    <a class="carrito-head" href="../product/carrito"><i class="fas fa-shopping-cart"></i></a>
+  </div>
+
+
+
+          
+          
+        
     </div>
+    
   </div>
 
 </header> 
+
+
+
+
+
+        

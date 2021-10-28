@@ -7,7 +7,6 @@ const adminUserCheck = require ('../middlewares/adminUserCheck');
 
 /* VALIDACIONES*/
 const productValidator = require('../validations/productValidator');
-const adminUserCheck = require('../middlewares/adminUserCheck')
 
 
 /* GET home page. */

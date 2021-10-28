@@ -54,5 +54,13 @@
       "password": "$2a$10$YDM.s5oko99OgOJzftDaFelkpxAo.JuaEBSnGQHlTWPllIQuGRX/C",
       "avatar": "avatar-default.jpg",
       "rol": "user"
+   },
+   {
+      "id": 8,
+      "name": "mati95",
+      "email": "maticuervo@gmail.com",
+      "password": "$2a$10$GczntUYlxyOr6Ur0qQAoCO1fuo1DrB.s8612RVCJFsNvw3mZTZ0Wq",
+      "avatar": "avatar-1635411518397.jpg",
+      "rol": "admin"
    }
 ]
