@@ -3,7 +3,7 @@ const {check, body} = require('express-validator');
 module.exports = [
 
     check('name')
-        .notEmpty().withMessage('El nombre es obligatorio'),
+        .notEmpty().withMessage('El nombre es requerido'),
    
     body('password')
         .custom(value => {
