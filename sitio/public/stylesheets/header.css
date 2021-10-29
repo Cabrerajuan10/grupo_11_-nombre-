@@ -73,6 +73,55 @@ header .menu-bar ul{
     display: none;
 }
 
+
+/*!ESTILOS DEL NAVBAR*/
+header .navbar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+header .navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+
+}
+
+header .navbar ul {
+    margin: auto;
+
+}
+
+header .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: Roboto, "sans-serif";
+    font-size: 1.2rem;
+}
+
+header .navbar ul li::before {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(to right, #cf8642, #f3a15a, #c57a34);
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 400ms ease-out;
+}
+
+header .navbar ul li:hover::before {
+    width: 100%;
+}
+
+
+
 @media(min-width:670px){
 
     header .menu-head .user-head{
