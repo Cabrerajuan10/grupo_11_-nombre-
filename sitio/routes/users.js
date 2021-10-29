@@ -3,7 +3,7 @@ const router = express.Router();
 const loginValidator = require('../validations/loginValidator');
 const registerValidator = require('../validations/registerValidator');
 
-const userLoginChecnk = require ('../middlewares/userLoginCheck');
+const userLoginCheck = require ('../middlewares/userLoginCheck');
 const notEntry = require('../middlewares/notEntry');
 const profileValidator = require('../validations/profileValidator');
 const upload = require('../middlewares/muterImageUser');
@@ -18,7 +18,7 @@ router
 .get('/login',notEntry, login)
 .post('/login', loginValidator, processLogin)
 .get('/logout',logout)
-.get('/profile',userLoginChecnk,profile)
+.get('/profile',userLoginCheck,profile)
 .post('/profile',upload.single('avatar'),profileValidator, update)
 
 

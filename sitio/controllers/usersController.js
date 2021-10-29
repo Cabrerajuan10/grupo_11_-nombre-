@@ -3,6 +3,7 @@ const path = require ('path');
 const fs = require('fs');
 let users = require(path.join(__dirname,'../data/users.json'))
 const {validationResult} = require('express-validator');
+const { destroy } = require('./productsController');
 
 module.exports = {
 
@@ -77,6 +78,7 @@ module.exports = {
 
     logout : (req,res) =>{
         req.session.destroy()
+        res.clearCookie('communityElectro')
         res.redirect('/')
     },
 
