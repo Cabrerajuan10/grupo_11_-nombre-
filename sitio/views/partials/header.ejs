@@ -40,23 +40,23 @@
       <% if (locals.userLogin) { %>
         <img width="30" height="30" class="rounded-circle" src="/images/users/<%= locals.userLogin.avatar %>" alt="">  <%= locals.userLogin.name %>
        <% } else { %>    
-          <i class="fas fa-user"></i>Mi cuenta
+          <i class="fas fa-user"></i> Mi cuenta
           <% } %>
 
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
       <% if (locals.userLogin) { %>
-      <li><a class="dropdown-item" href="/users/profile">Mi perfil</a></li>
+      <li><a class="dropdown-item" href="/users/profile"><i class="far fa-user-circle"></i> Mi perfil</a></li>
       <% } else { %>
-      <li><a class="dropdown-item" href="/users/login">Iniciar sesion</a></li>
+      <li><a class="dropdown-item" href="/users/login"><i class="far fa-user-circle"></i> Iniciar sesion</a></li>
       <% } %>
       <% if (locals.userLogin) { %>
-      <li><a class="dropdown-item" href="/users/logout">Cerrar sesion</a></li>
+      <li><a class="dropdown-item" href="/users/logout"><i class="fas fa-power-off"></i> Cerrar sesion</a></li>
       <% } else { %>
-        <li><a class="dropdown-item" href="/users/register">Registrate</a></li>
+        <li><a class="dropdown-item" href="/users/register"><i class="fas fa-sign-in-alt"></i> Registrate</a></li>
         <% } %>
         <% if (locals.userLogin && locals.userLogin.rol === 'admin') { %>
-          <li><a class="dropdown-item" href="/admin">Administrador</a></li>
+          <li><a class="dropdown-item" href="/admin"><i class="fas fa-users-cog"></i> Administrador</a></li>
           <% } %>
     </ul>
     <a class="menu-burguer" href=""><i class="fas fa-bars"></i></a>

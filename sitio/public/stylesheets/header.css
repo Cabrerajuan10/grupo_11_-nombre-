@@ -1,3 +1,4 @@
+
 header{
     background-color: var(--colorCeleste);
     height: 90px;
@@ -120,6 +121,26 @@ header .navbar ul li:hover::before {
     width: 100%;
 }
 
+
+header .dropdown-item{
+    font-weight: 500;
+    width: 70%;
+    
+}
+
+header .dropdown-menu{   
+    margin: 0 auto;
+    overflow-x: hidden;
+    
+}
+
+header .dropdown-menu li{   
+    margin: 0 auto;
+    text-align: center;
+    background: #f3f2f0;
+    border: solid 1px black;
+    
+}
 
 
 @media(min-width:670px){
