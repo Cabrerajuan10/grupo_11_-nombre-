@@ -1,9 +1,9 @@
 # Daily sprint 6
-5/9
+5/11
 #### Que hice ayer?
 - Juan: avance con el diagrama.
 - Mati: comenzo las configuracion para las migraciones.
-- Maxi: no logro avanzar con la tarea.
+- Maxi: avance con el diagrama.
 
 #### Que voy a hacer hoy?
 - Juan: termino el diagrama. 
