@@ -22,12 +22,12 @@
 8/11
 #### Que hice ayer?
 - Juan: Reunion con maxi, terminamos el diagrama.(Repaso de migraciones).
-- Mati: 
+- Mati: Trabajo con las migraciones
 - Maxi: Reunion con juan para terminar el diagrama.
 
 #### Que voy a hacer hoy?
 - Juan: Se reunira con el equipo para repartir tareas(Logica del siders-tablas secundarias).
-- Mati: 
+- Mati: Se reunira con el equipo para repartir tareas(Logica del siders-tablas).
 - Maxi: Se reunira con el equipo para repartir tareas(Logica del siders-tablas primarias o productos).
 
 #### Bloqueadores:
