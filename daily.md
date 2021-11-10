@@ -17,6 +17,7 @@
 #### Action items:
 - maxi y mati : apoyar a juan en el diagrama.
 
+
 # Daily sprint 6
 
 8/11
@@ -34,5 +35,25 @@
 Todos: Tareas no repartidas.
 
 #### Action items:
-Todos: Reunion para repartir tareas (Hora propuesta: 21:30hs.)
-- 
+- [ ] Todos: Reunion para repartir tareas (Hora propuesta: 21:30hs.)
+
+
+
+
+# Daily sprint 6
+9/11
+#### Que hice ayer?
+- Juan: 
+- Mati: Termino las migraciones de los modelos.
+- Maxi: Repaso de contenidos para entender modelos.
+
+#### Que voy a hacer hoy?
+- Juan: 
+- Mati: Comienza logica del siders-tablas.
+- Maxi: Comienza logica del siders-tablas primarias o productos.
+
+#### Bloqueadores:
+
+
+#### Action items:
+- [ ] Todos: Reunion para repartir tareas (Hora propuesta: 21hs).
