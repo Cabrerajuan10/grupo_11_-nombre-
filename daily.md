@@ -43,7 +43,7 @@ Todos: Tareas no repartidas.
 # Daily sprint 6
 9/11
 #### Que hice ayer?
-- Juan: 
+- Juan: no pude relizar la terea por falta de tiempo.
 - Mati: Termino las migraciones de los modelos.
 - Maxi: Repaso de contenidos para entender modelos.
 
