@@ -75,4 +75,23 @@ Todos: Tareas no repartidas.
  juan - maxi- mati: organizacion de tiempos.
 
 #### Action items:
+
+
+# Daily sprint 6
+12/11
+#### Que hice ayer?
+- Juan: me reuni con maxi avanzamos con lo seeders.
+- Mati: estuvo trabajando en contoladores con bases de datos.
+- Maxi: 
+
+#### Que voy a hacer hoy?
+- Juan: hoy terminamos la seeders y comenzar con el crud.
+- Mati: Comenzar a trabajar en el crud.
+- Maxi: 
+
+#### Bloqueadores:
+ .
+
+#### Action items:
 - 
+
