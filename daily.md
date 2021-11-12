@@ -63,16 +63,16 @@ Todos: Tareas no repartidas.
 11/11
 #### Que hice ayer?
 - Juan: me reuni con maxi para organizarnos con las tareas.
-- Mati: 
+- Mati: Trabajar en las seeders y probar migraciones
 - Maxi: me reuni con maxi para organizarnos con las tareas.
 
 #### Que voy a hacer hoy?
 - Juan: hacer el punto 2 y renion con maxi para hacer las seeders.
-- Mati: 
+- Mati: Comenzar a trabajar en el crud
 - Maxi: renion con juan para hacer las seeders.
 
 #### Bloqueadores:
-- juan - maxi: organizacion de tiempos.
+ juan - maxi- mati: organizacion de tiempos.
 
 #### Action items:
 - 
