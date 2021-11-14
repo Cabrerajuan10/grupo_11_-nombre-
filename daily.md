@@ -43,7 +43,7 @@ Todos: Tareas no repartidas.
 # Daily sprint 6
 9/11
 #### Que hice ayer?
-- Juan: 
+- Juan: no pude relizar la terea por falta de tiempo.
 - Mati: Termino las migraciones de los modelos.
 - Maxi: Repaso de contenidos para entender modelos.
 
@@ -57,3 +57,41 @@ Todos: Tareas no repartidas.
 
 #### Action items:
 - [ ] Todos: Reunion para repartir tareas (Hora propuesta: 21hs).
+
+
+# Daily sprint 6
+11/11
+#### Que hice ayer?
+- Juan: me reuni con maxi para organizarnos con las tareas.
+- Mati: Trabajar en las seeders y probar migraciones
+- Maxi: me reuni con maxi para organizarnos con las tareas.
+
+#### Que voy a hacer hoy?
+- Juan: hacer el punto 2 y renion con maxi para hacer las seeders.
+- Mati: Comenzar a trabajar en el crud
+- Maxi: renion con juan para hacer las seeders.
+
+#### Bloqueadores:
+ juan - maxi- mati: organizacion de tiempos.
+
+#### Action items:
+
+
+# Daily sprint 6
+12/11
+#### Que hice ayer?
+- Juan: me reuni con maxi avanzamos con lo seeders.
+- Mati: estuvo trabajando en contoladores con bases de datos.
+- Maxi: 
+
+#### Que voy a hacer hoy?
+- Juan: hoy terminamos la seeders y comenzar con el crud.
+- Mati: Comenzar a trabajar en el crud.
+- Maxi: 
+
+#### Bloqueadores:
+ .
+
+#### Action items:
+- 
+
