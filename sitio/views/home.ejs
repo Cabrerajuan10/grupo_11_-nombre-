@@ -86,13 +86,12 @@
     <div class="box-articles">
       <div class="glider-contain">
         <div class="glider1">
-          <% products.forEach(product => { %> 
-            <% product.length <= 12 %>  
+          <% products.forEach(product => { %>  
            <a href="/product/detailProduct/<%= product.id %>">
             <div class="tarjeta-contenedor">
               <article class="tarjeta">
                   <figure>
-                      <img src="/images/detailProduct/<%= product.image[0] %>">
+                      <img src="/images/detailProduct/<%= product.images[0].file %>">
                   </figure>
                 
                   <div class="contenido">
@@ -104,9 +103,7 @@
                     </div>
                     
 
-                    <div class="descuento">
-                    <p><%= product.discount %>%OFF</p>
-                  </div>
+                    
 
                   </div>
               </article>
@@ -153,7 +150,7 @@
             <div class="tarjeta-contenedor">
               <article class="tarjeta">
                   <figure class="img-producto">
-                      <img src="/images/detailProduct/<%= product.image[0] %>">
+                      <img src="/images/detailProduct/<%= product.images[0].file %>">
                   </figure>
                 
                   <div class="contenido">

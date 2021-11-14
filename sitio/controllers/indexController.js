@@ -1,26 +1,70 @@
-const fs = require('fs');
-const path = require ('path');
-const products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'));
-const categories = require('../data/categories.json');
-const shuffle = array => array.sort(() => Math.random() - 0.5);
+const db = require('../database/models')
+const {Op,Sequelize} = require('sequelize')
+
 
 module.exports = {
+    home: (req, res) => {
+        let ofertas = db.Product.findAll({
+            where: {
+                discount: {
+                    [Op.gte]: 25
+                },
+                show: true
+            },
 
-    home : (req,res) => {
-        return res.render('home',{
-            title : "Community Electro",
-            ofertas : shuffle(products.filter(product => product.category === 'oferta')).splice(0,4),
-            products:  JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8')),
-            categories
+            limit: 4,
+            include: [
+                'images',
+                'category'
+            ],
+            order: Sequelize.literal('rand()')
         })
+        let products = db.Product.findAll({
+            where: {
+                categoryId: {
+                    [Op.like]: 1
+                }
+            },
+            limit: 6,
+            include: [
+                'images',
+                'category'
+            ],
+            order: Sequelize.literal('rand()')
+        })
+
+        Promise.all([ofertas, products])
+
+            .then(([ofertas, products]) => {
+                return res.render('home', {
+                    title: 'CommunityElectro',
+                    ofertas,
+                    products
+
+                });
+            })
+            .catch(error => console.log(error))
+
+
+
     },
+    admin: (req, res) => {
+        let products = db.Product.findAll({
+            include: ['images', 'category']
 
-    admin : (req,res) => {
-        return res.render('admin',{
-            title : "Administración",
-            products: JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8')),
-            categories
         })
+        let categories = db.Category.findAll()
+
+        Promise.all([products, categories])
+            .then(([products, categories]) => {
+                return res.render('admin', {
+                    title: "Administración",
+                    products,
+                    categories
+                })
+            })
+            .catch(error => console.log(error))
+
     }
 
 }

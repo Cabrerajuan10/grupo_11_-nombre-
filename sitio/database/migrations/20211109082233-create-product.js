@@ -20,6 +20,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DECIMAL(8,2)
       },
+      priceRegular: {
+        allowNull: false,
+        type: Sequelize.DECIMAL(8,2)
+      },
       discount: {
         allowNull: false,
         type: Sequelize.INTEGER,
@@ -33,6 +37,10 @@ module.exports = {
           },
           key: 'id'
         }
+      },
+      show: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
       },
       createdAt: {
         allowNull: false,
