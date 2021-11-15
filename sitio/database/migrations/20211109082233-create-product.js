@@ -9,25 +9,28 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        allowNull: false,
-        type: Sequelize.STRING(255)
+        type: Sequelize.STRING,
+        allowNull: false
+        
       },
       description: {
+        type: Sequelize.STRING(500),
         allowNull: false,
-        type: Sequelize.STRING(500)
+        
       },
       price: {
-        allowNull: false,
-        type: Sequelize.DECIMAL(8,2)
+        type: Sequelize.DECIMAL(8,2),
+        allowNull: false
+        
       },
       priceRegular: {
-        allowNull: false,
-        type: Sequelize.DECIMAL(8,2)
+        type: Sequelize.DECIMAL(8,2),
+        allowNull: false
+        
       },
       discount: {
-        allowNull: false,
         type: Sequelize.INTEGER,
-        defaulValue: 0
+        defaultValue: 0
       },
       categoryId: {
         type: Sequelize.INTEGER,
@@ -52,7 +55,8 @@ module.exports = {
       },
       deletedAt: {
         type: Sequelize.DATE,
-        defaultValue : null
+        defaultValue : null,
+        
       }
     });
   },
