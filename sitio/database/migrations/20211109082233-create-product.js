@@ -39,12 +39,12 @@ module.exports = {
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue : null
       },
-      deleteAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+      deletedAt: {
+        type: Sequelize.DATE,
+        defaultValue : null
       }
     });
   },
