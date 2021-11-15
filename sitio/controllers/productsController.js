@@ -157,7 +157,7 @@ module.exports = {
         let products = db.Product.findAll({
             where: {
                 name: {
-                    [Op.substring]: req.query.keyword
+                    [Op.substring]: req.query.search
                 }
             },
             include: ['images', 'category']

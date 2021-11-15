@@ -45,7 +45,7 @@
       "email": "maxi@gmail.com",
       "password": "$2a$10$DGDJIPpMMVcF8PRaUtK1TOfi82AaS3IR1WVKofiNv2qZkcnUJaJ26",
       "avatar": "avatar-default.jpg",
-      "rol": "user"
+      "rol": "admin"
    },
    {
       "id": 7,
