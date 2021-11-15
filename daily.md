@@ -93,5 +93,25 @@ Todos: Tareas no repartidas.
  .
 
 #### Action items:
-- 
+
+
+
+# Daily sprint 6
+15/11
+#### Que hice ayer?
+- Juan: Se termino seeders-crud de usuarios y casi todo el crud de produtos.
+- Mati: Se termino seeders-crud de usuarios y casi todo el crud de produtos.
+- Maxi: Se termino seeders-crud de usuarios y casi todo el crud de produtos.
+
+#### Que voy a hacer hoy?
+- Juan: Corregir errores y entregar spirnt
+- Mati: Corregir errores y entregar spirnt
+- Maxi: Corregir errores y entregar spirnt
+
+#### Bloqueadores:
+ juan - maxi- mati: No encuentro el error en los metodos de eliminar y buscador producto.
+
+#### Action items:
+- Consulta con los profes.
+- Reunion de equipo despues de las 19hs.
 
