@@ -201,19 +201,19 @@ module.exports = {
             .catch(error => console.log(error))
     },
     destroy: (req, res) => {
-       
+
         db.Product.destroy({
-            where : {
-                id : req.params.id,
-            }
+            where: {
+              productId: req.params.id,
+            },
+          })
+
+        .then( () => {
+            return res.redirect('/admin')
         })
-            .then( () => {
-                return res.redirect('/admin')
-            })
-            .catch(error => console.log(error))
-
+        .catch(error => console.log(error))
     },
-
+   
     carrito: (req,res) => {
         return res.render('carrito', {
             title: 'Carrito'
