@@ -201,13 +201,21 @@ module.exports = {
             .catch(error => console.log(error))
     },
     destroy: (req, res) => {
-       
-        db.Product.destroy({
+
+        let resultImage = db.Image.destroy({
             where : {
-                id : req.params.id,
+                productId : req.param.id
             }
-        })
-            .then( () => {
+        });
+        let resultProduct = db.Product.destroy({
+            where : {
+                id : req.param.id
+            }
+        });
+
+        Promise.all([resultImage, resultProduct])
+
+        .then( () => {
                 return res.redirect('/admin')
             })
             .catch(error => console.log(error))

@@ -20,7 +20,7 @@
           <p>E-mail</p>
           <input class="text" type="email" name="email">
           <!-- errors -->
-          <span class="text-danger"><%= locals.errores && errores.email ? errores.email.msg : null %></span>
+          <span class="text-danger"><%= locals.errores && errores.email ? errores.email.msg : null %><%= typeof error != 'undefined' && error.email ? error.email : null %></span>
         </div>
 
         <!-- nombre de usurio -->
