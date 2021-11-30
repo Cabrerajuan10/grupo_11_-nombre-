@@ -1,10 +1,6 @@
 const bcrypt = require('bcryptjs');
-const path = require('path');
 const fs = require('fs');
-let users = require(path.join(__dirname, '../data/users.json'))
 const { validationResult } = require('express-validator');
-const { destroy } = require('./productsController');
-
 const db = require('../database/models');
 
 module.exports = {

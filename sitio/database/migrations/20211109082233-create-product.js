@@ -10,23 +10,19 @@ module.exports = {
       },
       name: {
         type: Sequelize.STRING,
-        allowNull: false
-        
+        allowNull: false,
       },
       description: {
-        type: Sequelize.STRING(500),
+        type: Sequelize.STRING(600),
         allowNull: false,
-        
       },
       price: {
-        type: Sequelize.DECIMAL(8,2),
-        allowNull: false
-        
+        type: Sequelize.DECIMAL(10,2),
+        allowNull: false,
       },
       priceRegular: {
-        type: Sequelize.DECIMAL(8,2),
-        allowNull: false
-        
+        type: Sequelize.DECIMAL(10,2),
+        allowNull: false,
       },
       discount: {
         type: Sequelize.INTEGER,
@@ -34,11 +30,11 @@ module.exports = {
       },
       categoryId: {
         type: Sequelize.INTEGER,
-        references: {
-          model:{
-            tableName:'Categories' 
+        references : {
+          model : {
+            tableName : 'Categories'
           },
-          key: 'id'
+          key : 'id'
         }
       },
       show: {
@@ -55,8 +51,7 @@ module.exports = {
       },
       deletedAt: {
         type: Sequelize.DATE,
-        defaultValue : null,
-        
+        defaultValue : null
       }
     });
   },

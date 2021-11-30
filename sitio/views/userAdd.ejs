@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head',{title : 'Agregar Usuario'}) %> 
+
+<body class="bg-light">
+  <%- include('./partials/header') %> 
+
+    <main class="container">
+        <div class="row">
+            <div class="col-12 col-md-10 col-lg-8 mt-5 mx-auto">
+                <div class="card">
+                    <div class="card-header text-light bg-dark">
+                        <h4>Agregar Usuario</h4>
+                    </div>
+                    <div class="card-body">
+                        <form class="row" method="POST" enctype="multipart/form-data">
+                                <div class="col-12 mb-3">
+                                    <div class="form-floating ">
+                                        <input type="text" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" id="name" placeholder="Nombre de usuario" name="name" value="<%= locals.old && old.name ? old.name : null %>">
+                                        <label for="name">Nombre del usuario</label>
+                                      </div>
+                                      <span class="text-danger small ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="form-floating ">
+                                        <input type="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" placeholder="Email del usuario" id="floatingTextarea" name="email"><%= locals.old && old.email ? old.email : null %></input>
+                                        <label for="floatingTextarea">Email</label>
+                                      </div>
+                                      <span class="text-danger small ms-2"><%= locals.email && errors.email ? errors.email.msg : null%> </span>
+
+                                </div>
+
+                                <div class="col-12 mb-3">
+                                  <div class="form-floating ">
+                                      <input type="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" placeholder="Contraseña" id="floatingTextarea" name="password"><%= locals.old && old.password ? old.password : null %></input>
+                                      <label for="floatingTextarea">Contraseña</label>
+                                    </div>
+                                    <span class="text-danger small ms-2"><%= locals.password && errors.password ? errors.password.msg : null%> </span>
+
+                              </div>
+
+                              <div class="col-12 col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <select class="form-select <%= locals.errors && errors.category ? 'is-invalid' : null %>" id="rol" aria-label="Floating label select example" name="rolId">
+                                      <option value="" selected hidden>Selecciona el rol de usuario</option>
+                                      <% rols.forEach(rol => { %>
+                                       <option value="<%= rol.id %>" <%= locals.old && old.user.rolId === rol.name  ? 'selected' : null%> ><%= rol.name %></option>
+                                      <% }) %>
+                                    </select>
+                                    <label for="rol">Roles</label>
+                                  </div>
+                                  <span class="text-danger small ms-2"><%= locals.errors && errors.category ? errors.category.msg : null%> </span>
+
+                               </div>
+
+
+                               <div class="col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label for="avatar" class="btn btn-outline-secondary w-100 mt-2">Subir imagen</label>
+                                    <input hidden class="form-control" type="file" id="avatar" name="avatar">
+                                  </div>
+                               </div>
+                                <div class="col-12 mt-5">
+                                    <button type="submit" class="btn btn-outline-dark w-100">Guardar</button>
+                                </div>
+                           
+                          </form>
+                    </div>
+                   
+                </div>
+            </div>
+           
+        </div>
+    </main>
+
+    <%- include('./partials/scripts') %> 
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 'use strict';
 
-const imagenes = ['samsung-s20-1.png','img-phone-02.png',
+const imagenes = ['samsung-s20-1.png',
 'smart-tv-50-uhd-4k-philips-50pud6654-77-removebg-preview.png',
 '169017-800-auto-removebg-preview.png',
 'D_NQ_NP_894561-MLA44774447406_022021-O-removebg-preview.png',

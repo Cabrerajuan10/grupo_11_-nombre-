@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-     static associate(models) {
+    static associate(models) {
       // define association here
       Product.hasMany(models.Image,{
         as : 'images',
@@ -28,14 +28,13 @@ module.exports = (sequelize, DataTypes) => {
       })
     }
   };
-
   Product.init({
     name: {
       type : DataTypes.STRING,
       allowNull :false
     }, 
     description: {
-     type : DataTypes.STRING(800),
+     type : DataTypes.STRING(600),
     },
     price: DataTypes.DECIMAL,
     priceRegular: DataTypes.DECIMAL,
@@ -44,7 +43,7 @@ module.exports = (sequelize, DataTypes) => {
     show : DataTypes.BOOLEAN
   }, {
     sequelize,
-    modelName: 'Product'
+    modelName: 'Product',
   });
   return Product;
 };

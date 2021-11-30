@@ -8,7 +8,7 @@ module.exports = {
        {
         name : 'Mati',
         email : 'mati@communityElectro.com',
-        password : bcrypt.hashSync('123123',10),
+        password : bcrypt.hashSync('123123123',10),
         avatar : 'avatar-1635310335310.jpg',
         rolId : 2,
         createdAt : new Date,

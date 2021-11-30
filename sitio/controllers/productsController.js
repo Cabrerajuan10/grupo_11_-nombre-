@@ -23,11 +23,12 @@ module.exports = {
 
 
         if (errors.isEmpty()) {
-            const { name, description, price, priceRegular, discount, category } = req.body;
+            const { name, description, features, price, priceRegular, discount, category } = req.body;
 
             db.Product.create({
                 name : name.trim(),
                 description : description.trim(),
+                features : features.trim(),
                 price,
                 priceRegular,
                 discount,
@@ -108,12 +109,13 @@ module.exports = {
         let errors = validationResult(req);
 
         if (errors.isEmpty()) {
-            const { name, description, price, priceRegular, discount, category, show } = req.body;
+            const { name, description,features, price, priceRegular, discount, category, show } = req.body;
          
             db.Product.update(
                 {
                     name : name.trim(),
                     description : description.trim(),
+                    features: features.trim(),
                     price,
                     priceRegular,
                     discount,
@@ -204,12 +206,12 @@ module.exports = {
 
         let resultImage = db.Image.destroy({
             where : {
-                productId : req.param.id
+                productId : req.params.id
             }
         });
         let resultProduct = db.Product.destroy({
             where : {
-                id : req.param.id
+                id : req.params.id
             }
         });
 

@@ -29,6 +29,14 @@
                                       <span class="text-danger small ms-2"><%= locals.errors && errors.description ? errors.description.msg : null%> </span>
 
                                 </div>
+                                 <div class="col-12 mb-3">
+                                    <div class="form-floating ">
+                                        <textarea style="resize: none; height: 100px;" class="form-control <%= locals.errors && errors.features ? 'is-invalid' : null %>" placeholder="Caracteristicas tecnicas" id="floatingTextarea" name="features"><%= locals.old && old.features ? old.features : null %></textarea>
+                                        <label for="floatingTextarea">Caracteristicas</label>
+                                      </div>
+                                      <span class="text-danger small ms-2"><%= locals.errors && errors.features ? errors.features.msg : null%> </span>
+
+                                </div>
                                <div class="col-12 col-md-6 mb-3">
                                 <div class="form-floating ">
                                     <input type="number" class="form-control <%= locals.errors && errors.price ? 'is-invalid' : null %>" id="price" name="price" value=<%= locals.old && old.price ? old.price : null %>>
@@ -61,6 +69,7 @@
                                        <option value="<%= category.id %>" <%= locals.old && old.category.id === category.id  ? 'selected' : null%> ><%= firstLetter(category.name) %></option>
                                       <% }) %>
                                     </select>
+                                    
                                     <label for="category">Categoría</label>
                                   </div>
                                   <span class="text-danger small ms-2"><%= locals.errors && errors.category ? errors.category.msg : null%> </span>

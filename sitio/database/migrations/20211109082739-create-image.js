@@ -13,20 +13,20 @@ module.exports = {
       },
       productId: {
         type: Sequelize.INTEGER,
-        references: {
-          model:{
-            tableName:'Products' 
+        references : {
+          model : {
+            tableName : 'Products'
           },
-          key: 'id'
+          key : 'id'
         },
-        oneDelete: 'cascade'
+        onDelete : 'cascade'
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
+        defaultValue : null,
         type: Sequelize.DATE
       }
     });

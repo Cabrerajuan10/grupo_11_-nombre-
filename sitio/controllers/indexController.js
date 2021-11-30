@@ -4,6 +4,7 @@ const {Op,Sequelize} = require('sequelize')
 
 module.exports = {
     home: (req, res) => {
+        
         let ofertas = db.Product.findAll({
             where: {
                 discount: {
@@ -49,18 +50,24 @@ module.exports = {
 
     },
     admin: (req, res) => {
+        
         let products = db.Product.findAll({
             include: ['images', 'category']
 
         })
         let categories = db.Category.findAll()
+        let users = db.User.findAll({include: ['rol']})
+        let rols = db.Rol.findAll()
+        
 
-        Promise.all([products, categories])
-            .then(([products, categories]) => {
+        Promise.all([products, categories,users,rols])
+            .then(([products, categories,users,rols]) => {
                 return res.render('admin', {
                     title: "Administración",
                     products,
-                    categories
+                    categories,
+                    users,
+                    rols
                 })
             })
             .catch(error => console.log(error))

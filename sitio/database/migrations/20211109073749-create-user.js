@@ -10,30 +10,28 @@ module.exports = {
       },
       name: {
         type: Sequelize.STRING(50),
-        allowNull: false
+        allowNull: false,
       },
       email: {
         type: Sequelize.STRING,
-        allowNull: false
-        
+        allowNull: false,
       },
       password: {
         type: Sequelize.STRING,
-        allowNull: false
-        
+        allowNull: false,
       },
       avatar: {
         type: Sequelize.STRING,
-        defaultValue:'avatar-default.jpg'
+        defaultValue : 'default.png'
       },
       rolId: {
         type: Sequelize.INTEGER,
-        defaultValue: 1,
-        references: {
-          model:{
-            tableName:'Rols' 
+        defaultValue :  1,
+        references : {
+          model : {
+            tableName : 'Rols'
           },
-          key: 'id'
+          key : 'id'
         }
       },
       createdAt: {

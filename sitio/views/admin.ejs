@@ -5,85 +5,240 @@
 <body class="bg-light">
   <%- include('./partials/header') %> 
   <main class="container">
-    <div class="row">
-      <div class="col-12 mx-auto">
-        <div class="card shadow mt-5">
-          <div class="card-header">
-            <div class="row">
-              <div class="col-12 col-md-2">
-                <%= title %>
+
+    <!--OPCIONES PRODUCTOS/USUARIOS-->
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Productos</button>
+      </li>
+      
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Usuarios</button>
+      </li>
+    </ul>
+
+   
+    <div class="tab-content" id="pills-tabContent"class="tab-products">
+       <!--TABLA DE PRODUCTOS-->
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+        <div class="row">
+          <div class="col-12 mx-auto">
+            <div class="card shadow mt-5">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-12 col-md-2">
+                    <%= title %>
+                  </div>
+                  <div class="col-12 col-md-4">
+                   <form class="row" action="/product/search" method="GET">
+                     <div class="col-9">
+                      <input type="text" class="form-control" name="search" placeholder="Buscar producto...">
+                     </div>
+                     <button style="display:flex; justify-content: center;" class="col-3  btn btn-outline-info" type="submit">Buscar</button>
+                   </form>
+                   </div>
+                   <div class="col-12 col-md-4">
+                   <form class="row" action="/product/filter" method="GET">
+                    <div class="col-9">
+                     <select name="category" class="form-select">
+                       <option value="" selected hidden>Filtrar por...</option>
+                       <% categories.forEach(category => { %>
+                        <option value="<%= category.id %>"><%= category.name %></option>
+                        <% }) %>
+                     </select>
+                    </div>
+                    <button style="display:flex; justify-content: center;" class="col-3 btn btn-outline-info" type="submit">Filtrar</button>
+                  </form>
+                  </div>
+                  <div class="col-12 col-md-2 text-end">
+                    <div>
+                      <a class="btn btn-info " href="/product/add">Agregar</a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-12 col-md-4">
-               <form class="row" action="/product/search" method="GET">
-                 <div class="col-9">
-                  <input type="text" class="form-control" name="search" placeholder="Buscar producto...">
-                 </div>
-                 <button style="display:flex; justify-content: center;" class="col-3  btn btn-outline-info" type="submit">Buscar</button>
-               </form>
-               </div>
-               <div class="col-12 col-md-4">
-               <form class="row" action="/product/filter" method="GET">
-                <div class="col-9">
-                 <select name="category" class="form-select">
-                   <option value="" selected hidden>Filtrar por...</option>
-                   <% categories.forEach(category => { %>
-                    <option value="<%= category.id %>"><%= category.name %></option>
+              <div class="table-responsive" class="card-body">
+                <table class="table table-hover">
+                  <thead class="table-dark">
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Imagen</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Precio</th>
+                      <th scope="col">Descuento</th>
+                      <th scope="col">Categoría</th>
+                      <th scope="col">Acciones</th>
+                    </tr>
+                   
+                  </thead>
+                  <tbody>
+                    <% products.forEach((product,index) => { %>
+                      <tr>
+                        <th scope="row"><%= index + 1 %> </th>
+                        <td><img width="100" src="/images/detailProduct/<%= product.images[0].file %>" alt=""></td>
+                        <td><%= product.name %></td>
+                        <td><%= product.price %></td>
+                        <td><%= product.discount %></td>
+                        <td><%= product.category.name %></td>
+                        <td class="d-flex justify-content-around">
+                          <a href="/product/edit/<%= product.id %>" class="btn btn-sm btn-success" style="width: 35px;"><i class="fas fa-edit"></i></a>
+                          <div>
+                            <form action="/product/destroy/<%= product.id %>?_method=DELETE" method="POST">
+                              <button type="submit" class="btn btn-sm btn-danger" style="width: 35px;"><i class="fas fa-trash"></i></button>
+                            </form>
+                          </div>
+                        </td>
+                      </tr>
                     <% }) %>
-                 </select>
-                </div>
-                <button style="display:flex; justify-content: center;" class="col-3 btn btn-outline-info" type="submit">Filtrar</button>
-              </form>
-              </div>
-              <div class="col-12 col-md-2 text-end">
-                <div>
-                  <a class="btn btn-info " href="/product/add">Agregar</a>
-                </div>
+                  </tbody>
+                </table>
               </div>
             </div>
-          </div>
-          <div class="table-responsive" class="card-body">
-            <table class="table table-hover">
-              <thead class="table-dark">
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Imagen</th>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Precio</th>
-                  <th scope="col">Descuento</th>
-                  <th scope="col">Categoría</th>
-                  <th scope="col">Acciones</th>
-                </tr>
-               
-              </thead>
-              <tbody>
-                <% products.forEach((product,index) => { %>
-                  <tr>
-                    <th scope="row"><%= index + 1 %> </th>
-                    <td><img width="100" src="/images/detailProduct/<%= product.images[0].file %>" alt=""></td>
-                    <td><%= product.name %></td>
-                    <td><%= product.price %></td>
-                    <td><%= product.discount %></td>
-                    <td><%= product.category.name %></td>
-                    <td class="d-flex justify-content-around">
-                      <a href="/product/edit/<%= product.id %>" class="btn btn-sm btn-success" style="width: 35px;"><i class="fas fa-edit"></i></a>
-                      <div>
-                        <form action="/product/destroy/<%= product.id %>?_method=DELETE" method="POST">
-                          <button type="submit" class="btn btn-sm btn-danger" style="width: 35px;"><i class="fas fa-trash"></i></button>
-                        </form>
-                      </div>
-                    </td>
-                  </tr>
-                <% }) %>
-              </tbody>
-            </table>
+          
           </div>
         </div>
-      
+
+
       </div>
-    </div>
+
+
+<!-------------------------------------------------------------------------------------------------->
+
+
+    
+      <!--TABLA DE USUARIOS-->
+      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+        <div class="row">
+          <div class="col-12 mx-auto">
+            <div class="card shadow mt-5">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-12 col-md-2">
+                    <%= title %>
+                  </div>
+                  <div class="col-12 col-md-4">
+                   <form class="row" action="/users/userSearch" method="GET">
+                     <div class="col-9">
+                      <input type="text" class="form-control" name="search" placeholder="Buscar usuario...">
+                     </div>
+                     <button style="display:flex; justify-content: center;" class="col-3  btn btn-outline-info" type="submit">Buscar</button>
+                   </form>
+                   </div>
+                   <div class="col-12 col-md-4">
+                   <form class="row" action="/users/userFilter" method="GET">
+                    <div class="col-9">
+                     <select name="rol" class="form-select">
+                       <option value="" selected hidden>Filtrar por...</option>
+                       <% rols.forEach(rol => { %>
+                        <option value="<%= rol.id %>"><%= rol.name %></option>
+                        <% }) %>
+                     </select>
+                    </div>
+                    <button style="display:flex; justify-content: center;" class="col-3 btn btn-outline-info" type="submit">Filtrar</button>
+                  </form>
+                  </div>
+                  <div class="col-12 col-md-2 text-end">
+                    <div>
+                      <a class="btn btn-info " href="/users/userAdd">Agregar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-responsive" class="card-body">
+                <table class="table table-hover">
+                  <thead class="table-dark">
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Avatar</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Rol</th>
+                      <th scope="col">Acciones</th>
+                    </tr>
+                   
+                  </thead>
+                  <tbody>
+                    <% users.forEach((user,index) => { %>
+                      <tr>
+                        <th scope="row"><%= index + 1 %> </th>
+                        <td><img width="100" src="/images/users/<%= user.avatar %>" alt=""></td>
+                        <td><%= user.name %></td>
+                        <td><%= user.email %></td>
+                        <td><%= user.rol.name %></td>
+                       
+                        <td class="d-flex justify-content-around">
+                          <a href="/users/userEdit/<%= user.id %>" class="btn btn-sm btn-success" style="width: 35px;"><i class="fas fa-edit"></i></a>
+                          <div>
+                            <form action="/users/userDestroy/<%= user.id %>?_method=DELETE" method="POST">
+                              <button type="submit" class="btn btn-sm btn-danger" style="width: 35px;"><i class="fas fa-trash"></i></button>
+                            </form>
+                          </div>
+                        </td>
+                      </tr>
+                    <% }) %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+        </div>
+  
+   
+   
+   
+   
+   
+          
+  
+  
+  
+
+
+  
+
+   
   </main>
 
 
   <%-include('./partials/scripts')%> 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
