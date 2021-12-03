@@ -1,5 +1,6 @@
 const firstLetter = require('../utils/firstLetter');
 const{validationResult} = require('express-validator')
+const cuotas = require('../utils/dividirCuotas')
 
 /* BASE DE DATOS */
 
@@ -82,7 +83,8 @@ module.exports = {
                     .then(category => {
                         return res.render('detailProduct', {
                             product,
-                            products: category.products
+                            products: category.products,
+                            cuotas
                         })
                     })
             })
