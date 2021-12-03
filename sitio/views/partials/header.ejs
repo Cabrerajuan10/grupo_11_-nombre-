@@ -21,7 +21,7 @@
     <div class="menu-head">
  <% if (locals.userLogin) { %>
           
-          <li><a class="user-head" href="/users/profile"><img width="30" height="30" class="rounded-circle" src="/images/users/<%= locals.userLogin.avatar %>" alt="">  <%= locals.userLogin.name %></a></li>
+          <li><a class="user-head" href="/users/profile"><img width="30" height="30" class="rounded-circle" src="/images/users/<%= locals.userLogin.avatar %>" alt=""><%= locals.userLogin.name %></a></li>
           <li><a class="user-head" href="/users/logout">Cerrar sesión</a></li>
           <a class="carrito-head" href="../product/carrito"><i class="fas fa-shopping-cart"></i></a>
           <% if (locals.userLogin.rol === 2) { %>

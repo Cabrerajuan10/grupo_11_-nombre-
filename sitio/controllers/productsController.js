@@ -128,9 +128,36 @@ module.exports = {
                     }
                 }
             )
-                .then( () => {
-                    return res.redirect('/admin')
-                })
+            .then(() => {
+                if(req.files[0] != undefined) {
+                    db.Image.destroy(
+                            {
+                                where: {
+                                    productId: req.params.id
+                                }
+                            }
+                        )
+                        .then(() => {
+                            let images = req.files.map(image => {
+                                let img = {
+                                    file: image.filename,
+                                    productId: req.params.id
+                                }
+                                return img
+                            })
+                            db.Image.bulkCreate(images, { validate: true })
+
+                                .then(() => {
+                                    return res.redirect('/admin')
+                                })
+                                .catch(error => console.log(error))
+                        })
+                    } else {
+                        
+                        return res.redirect('/admin')
+                    }
+                })       
+        
         
 
 

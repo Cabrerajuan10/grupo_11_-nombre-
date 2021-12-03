@@ -89,7 +89,7 @@ module.exports = {
                     name : name.trim(),
                     email : email.trim(),
                     password: bcrypt.hashSync(password,10).trim(),
-                    avatar: req.file.filename,
+                    avatar: req.file? req.file.filename : 'avatar-default.jpg',
                     rolId: rolId
                 },
                 {
