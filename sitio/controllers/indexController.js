@@ -59,16 +59,25 @@ module.exports = {
         let categories = db.Category.findAll()
         let users = db.User.findAll({include: ['rol']})
         let rols = db.Rol.findAll()
+        let rol = db.Rol.findByPk(req.query.rol,{
+            include:[{
+
+                association: 'users',
+                include: ['rol']
+            }
+            ]
+        })
         
 
-        Promise.all([products, categories,users,rols])
-            .then(([products, categories,users,rols]) => {
+        Promise.all([products, categories,users,rols,rol])
+            .then(([products, categories,users,rols,rol]) => {
                 return res.render('admin', {
                     title: "Administración",
                     products,
                     categories,
                     users,
-                    rols
+                    rols,
+                    rol
                 })
             })
             .catch(error => console.log(error))

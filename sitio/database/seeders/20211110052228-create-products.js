@@ -8,14 +8,14 @@
     "price": 69.999,
     "priceRegular": 82.000,
     "discount": 0,
-    "categoryId": 1,
+    "categoryId": 4,
     "show": true,
     createdAt: new Date
 },
 {
     "name": " Smart TV 50 UHD4K Philips",
     "description": "El Smart TV Philips 50 pulgadas 50PUD6654/77 cuenta con una pantalla de visualización LED de 16:9 y resolución Ultra HD 4K 3840 x 2160 píxeles que brinda una gran calidad de imagen y contraste.",
-    "categoryId": 1,
+    "categoryId": 3,
     "price": 59.999,
     "priceRegular": 69.999,
     "discount": 15,
@@ -25,7 +25,7 @@
 {
     "name": "Monitor Samsung 22",
     "description": "Mediante su entrada PC In podrás conectar tu PC o Notebook. Además, también ofrece la posibilidad de conectarse a través de HDMI. El LED no tiene sistema de audio incorporado",
-    "categoryId": 1,
+    "categoryId": 3,
     "price": 25.999,
     "priceRegular": 30000,
     "discount": 10,
@@ -38,14 +38,14 @@
     "price": 106.999,
     "priceRegular": 150000,
     "discount": 10,
-    "categoryId": 1,
+    "categoryId": 4,
     "show": true,
     createdAt: new Date
 },
 {
     "name": "Impresora Multifunción HP",
     "description": "Con la impresora multifunción HP Deskjet Ink Advantage 3775 podrás imprimir, escanear y copiar de manera inalámbrica. Tiene un diseño compacto, pensado para ahorrar espacio y que quepa en un escritorio, un estante o en el lugar de tu hogar que necesites. Además, cuenta con un modo silencioso que evita ruidos molestas excesivos",
-    "categoryId": 1,
+    "categoryId": 5,
     "price": 14.499,
     "priceRegular": 18620,
     "discount": 10,
@@ -58,7 +58,7 @@
     "price": 29.999,
     "priceRegular": 30362,
     "discount": 10,
-    "categoryId": 1,
+    "categoryId": 3,
     "show": true,
     createdAt: new Date
 },
@@ -68,7 +68,7 @@
     "price": 34.999,
     "priceRegular": 40000,
     "discount": 15,
-    "categoryId": 1,
+    "categoryId": 6,
     "show": true,
     createdAt: new Date
 },
@@ -78,7 +78,7 @@
     "price": 19.999,
     "priceRegular": 21000,
     "discount": 5,
-    "categoryId": 1,
+    "categoryId": 5,
     "show": true,
     createdAt: new Date
 },
@@ -88,7 +88,7 @@
     "price": 28.999,
     "priceRegular": 350000,
     "discount": 10,
-    "categoryId": 1,
+    "categoryId": 3,
     "show": true,
     createdAt: new Date
 }

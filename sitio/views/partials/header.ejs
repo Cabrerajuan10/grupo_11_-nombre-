@@ -1,6 +1,7 @@
 <header>
 
   <div class="nav-search-header">
+    <div class="menu-burger"><i class="fas fa-bars"></i></div>
     <div class="logo"> <a href="/"><img src="/images/home/Logo C-E.png" alt=""></div></a>
 
     <div class="searh-header">
@@ -42,14 +43,13 @@
       </div> -->
 
     </div>
-    <div class="menu-head">
+<div class="menu-head">
       
-
 
  <% if (locals.userLogin) { %>
 
 <!--SI SE LOGUEA UN USUARIO-->
-  <nav >
+  <nav class="nav-user">
     
     <div class="navbar"> 
       
@@ -73,7 +73,7 @@
         <% }else{ %>
 
              <a class="user-head" href="../users/login"><i class="fas fa-user"></i></a>
-             <a class="carrito-head" href="../product/carrito"><i class="fas fa-shopping-cart"></i></a>
+             
             </ul>
     
     </ul>
@@ -85,9 +85,12 @@
  
 
   <script src="../../public/javascripts/header.js"></script>
+    <% } %>
+    <a class="carrito-head" href="../product/carrito"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+     
+    
 
-    </div><% } %> 
-   <a class="carrito-head" href="../product/carrito"><i class="fas fa-shopping-cart"></i></a> 
   </div>
 
 </header> 

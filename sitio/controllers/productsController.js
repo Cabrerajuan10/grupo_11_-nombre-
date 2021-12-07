@@ -196,20 +196,47 @@ module.exports = {
             },
             include: ['images', 'category']
         })
+        let category = db.Category.findByPk(req.query.category,{
+           
+            include: [
+                {
+                    association : 'products',
+                    include : ['images','category']
+                }
+
+            ]
+        })
+        let users = db.User.findAll({include:['rol']})
         let categories = db.Category.findAll()
+        let rols = db.Rol.findAll()
 
-        Promise.all([products, categories])
+        Promise.all([products,category,categories,rols,users])
 
-            .then(([products, categories]) => {
+            .then(([products,category,categories,rols,users]) => {
                 return res.render('admin', {
                     products,
+                    category,
                     categories,
+                    rols,
+                    users,
                     title: 'Resultado de la búsqueda'
                 })
             })
             .catch(error => console.log(error))
     },
     filter: (req, res) => {
+
+        let products = db.Product.findAll({
+            include: ['images', 'category']
+
+        })
+        let categories = db.Category.findAll()
+        
+        let rols = db.Rol.findAll()
+
+        let users = db.User.findAll({
+            include: ['rol']
+        })
 
         let category = db.Category.findByPk(req.query.category,{
            
@@ -221,15 +248,19 @@ module.exports = {
 
             ]
         })
-        let categories = db.Category.findAll();
+        
 
-        Promise.all([category, categories])
+        Promise.all([products,category,categories,rols,users])
 
-            .then(([category,categories]) => {
+            .then(([products,category,categories,rols,users]) => {
                 return res.render('admin', {
                     title: 'Categoría: ' + req.query.category,
+                    products: category.products,
+                    category,
                     categories,
-                    products : category.products
+                    rols,
+                    users              
+            
                 })
             })
             .catch(error => console.log(error))

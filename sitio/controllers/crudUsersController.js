@@ -128,18 +128,31 @@ module.exports = {
 
     },
     userSearch: (req,res) => {
+        let products = db.Product.findAll({
+            include: ['images', 'category']
+
+        })
+        let categories = db.Category.findAll()
+        
+        let rols = db.Rol.findAll()
 
         let users = db.User.findAll({
             where: {
                 name: {
                     [Op.substring]: req.query.search
                 }
-            }
+            },
+            include: ['rol']
+
         })
 
-            .then((users) => {
+            Promise.all([products,categories,users,rols])
+            .then(([products,categories,users,rols]) => {
                 return res.render('admin', {
+                    products,
+                    categories,
                     users,
+                    rols,
                     title: 'Resultado de la búsqueda'
                 })
             })
@@ -155,24 +168,51 @@ module.exports = {
     },
 
     userFilter: (req, res) => {
-        let rol = db.Rol.findByPk(req.query.rol,{
+        let products = db.Product.findAll({
+            include: ['images', 'category']
+
+        })
+        let categories = db.Category.findAll()
+        
+        let rols = db.Rol.findAll()
+
+        let users = db.User.findAll({
+            include: ['rol']
+        })
+
+        let category = db.Category.findByPk(req.query.category,{
            
             include: [
                 {
-                    association : 'users'
+                    association : 'products',
+                    include : ['images','category']
                 }
 
             ]
         })
-        let rols = db.Rol.findAll()
 
-        Promise.all([rol, rols])
+        let rol = db.Rol.findByPk(req.query.rol,{
+            include:[{
 
-            .then(([rol, rols]) => {
+                association: 'users',
+                include: ['rol']
+            }
+            ]
+        })
+        
+
+        Promise.all([rol,products,category,categories,rols,users])
+
+            .then(([rol,products,category,categories,rols,users]) => {
                 return res.render('admin', {
-                    title: 'Rol: ' + req.query.rol,
+                    title: 'Resultado de la busqueda',
+                    products,
+                    category,
+                    rol,
+                    categories,
                     rols,
-                    rol
+                    users: rol.users            
+            
                 })
             })
             .catch(error => console.log(error))
