@@ -8,7 +8,7 @@ module.exports = {
         let ofertas = db.Product.findAll({
             where: {
                 discount: {
-                    [Op.gte]: 25
+                    [Op.gte]: 5
                 },
                 show: true
             },
@@ -37,6 +37,7 @@ module.exports = {
         Promise.all([ofertas, products])
 
             .then(([ofertas, products]) => {
+
                 return res.render('home', {
                     title: 'CommunityElectro',
                     ofertas,

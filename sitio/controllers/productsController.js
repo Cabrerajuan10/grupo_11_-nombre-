@@ -1,6 +1,6 @@
 const firstLetter = require('../utils/firstLetter');
 const{validationResult} = require('express-validator')
-const cuotas = require('../utils/dividirCuotas')
+const {doceCuotas, seisCuotas} = require('../utils/dividirCuotas')
 
 /* BASE DE DATOS */
 
@@ -68,6 +68,7 @@ module.exports = {
         }
     },
     detail: (req, res) => {
+        
         db.Product.findByPk(req.params.id, {
             include: ['images', 'features']
         })
@@ -81,10 +82,12 @@ module.exports = {
                     ]
                 })
                     .then(category => {
+                        
                         return res.render('detailProduct', {
                             product,
                             products: category.products,
-                            cuotas
+                            doceCuotas,
+                            seisCuotas
                         })
                     })
             })
