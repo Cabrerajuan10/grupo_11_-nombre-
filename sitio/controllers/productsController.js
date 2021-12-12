@@ -69,6 +69,8 @@ module.exports = {
     },
     detail: (req, res) => {
         
+
+
         db.Product.findByPk(req.params.id, {
             include: ['images', 'features']
         })
