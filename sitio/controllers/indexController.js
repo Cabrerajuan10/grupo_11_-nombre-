@@ -21,11 +21,7 @@ module.exports = {
             order: Sequelize.literal('rand()')
         })
         let products = db.Product.findAll({
-            where: {
-                categoryId: {
-                    [Op.like]: 1
-                }
-            },
+            
             limit: 6,
             include: [
                 'images',

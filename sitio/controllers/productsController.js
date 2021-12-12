@@ -287,6 +287,43 @@ module.exports = {
 
     },
 
+    searchHome: (req, res) => {
+
+        let products = db.Product.findAll({
+            where: {
+                name: {
+                    [Op.substring]: req.query.search
+                }
+            },
+            include: ['images', 'category']
+        })
+        let category = db.Category.findByPk(req.query.category,{
+           
+            include: [
+                {
+                    association : 'products',
+                    include : ['images','category']
+                }
+
+            ]
+        })
+        
+        let categories = db.Category.findAll()
+        
+
+        Promise.all([products,category,categories])
+
+            .then(([products,category,categories]) => {
+                return res.render('productsSearch', {
+                    products,
+                    category,
+                    categories,       
+                    title: 'Resultado de la búsqueda'
+                })
+            })
+            .catch(error => console.log(error))
+        },
+
     carrito: (req,res) => {
         return res.render('carrito', {
             title: 'Carrito'

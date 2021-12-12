@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %> 
+
+<body class="products-search">
+  <%- include('./partials/header') %> 
+
+    <main class="search-main">
+       
+        <div class="products-container">
+
+            <!--TARJETAS DE LOS PRODUCTOS-->
+
+            <section class="productos-recomendados">
+                <div class="productos">
+                  <h3>Mira tambien</h3>
+                  <!--SLIDER DE GLIDER-->
+
+                    
+                      <% products.forEach(product => { %>
+                        <a href="/product/detailProduct/<%= product.id %>">
+                          <div class="container">
+                            <article class="tarjeta">
+                                <figure>
+                                    <img src="/images/detailProduct/<%= product.images[0].file %>">
+                                </figure>
+                              
+                                <div class="contenido">
+                                  <h3><%= product.name %></h3>
+                                  <p class="precio-regular">Precio regular: $<%= product.priceRegular %></p>
+                                  <p class="precio">$<%= product.price %></p>
+                                  <div class="envio-gratis">
+                                    <p><i class="fas fa-truck"></i>Envio <b>GRATIS</b> a CABA Y GBA</p>
+                                  </div>
+                                  
+              
+                                  <div class="descuento">
+                                  <p><%= product.discount %>%OFF</p>
+                                </div>
+              
+                                </div>
+                            </article>
+                           </div>
+                         </a>
+                    <% }) %>
+          
+                    </div>
+                  </div>
+                </div>
+              </section>
+        </div>
+
+
+    </main>
+
+
+    <%-include('./partials/footer')%>
+    <%-include('./partials/scripts') %> 
+
+</body>
+</html>
