@@ -210,11 +210,9 @@
 .login .wrapper input{
 	width: 100%;
 	height: 100%;
-	border: 1px solid var(--colorCeleste);
 	padding-left: 15px;
 	font-size: 18px;
 	outline: none;
-	border-radius: 5px;
   }
 .login .wrapper input::placeholder{
 	font-size: 17px;
