@@ -20,3 +20,20 @@ inputs.forEach(input => {
 });
 
 
+
+	  /*Mostrar / ocultar la contraseña*/
+const showBtn = document.querySelector(".show-btn i");
+const inputPassword = document.getElementById("input-password");
+const btnWatch = document.getElementById("watch");
+      
+	btnWatch.addEventListener('click', () => {
+		if(inputPassword.type === "text"){
+			inputPassword.type = "password";
+			showBtn.classList.add("hide-btn");
+		}else {
+			inputPassword.type = "text";
+			showBtn.classList.remove("hide-btn");
+		}
+    
+    console.log(inputPassword.type)
+})
