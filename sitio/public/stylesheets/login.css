@@ -204,7 +204,6 @@
 	position: relative;
 	height: 55px;
 	width: 100%;
-	border-radius: 5px;
 	box-shadow: 0px 3px 3px rgba(0,0,0,0.1);
   }
 .login .wrapper input{
@@ -217,7 +216,7 @@
 .login .wrapper input::placeholder{
 	font-size: 17px;
   }
-.login .wrapper span{
+.login .wrapper .show-btn{
 	position: absolute;
 	right: 15px;
 	top: 50%;
@@ -234,6 +233,37 @@
 	content: "\f070";
   }
 
+  .box-email{
+	position: relative;
+}
+#error-email{
+position: absolute;
+bottom: 100%;
+right: 10%;
+}
+
+#info-email{
+position: absolute;
+bottom: 70%;
+right: 10%;
+
+}
+
+.wrapper{
+position: relative;
+}
+
+#error-password{
+position: absolute;
+bottom: 100%;
+right: 10%;
+}
+
+#info-password{
+position: absolute;
+bottom: 100%;
+right: 10%;
+}
 
 
 @media screen and (max-width: 1050px){
