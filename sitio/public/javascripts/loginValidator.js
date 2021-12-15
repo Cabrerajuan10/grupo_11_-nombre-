@@ -12,9 +12,10 @@ const emailVerify = async email => {
     }
 }
 
-const formulario = $('form-login');
+const formulario = $('form');
 const inputEmail = $('email');
 const inputPassword = $('input-password');
+const inputName = $('input-name');
 const showBtn = document.querySelector(".show-btn i"); //icono
 const btnWatch = $("watch");
 
@@ -45,6 +46,44 @@ inputs.forEach(input => {
 const regExLetras = /^[_A-zA-Z]*((-|\s)*[_A-zA-Z])*$/
 const regExEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/ 
 const regExPassword = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/
+
+
+/* nombre */
+inputName.addEventListener('focus', function() {
+    $('info-name').innerText = "Solo letras"
+    $('error-name').innerText = null;
+    this.classList.remove('is-invalid');
+})
+
+inputName.addEventListener('keydown', function() {
+    $('info-name').innerText = null;
+})
+
+inputName.addEventListener('blur', function() {
+    switch (true) {
+        case !this.value :
+            $('error-name').innerText = "El nombre es requerido";
+            this.classList.add('is-invalid')
+            break;
+        case !regExLetras.test(this.value) :
+            $('error-name').innerText = "Solo se permiten letras";
+            this.classList.add('is-invalid');
+            break;
+        default:
+            $('error-name').innerText = null;
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+            
+    }
+})
+
+
+
+
+
+
+
+
 
 
 /* email */
@@ -87,7 +126,7 @@ inputPassword.addEventListener('blur', function() {
             $('error-password').innerText = "La contraseña es requerida";
             this.classList.add('is-invalid')
             break;
-
+            
         default:
             $('error-password').innerText = null;
             this.classList.remove('is-invalid');
