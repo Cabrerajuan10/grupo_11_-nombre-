@@ -1,4 +1,4 @@
-
+console.log('registerValidator success');
 const $ = id => document.getElementById(id);
 
 
@@ -7,12 +7,12 @@ const inputPassword = $('input-password');
 const inputName = $('input-name');
 
 
-const inputs = document.querySelectorAll(".input");
 
 
 /* expresiones regulares */
 const regExLetras = /^[_A-zA-Z]*((-|\s)*[_A-zA-Z])*$/
 const regExPassword = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/
+
 
 /* nombre */
 inputName.addEventListener('focus', function() {
@@ -46,23 +46,21 @@ inputName.addEventListener('blur', function() {
 
 
 
-
-
 /* password */
 
-inputName.addEventListener('keydown', function() {
-    $('info-name').innerText = null;
+inputPassword.addEventListener('keydown', function() {
+    $('info-password').innerText = null;
 })
 
-inputName.addEventListener('blur', function() {
+inputPassword.addEventListener('blur', function() {
     switch (true) {
         case !this.value :
-            $('error-name').innerText = "El nombre es requerid";
+            $('error-password').innerText = "La contraseña es requerida";
             this.classList.add('is-invalid')
             break;
-
+            
         default:
-            $('error-name').innerText = null;
+            $('error-password').innerText = null;
             this.classList.remove('is-invalid');
             this.classList.add('is-valid');
             break;
