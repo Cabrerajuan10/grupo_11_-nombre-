@@ -115,3 +115,28 @@ Todos: Tareas no repartidas.
 - Consulta con los profes.
 - Reunion de equipo despues de las 19hs.
 
+
+
+
+# Daily sprint 7
+01/12
+#### Que hice ayer?
+- Juan: 
+- Mati: Correciones en seeders, migraciones, y cruds. Implementacion de crud de usuarios en vista admin
+- Maxi: 
+
+#### Que voy a hacer hoy?
+- Juan: 
+- Mati: Correcion de errores en vista admin
+- Maxi: 
+
+#### Bloqueadores:
+ juan - maxi- mati:
+ - Error y conflicto en la vista admin con los metodos filter y search de los crud de productos y usuarios aplicando de bootstrap navs y tabs(JavaScript behavior)
+ - No logramos hacer que se editen las imagenes de los productos
+
+#### Action items:
+- Consulta errores con los profes.
+- Reunion de equipo para hablar sobre implementar mejoras en el proyecto
+
+
