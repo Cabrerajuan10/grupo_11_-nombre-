@@ -5,6 +5,7 @@
 
 .home .banner img{
     height: 200px;
+   
 }
 
 .home .form-1, .form-2, .form-3 {
@@ -143,6 +144,10 @@
 }
 
 
+/* .glider-next {
+    right: 5px;
+    left: auto;
+} */
 
 
 /*!TARJETA DEL PRODUCTO*/

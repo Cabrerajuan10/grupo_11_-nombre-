@@ -1,41 +1,119 @@
-<header>
 
-  <div class="nav-search-header">
-    <div class="logo"> <a href="/"><img src="/images/home/Logo C-E.png" alt=""></div></a>
+<header class="header">
 
-    <div class="searh-header">
-      <div class="buscador">
-        <div class="search-bar"><input type="text" class="buscar_texto"></div>
-        <div class="search"><button type="submit"><i class="fas fa-search"></i></button> </div>
+ 
+
+  
+    <a href="/" >
+        <img class="logo" src="/images/home/Logo C-E.png" alt="">
+    </a>
+
+
+
+    <form class="form-search" action="/product/searchHome" autocomplete="on">
+      <div class="input-search">
+        <input type="text" name="search" placeholder="Buscar producto...">
+        <button class="btn-search" type="submit"><i class="fas fa-search"></i></button>
+
 
       </div>
+        <nav class="navbar nav nav-links">
+      <li><a href="#">Ofertas</a></li>
+      <li><a href="#">Oportunidades</a></li>
+      <li><a href="#">Categorias</a></li>
+    
+      
+  </nav>
+    </form>
 
-      <div class="menu-bar">
-        <ul>
-          <li><a href="">Ofertas</a></li>
-          <li><a href="">Opotunidades</a></li>
-          <li><a href="">Ayuda</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="menu-head">
- <% if (locals.userLogin) { %>
-          
-          <li><a class="user-head" href="/users/profile"><img width="30" height="30" class="rounded-circle" src="/images/users/<%= locals.userLogin.avatar %>" alt="">  <%= locals.userLogin.name %></a></li>
-          <li><a class="user-head" href="/users/logout">Cerrar sesión</a></li>
-          <a class="carrito-head" href="../product/carrito"><i class="fas fa-shopping-cart"></i></a>
-          <% if (locals.userLogin.rol === 2) { %>
-            <a class="icon-admin" href="../admin"><i class="fas fa-users-cog"></i></a>
+
+    
+  
+  
+
+
+
+    
+
+
+    
+    
+
+  <div class="icons">
+        
+
+     
+
+  
+      
+        <!-- 
+
+        <div class="fas fa-user" id="search-btn"></div>
+
+        <div class="fas fa-users-cog" id="search-btn"></div>
+
+        <div class="" id="cart-btn"></div>
+
+        <div class="fas fa-bars" id="menu-btn"></div> -->
+        
+       <!--SI SE LOGUEA UN USUARIO-->
+      
+        
+  <nav class="nav-user">
+     
+    <div class="navbar">
+      <i class="fas fa-bars"></i>
+
+        <ul class="links">
+         
+          <li>
+           
+             <% if (locals.userLogin) { %>
+              
+            <a href="#"><img width="30" height="30" class="rounded-circle" src="/images/users/<%= locals.userLogin.avatar %>" alt=""><%= locals.userLogin.name %><i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i></a>
+            
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li><a class="user-head" href="/users/profile"><i class="far fa-user-circle"></i> Mi perfil</a></li>
+              <li><a class="user-head" href="/users/logout"><i class="fas fa-power-off"></i> Cerrar sesión</a></li>
+              <li><a href="users/carrito"><i class="fas fa-shopping-cart" id="cart-btn"></i> Carrito</a></li>
+              <% if (locals.userLogin.rol === 2) { %>
+
+                <!--SI SE LOGUEA UN ADMINISTRADOR-->
+                
+            <li><a class="icon-admin" href="../admin"><i class="fas fa-users-cog"></i> Administrador</a></li>
+
           <% } %> 
         <% }else{ %>
-        <a class="user-head" href="../users/login"><i class="fas fa-user"></i></a>
-        <a class="menu-burguer" href=""><i class="fas fa-bars"></i></a>
-        <a class="carrito-head" href="../product/carrito"><i class="fas fa-shopping-cart"></i></a>
-        <% } %>
-
-   
-            
+          
+             <a class="user-head" href="../users/login"><div class="fas fa-user"></div></a>
+             
+              <div class="fas fa-bars" id="menu-btn"></div>
+            </ul>
+     <% } %>
+    </ul>
+    
+      
     </div>
-  </div>
 
+  </nav>
+ 
+
+  
+   
+   
+
+
+
+  
+    
+    </div>
+  
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="/javascripts/header.js"></script>
 </header> 

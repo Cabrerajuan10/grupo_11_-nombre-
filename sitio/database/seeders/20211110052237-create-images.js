@@ -1,31 +1,60 @@
-'use strict';
+'use strict'
 
-const imagenes = ['samsung-s20-1.png',
-'smart-tv-50-uhd-4k-philips-50pud6654-77-removebg-preview.png',
-'169017-800-auto-removebg-preview.png',
-'D_NQ_NP_894561-MLA44774447406_022021-O-removebg-preview.png',
-'img-product1632739496199.png'];
 
-const images = [];
-
-for (let i = 0; i < 400; i++) {
-  for (let index = 0; index < 3; index++) {
-    var image = {
-      file : imagenes[Math.floor(Math.random() * (5 - 0)) + 0],
-      productId : i + 1,
-      createdAt : new Date,
-      updatedAt : new Date
-    }
-    images.push(image)
-    
+let products = [
+  {
+     "id": 1,
+     "images": [
+     "notebook-exo-141-celeron-n4020-500gb-4gb-m-48-plus-removebg-preview.png"]
+  },
+  {
+     "id": 2,
+     "images": ["smart-tv-50-uhd-4k-philips-50pud6654-77-removebg-preview.png"]
+  },
+  {
+     "id": 3,
+     "images": ["ba5a66fe2d29273ed1e7244f3e60-removebg-preview.png"]
+  },
+  {
+     "id": 4,
+     "images": ["tablet-samsungGalaxy-1.png"]
+  },
+  {
+     "id": 5,
+     "images": ["Impresora-Multifuncion-Hp-Deskjet-Ia-3775-1-35353-removebg-preview.png"]
+  },
+  {
+     "id": 6,
+     "images": ["mnt390-5_1_fkwfurkcbs9aamde-removebg-preview.png"]
+  },
+  {
+     "id": 7,
+     "images": ["8718863021613_03-a-removebg-preview.png"]
+  },
+  {
+     "id": 8,
+     "images": ["samsung-s20-1.png"]
+  },
+  {
+     "id": 9,
+     "images": ["default.jpg"]
   }
-  
-}
+]
+
+let images = products.map(product => {
+  let image = {
+    productId : product.id,
+    file : product.images,
+    createdAt : new Date
+  }
+
+  return image
+})
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
   
-     await queryInterface.bulkInsert('Images',images, {});
+     await queryInterface.bulkInsert('Images', images, {});
    
   },
 

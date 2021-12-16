@@ -1,5 +1,6 @@
 const firstLetter = require('../utils/firstLetter');
 const{validationResult} = require('express-validator')
+const {doceCuotas, seisCuotas} = require('../utils/dividirCuotas')
 
 /* BASE DE DATOS */
 
@@ -67,6 +68,9 @@ module.exports = {
         }
     },
     detail: (req, res) => {
+        
+
+
         db.Product.findByPk(req.params.id, {
             include: ['images', 'features']
         })
@@ -80,9 +84,12 @@ module.exports = {
                     ]
                 })
                     .then(category => {
+                        
                         return res.render('detailProduct', {
                             product,
-                            products: category.products
+                            products: category.products,
+                            doceCuotas,
+                            seisCuotas
                         })
                     })
             })
@@ -128,9 +135,36 @@ module.exports = {
                     }
                 }
             )
-                .then( () => {
-                    return res.redirect('/admin')
-                })
+            .then(() => {
+                if(req.files[0] != undefined) {
+                    db.Image.destroy(
+                            {
+                                where: {
+                                    productId: req.params.id
+                                }
+                            }
+                        )
+                        .then(() => {
+                            let images = req.files.map(image => {
+                                let img = {
+                                    file: image.filename,
+                                    productId: req.params.id
+                                }
+                                return img
+                            })
+                            db.Image.bulkCreate(images, { validate: true })
+
+                                .then(() => {
+                                    return res.redirect('/admin')
+                                })
+                                .catch(error => console.log(error))
+                        })
+                    } else {
+                        
+                        return res.redirect('/admin')
+                    }
+                })       
+        
         
 
 
@@ -164,20 +198,47 @@ module.exports = {
             },
             include: ['images', 'category']
         })
+        let category = db.Category.findByPk(req.query.category,{
+           
+            include: [
+                {
+                    association : 'products',
+                    include : ['images','category']
+                }
+
+            ]
+        })
+        let users = db.User.findAll({include:['rol']})
         let categories = db.Category.findAll()
+        let rols = db.Rol.findAll()
 
-        Promise.all([products, categories])
+        Promise.all([products,category,categories,rols,users])
 
-            .then(([products, categories]) => {
+            .then(([products,category,categories,rols,users]) => {
                 return res.render('admin', {
                     products,
+                    category,
                     categories,
+                    rols,
+                    users,
                     title: 'Resultado de la búsqueda'
                 })
             })
             .catch(error => console.log(error))
     },
     filter: (req, res) => {
+
+        let products = db.Product.findAll({
+            include: ['images', 'category']
+
+        })
+        let categories = db.Category.findAll()
+        
+        let rols = db.Rol.findAll()
+
+        let users = db.User.findAll({
+            include: ['rol']
+        })
 
         let category = db.Category.findByPk(req.query.category,{
            
@@ -189,15 +250,19 @@ module.exports = {
 
             ]
         })
-        let categories = db.Category.findAll();
+        
 
-        Promise.all([category, categories])
+        Promise.all([products,category,categories,rols,users])
 
-            .then(([category,categories]) => {
+            .then(([products,category,categories,rols,users]) => {
                 return res.render('admin', {
                     title: 'Categoría: ' + req.query.category,
+                    products: category.products,
+                    category,
                     categories,
-                    products : category.products
+                    rols,
+                    users              
+            
                 })
             })
             .catch(error => console.log(error))
@@ -223,6 +288,43 @@ module.exports = {
             .catch(error => console.log(error))
 
     },
+
+    searchHome: (req, res) => {
+
+        let products = db.Product.findAll({
+            where: {
+                name: {
+                    [Op.substring]: req.query.search
+                }
+            },
+            include: ['images', 'category']
+        })
+        let category = db.Category.findByPk(req.query.category,{
+           
+            include: [
+                {
+                    association : 'products',
+                    include : ['images','category']
+                }
+
+            ]
+        })
+        
+        let categories = db.Category.findAll()
+        
+
+        Promise.all([products,category,categories])
+
+            .then(([products,category,categories]) => {
+                return res.render('productsSearch', {
+                    products,
+                    category,
+                    categories,       
+                    title: 'Resultado de la búsqueda'
+                })
+            })
+            .catch(error => console.log(error))
+        },
 
     carrito: (req,res) => {
         return res.render('carrito', {

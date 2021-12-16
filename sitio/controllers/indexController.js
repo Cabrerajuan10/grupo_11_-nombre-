@@ -8,7 +8,7 @@ module.exports = {
         let ofertas = db.Product.findAll({
             where: {
                 discount: {
-                    [Op.gte]: 25
+                    [Op.gte]: 5
                 },
                 show: true
             },
@@ -21,11 +21,7 @@ module.exports = {
             order: Sequelize.literal('rand()')
         })
         let products = db.Product.findAll({
-            where: {
-                categoryId: {
-                    [Op.like]: 1
-                }
-            },
+            
             limit: 6,
             include: [
                 'images',
@@ -37,6 +33,7 @@ module.exports = {
         Promise.all([ofertas, products])
 
             .then(([ofertas, products]) => {
+
                 return res.render('home', {
                     title: 'CommunityElectro',
                     ofertas,
@@ -58,16 +55,25 @@ module.exports = {
         let categories = db.Category.findAll()
         let users = db.User.findAll({include: ['rol']})
         let rols = db.Rol.findAll()
+        let rol = db.Rol.findByPk(req.query.rol,{
+            include:[{
+
+                association: 'users',
+                include: ['rol']
+            }
+            ]
+        })
         
 
-        Promise.all([products, categories,users,rols])
-            .then(([products, categories,users,rols]) => {
+        Promise.all([products, categories,users,rols,rol])
+            .then(([products, categories,users,rols,rol]) => {
                 return res.render('admin', {
                     title: "Administración",
                     products,
                     categories,
                     users,
-                    rols
+                    rols,
+                    rol
                 })
             })
             .catch(error => console.log(error))
