@@ -13,6 +13,7 @@ module.exports = [
             }
         }).then(user => {
             if(!user || !bcrypt.compareSync(req.body.password,user.password)){ // en el caso que usuario/contraseña no se encuentre en la base de datos devuelve error.
+                
                 return Promise.reject()
             }
         }).catch( () => Promise.reject('Credenciales inválidas'))

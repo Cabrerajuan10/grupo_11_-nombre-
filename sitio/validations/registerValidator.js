@@ -5,7 +5,10 @@ const users = require('../data/users.json');
 module.exports =[
 
     check('name')
-        .notEmpty().withMessage('Debes ingresar tu nombre'),
+        .notEmpty().withMessage('Debes ingresar tu nombre')
+        .isLength({
+            min : 2
+        }).withMessage('El nombre debe tener un mínimo de 2 caracteres'),
 
     check('email')
         .notEmpty().withMessage('Debes ingresar tu email')
@@ -23,9 +26,9 @@ module.exports =[
 
     check('password')
         .isLength({
-            min : 6,
+            min : 8,
             max : 12
-        }).withMessage('La contraseña debe tener un mínimo de 6 y un máximo de 12 caracteres'),
+        }).withMessage('La contraseña debe tener un mínimo de 8 y un máximo de 12 caracteres'),
 
     body('password2')
         .custom((value,{req}) =>{
