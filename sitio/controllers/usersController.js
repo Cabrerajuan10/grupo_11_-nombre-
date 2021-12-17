@@ -112,7 +112,7 @@ module.exports = {
         res.redirect('/')
     },
 
-  
+
     profile: (req, res) => {
         db.User.findByPk(req.session.userLogin.id)
             .then(user => res.render('./users/profile', {
@@ -126,8 +126,8 @@ module.exports = {
 
             try {
 
-                let user = await db.User.findByPk(req.session.userLogin.id)
 
+                let user = await db.User.findByPk(req.session.userLogin.id)
 
                 let userResult = await db.User.update({
                     name: req.body.name,
@@ -136,15 +136,17 @@ module.exports = {
                     avatar: req.file ? req.file.filename : user.avatar
                 }, {
                     where: {
-                        id: req.session.userLogin.id         
+                        id: req.session.userLogin.id
                     }
                 })
 
+                let user1 = await db.User.findByPk(req.session.userLogin.id)
+
                 req.session.userLogin = {
-                    id: user.id,
-                    name: user.name,
-                    avatar: user.avatar,
-                    rolid: user.rol
+                    id: user1.id,
+                    name: user1.name,
+                    avatar: user1.avatar,
+                    rolid: user1.rol
                 }
 
                 return res.redirect('/users/profile')

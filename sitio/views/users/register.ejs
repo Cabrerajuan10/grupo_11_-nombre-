@@ -2,67 +2,112 @@
 <html lang="es">
 
 <!-- head -->
-<%-include('../partials/head',{title: 'Registro'}) %>
+<%-include('../partials/head',{title: 'register' }) %>
 
-<body class="register">
+  <body class="register">
 
-  <!-- header -->
-  <%-include('../partials/header') %>
-
-  <main>
-    <div class="box-contain">
-      <h4>¡BIENVENIDO! COMPLETA TUS DATOS Y REGISTRATE.</h4>
-
-      <form action="" method="POST">
-
-        <!-- email -->
-        <div class="container-input">
-          <p>E-mail</p>
-          <input class="form-control" type="email" name="email">
-          <!-- errors -->
-          <span class="text-danger"><%= locals.errores && errores.email ? errores.email.msg : null %><%= typeof error != 'undefined' && error.email ? error.email : null %></span>
+    <!-- header -->
+    <%-include('../partials/header') %>
+      <div class="register-container"></div>
+      <img class="wave" src="/images/login/wave-naranja.png">
+      <div class="container">
+        <div class="img-register">
+          <img src="/images/home/Logo C-E.png">
         </div>
+        <div class="register-content">
+          <form id="form-register" action="" method="POST" autocomplete="off" novalidate>
+            <img src="/images/users/avatar-login.png">
+            <h3 class="title">Bienvenid@ Completa tus datos y Registrate.</h3>
 
-        <!-- nombre de usurio -->
-        <div class="container-input">
-          <p>Nombre de usuario</p>
-          <input class="form-control" type="text" name="name" value="<%= locals.old && old.name ? old.name : null %>">
-          <!-- errors -->
-          <span class="text-danger"><%= locals.errores && errores.name ? errores.name.msg : null %></span>
+            <div class="input-div one">
+              <div class="i">
+                <i class="fas fa-user"></i>
+              </div>
+
+              <div class="div box-email">
+                <h5>Nombre de usuario</h5>
+                <input type="text" class="input" name="name" id="name"  value="<%= locals.old && old.name ? old.name : null %>">
+                <!-- errors -->
+                <span id="error-name" class="small text-danger">
+                  <%= locals.errores && errores.name ? errores.name.msg : null %>
+                </span>
+                <span id="info-name" class="small text-info"></span>
+
+
+              </div>
+
+              
+            </div>
+            <div class="input-div one">
+              <div class="i">
+                <i class="fas fa-user"></i>
+              </div>
+
+              <div class="div box-email">
+                <h5>Email</h5>
+
+                <input class="input" type="email" id="email" name="email">
+                <!-- errors -->
+                <span id="error-email" class="small text-danger">
+                  <%= locals.errores && errores.email ? errores.email.msg : null %>
+                    <%= typeof error !='undefined' && error.email ? error.email : null %>
+                </span>
+                <span id="info-email" class="small text-info"></span>
+              </div>
+            </div>
+            <div class="input-div pass">
+              <div class="i">
+                <i class="fas fa-lock"></i>
+              </div>
+              <div class="div wrapper">
+                <h5>Contraseña</h5>
+                <input class="input pass" type="password" id="password" name="password" minlength="8">
+                <span class="show-btn"><i id="watch" class="fas fa-eye"></i></span>
+                <span id="error-pass" class="small text-danger">
+                  <%= locals.errores && errores.password ? errores.password.msg : null %>
+                </span>
+                <span id="info-password" class="small text-info"></span>
+              </div>
+            </div>
+            <div class="input-div pass">
+              <div class="i">
+                <i class="fas fa-lock"></i>
+              </div>
+              <!-- confirmar contraseña -->
+              <div class="div wrapper">
+                <h5>Confirmar Contraseña</h5>
+                <input class="input pass" type="password" id="password2" name="password2" minlength="8">
+                <span class="show-btn1"><i id="watch1" class="fas fa-eye"></i></span>
+                <!-- errors -->
+                <span id="error-pass2" class="small text-danger">
+                  <%= locals.errores && errores.password2 ? errores.password2.msg : null %>
+                </span>
+                <span id="info-password2" class="small text-info"></span>
+              </div>
+            </div>
+
+
+            <div class="box-form">
+              <span id="error-empty" class="small text-danger"></span>
+            </div>
+
+            <button class="btn-registro" type="submit">Registrate</button>
+
+          </form>
         </div>
+      </div>
 
-        <!-- contraseña -->
-        <div class="container-input">
-          <p>Contraseña</p>
-          <input class="form-control" type="password" id="password" name="password" minlength="8">
-          <!-- errors -->
-          <span class="text-danger"><%= locals.errores && errores.password ? errores.password.msg : null %></span>
-        </div>
 
-        <!-- confirmar contraseña -->
-        <div class="container-input">
-          <p>Confirmar contraseña</p>
-          <input class="form-control" type="password" id="password2" name="password2" minlength="8">
-          <!-- errors -->
-          <span class="text-danger"><%= locals.errores && errores.password2 ? errores.password2.msg : null %></span>
-        </div>
+     <!-- FOOTER -->
+     <%-include('../partials/footer')%>
 
-        
-        <!-- Boton -->
-        <div class="box-button">
-          <button class="btn-registro" type="submit">Registrate</button>
-        </div>
 
-      </form>
-    </div>
-  </main>
+      <!--SCRIPTS-->
+      <%-include('../partials/scripts')%>
 
-  <!--footer-->
-  <%-include('../partials/footer') %>
+        <script src="/javascripts/registerValidator.js"></script>
 
-  <!--scripts-->
-  <%-include('../partials/scripts')%>
-  
-</body>
+
+  </body>
 
 </html>
