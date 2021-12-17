@@ -13,7 +13,7 @@ module.exports = {
                 show: true
             },
 
-            limit: 4,
+            limit: 6,
             include: [
                 'images',
                 'category'
