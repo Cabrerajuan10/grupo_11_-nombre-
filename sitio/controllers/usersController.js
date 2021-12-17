@@ -93,7 +93,7 @@ module.exports = {
                     rol: user.rolId
                 }
                 if (req.body.remember) {
-                    res.cookie('communityElectro', req.session.userLogin, { maxAge: 1000 * 60 })
+                    res.cookie('communityElectro', req.session.userLogin, { maxAge: 1000 * 300 })
                 }
                 return res.redirect('/')
             })
@@ -138,7 +138,11 @@ module.exports = {
                     where: {
                         id: req.session.userLogin.id         
                     }
+                    
+
                 })
+
+               
 
                 req.session.userLogin = {
                     id: user.id,

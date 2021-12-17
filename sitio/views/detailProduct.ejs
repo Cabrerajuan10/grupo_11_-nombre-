@@ -38,9 +38,15 @@
               aria-label="Slide 3"></button>
           </div>
           <div class="carousel-inner">
-            <div class="descuento"> <!--ETIQUETA DE DESCUENTO-->
-              <p>OFF%<%= product.discount %></p>
-            </div>
+
+          
+            <% if (product.discount >=  10) { %>
+              <div class="descuento">
+               <p><%= product.discount %>%OFF</p>
+             </div>
+             <% } %>
+           
+            
 
             <% product.images.forEach(image => { %>
               <div class="carousel-item active">
@@ -67,10 +73,12 @@
         <div class="imagen-principal">
           <img id="img-principal" src="/images/detailProduct/<%= product.images[0].file %>" alt="">
 
-          
-          <div class="descuento">
+          <% if (product.discount >=  10) { %>
+           <div class="descuento">
             <p><%= product.discount %>%OFF</p>
           </div>
+          <% } %>
+          
           
         </div>
 
@@ -196,9 +204,12 @@
         <h3>Mira tambien</h3>
         <!--SLIDER DE GLIDER-->
         <div class="glider-contain">
-          <div class="glider-detail">
+          <div class="glider-detail"> 
+            <% let productDetail = product.id %>
             <% products.forEach(product => { %>
-              <a href="/product/detailProduct/<%= product.id %>">
+              
+              <% if (productDetail !== product.id) { %>
+                <a href="/product/detailProduct/<%= product.id %>">
                 <div class="container">
                   <article class="tarjeta">
                       <figure>
@@ -214,14 +225,18 @@
                         </div>
                         
     
-                        <div class="descuento">
-                        <p><%= product.discount %>%OFF</p>
-                      </div>
+                        <% if (product.discount >=  10) { %>
+                          <div class="descuento">
+                           <p><%= product.discount %>%OFF</p>
+                         </div>
+                         <% } %>
     
                       </div>
                   </article>
                  </div>
                </a>
+              <% } %>
+              
           <% }) %>
 
           </div>
@@ -241,6 +256,7 @@
   <!--LINK BOOTSTRAP-->
   <%-include('./partials/scripts')%> 
 
+  
 </body>
 
 </html>

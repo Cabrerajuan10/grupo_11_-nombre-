@@ -84,7 +84,9 @@ module.exports = {
                     ]
                 })
                     .then(category => {
+
                         
+
                         return res.render('detailProduct', {
                             product,
                             products: category.products,

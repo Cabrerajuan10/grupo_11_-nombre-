@@ -8,7 +8,7 @@ module.exports = {
         let ofertas = db.Product.findAll({
             where: {
                 discount: {
-                    [Op.gte]: 5
+                    [Op.gte]: 10
                 },
                 show: true
             },
@@ -21,6 +21,12 @@ module.exports = {
             order: Sequelize.literal('rand()')
         })
         let products = db.Product.findAll({
+            where: {
+                discount: {
+                    [Op.lte] : 0
+                }                    
+                
+            },
             
             limit: 6,
             include: [
