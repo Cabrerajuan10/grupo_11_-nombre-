@@ -322,7 +322,7 @@ module.exports = {
                     products,
                     category,
                     categories,       
-                    title: 'Resultado de la búsqueda'
+                    title:'Resultado de la búsqueda'
                 })
             })
             .catch(error => console.log(error))
