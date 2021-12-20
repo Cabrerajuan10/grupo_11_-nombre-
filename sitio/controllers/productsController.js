@@ -274,23 +274,13 @@ module.exports = {
     destroy: (req, res) => {
 
         
-        let resultImage = db.Image.destroy({
-            where : {
-                productId : req.params.id
-            }
-        });
-        let resultProduct = db.Product.destroy({
-            where : {
-                id : req.params.id
-            }
-        });
-
-        Promise.all([resultImage, resultProduct])
-
-        .then( () => {
-                return res.redirect('/admin')
+        db.Product.destroy({
+            where : {id: req.params.id}
+        })
+            .then(() => {
+                return res.redirect('/admin')  
             })
-            .catch(error => console.log(error))
+            .catch(error => console.log(error)) 
     },
 
     searchHome: (req, res) => {
