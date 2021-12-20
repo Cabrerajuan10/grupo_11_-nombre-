@@ -330,5 +330,24 @@ module.exports = {
         return res.render('carrito', {
             title: 'Carrito'
         })
+    },
+
+    categories: (req,res) => {
+        let products = db.Product.findAll({
+            where: {
+                categoryId: req.params.id
+            },
+            include: ['images', 'category']
+        })
+        let category = db.Category.findByPk(req.params.id)
+        Promise.all([products, category])
+        .then(([products, category]) => {
+            return res.render('productsSearch', {
+                products,
+                title: 'Productos de categoría: ' + category.name
+            })
+        })
+        .catch(error => console.log(error))
     }
+    
 }

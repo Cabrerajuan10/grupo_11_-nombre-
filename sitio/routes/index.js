@@ -8,5 +8,4 @@ const adminUserCheck = require ('../middlewares/adminUserCheck');
 router.get('/', home);
 router.get('/admin',adminUserCheck, admin);
 
-
 module.exports = router;

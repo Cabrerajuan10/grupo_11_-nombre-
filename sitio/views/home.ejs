@@ -72,12 +72,21 @@
     <!--munu-promociones -->
     <div class="box-prom">
       <div class="box-prom1">
-        <a class="laptop" href=""><i class="fas fa-laptop"></i></a>
-        <a class="tv" href=""><i class="fas fa-tv"></i></a>
+        <% categories.forEach(category => { %>
+          <% var category1 = [8,3] %> 
+          <% if (category1.includes(category.id)) { %>
+            <a href="product/category/<%= category.id %>" class=""><img class="categoria" src="/images/home/<%= category.image %> " alt=""></a>
+          <% } %>
+        <% }) %>
+        
       </div>
-      <div class="box-prom2">
-        <a class="mobile" href=""><i class="fas fa-mobile-alt"></i></a>
-        <a class="game" href=""><i class="fas fa-gamepad"></i></a>
+<div class="box-prom2">
+        <% categories.forEach(category => { %>
+          <% var category1 = [1,2] %> 
+          <% if (category1.includes(category.id)) { %>
+            <a href="product/category/<%= category.id %>" class=""><img class="categoria" src="/images/home/<%= category.image %> " alt=""></a>
+          <% } %>
+        <% }) %>
       </div>
     </div>
 
@@ -123,20 +132,13 @@
     <div class="box-categorias">
       <div class="glider-contain">
         <div class="glider2">
-          <div class="box-category"><div><img class="categoria" src="/images/home/img-categoria-celu.jpg" alt=""></div></div>
-          <div class="box-category"><div><img class="categoria" src="/images/home/img-categoria-gaming.jpg" alt=""></div></div>
-          <div class="box-category"><div><img class="categoria" src="/images/home/img-categoria-TV.jpg" alt=""></div></div>
-          <div class="box-category"><div><img class="categoria" src="/images/home/img-categoria-audio.jpg" alt=""></div></div>
-          <div class="box-category"><div><img class="categoria" src="/images/home/img-categoria-lavado.jpg" alt=""></div></div>
-          <div class="box-category"><div><img class="categoria" src="/images/home/img-categoria-calefaccion.jpg" alt=""></div></div>
-          <div class="box-category"><div><img class="categoria" src="/images/home/img-categoria-acces.car.jpg" alt=""></div></div>
-          <div class="box-category"><div><img class="categoria" src="/images/home/img-categoria-computacion.jpg" alt=""></div></div>
-          <div class="box-category"><div><img class="categoria" src="/images/home/img-categoria-heladeras.jpg" alt=""></div></div>
-          <div class="box-category"><div><img class="categoria" src="/images/home/img-categoria-peq.electros.jpg" alt=""></div></div>
+          <% categories.forEach(category => { %>
+            <a href="product/category/<%= category.id %>" class="box-category"><div><img class="categoria" src="/images/home/<%= category.image %> " alt=""></div></a>
+          <% }) %>
         </div>
         <button aria-label="Previous" class="glider-prev">«</button>
         <button aria-label="Next" class="glider-next">»</button>
-        <div role="tablist" class="dots-ofertas" id="dots-ofertas"></div>
+        <div role="tablist" class="dots2" id="dots2"></div>
       </div>
     </div>
 

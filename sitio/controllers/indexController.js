@@ -30,15 +30,17 @@ module.exports = {
             order: Sequelize.literal('rand()')
         })
 
-        Promise.all([ofertas, products])
+        let categories = db.Category.findAll()
 
-            .then(([ofertas, products]) => {
+        Promise.all([ofertas, products, categories])
+
+            .then(([ofertas, products, categories]) => {
 
                 return res.render('home', {
                     title: 'CommunityElectro',
                     ofertas,
-                    products
-
+                    products,
+                    categories
                 });
             })
             .catch(error => console.log(error))
@@ -78,6 +80,9 @@ module.exports = {
             })
             .catch(error => console.log(error))
 
-    }
+    },
+
+    
+   
 
 }

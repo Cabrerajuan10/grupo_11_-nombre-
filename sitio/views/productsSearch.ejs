@@ -13,11 +13,10 @@
 
             <section class="productos-recomendados">
                 <div class="productos">
-                  <h3>Mira tambien</h3>
+                  <h3><%= title %></h3>
                   <!--SLIDER DE GLIDER-->
 
-                    
-                      <% products.forEach(product => { %>
+                  <div class="contenido"><% products.forEach(product => { %>
                         <a href="/product/detailProduct/<%= product.id %>">
                           <div class="container">
                             <article class="tarjeta">
@@ -42,7 +41,9 @@
                             </article>
                            </div>
                          </a>
-                    <% }) %>
+                    <% }) %></div>
+                    
+                      
           
                     </div>
                   </div>

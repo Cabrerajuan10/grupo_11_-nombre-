@@ -31,7 +31,20 @@
     margin: 0;
 }
 
-.home .box-prom   i{
+.home .box-prom img{
+    font-size: 40px;
+    /* padding: 20px;
+    background-color: var(--colorCeleste); */
+    color: var(--colorBlanco);
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.home .box-prom .mobile img{
+    padding: 20px 32.5px;
+}
+
+/* .home .box-prom   i{
     font-size: 40px;
     padding: 20px;
     background-color: var(--colorNaranja);
@@ -42,7 +55,7 @@
 
 .home .box-prom .mobile i{
     padding: 20px 32.5px;
-}
+} */
 
 .home .box-prom{
     display: flex;
