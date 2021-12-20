@@ -99,7 +99,10 @@ module.exports = {
 
     },
     edit: (req, res) => {
-        let product = db.Product.findByPk(req.params.id)
+        let product = db.Product.findByPk(req.params.id,{
+            include: [{all:true}]
+        })
+
         let categories = db.Category.findAll()
 
         Promise.all([product,categories])
@@ -118,13 +121,12 @@ module.exports = {
         let errors = validationResult(req);
 
         if (errors.isEmpty()) {
-            const { name, description,features, price, priceRegular, discount, category, show } = req.body;
+            const { name, description, price, priceRegular, discount, category, show } = req.body;
          
             db.Product.update(
                 {
                     name : name.trim(),
                     description : description.trim(),
-                    features: features.trim(),
                     price,
                     priceRegular,
                     discount,
@@ -172,7 +174,7 @@ module.exports = {
 
         } else {
 
-            let product = db.Product.findByPk(req.params.id)
+            let product = db.Product.findByPk(req.params.id,{include:[{all:true}]})
             let categories = db.Category.findAll()
     
             Promise.all([product,categories])
@@ -271,6 +273,7 @@ module.exports = {
     },
     destroy: (req, res) => {
 
+        
         let resultImage = db.Image.destroy({
             where : {
                 productId : req.params.id
@@ -288,7 +291,6 @@ module.exports = {
                 return res.redirect('/admin')
             })
             .catch(error => console.log(error))
-
     },
 
     searchHome: (req, res) => {
