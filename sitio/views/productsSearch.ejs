@@ -6,7 +6,7 @@
   <%- include('./partials/header') %> 
 
     <main>
-    <p>Resultado de la busqueda</p>
+    <h3><%= title %></h3>
       <section>
         
               <% products.forEach(product => { %>
@@ -15,45 +15,35 @@
                 <div class="box-product">
                   <a href="/product/detailProduct/<%= product.id %>">
 
-            <section class="productos-recomendados">
-                <div class="productos">
-                  <h3><%= title %></h3>
-                  <!--SLIDER DE GLIDER-->
 
-                  <div class="contenido"><% products.forEach(product => { %>
-                        <a href="/product/detailProduct/<%= product.id %>">
-                          <div class="container">
-                            <article class="tarjeta">
-                                <figure>
-                                    <img src="/images/detailProduct/<%= product.images[0].file %>">
-                                </figure>
-                              
-                                <div class="contenido">
-                                  <h3><%= product.name %></h3>
-                                  <p class="precio-regular">Precio regular: $<%= product.priceRegular %></p>
-                                  <p class="precio">$<%= product.price %></p>
-                                  <div class="envio-gratis">
-                                    <p><i class="fas fa-truck"></i>Envio <b>GRATIS</b> a CABA Y GBA</p>
-                                  </div>
-                                  <% if (product.discount >=  10) { %>
-                                    <div class="descuento">
-                                     <p><%= product.discount %>%OFF</p>
-                                   </div>
-                                   <% } %>
-                                  
-              
-                                
-              
-                                </div>
-                            </article>
-                           </div>
-                         </a>
-                    <% }) %></div>
                     
+
+                    <article class="card-search">
+                        <figure>
+                            <img src="/images/detailProduct/<%= product.images[0].file %>">
+                        </figure>
                       
-          
-                    </div>
-                  </div>
+                        <div class="contenido">
+                          <h3><%= product.name %></h3>
+                          <p class="precio-regular">Precio regular: $<%= product.priceRegular %></p>
+                          <p class="precio">$<%= product.price %></p>
+                          <div class="envio-gratis">
+                            <p><i class="fas fa-truck"></i>Envio <b>GRATIS</b> a CABA Y GBA</p>
+                          </div>
+                          
+      
+                          <% if (product.discount >=  10) { %>
+                            <div class="descuento">
+                             <p><%= product.discount %>%OFF</p>
+                           </div>
+                           <% } %>
+      
+                        </div>
+
+                    </article>
+                   
+                 </a>
+                
                 </div>
             <% }) %>
   

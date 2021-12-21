@@ -288,6 +288,14 @@
     bottom: 68%;
     right: 10%;
   }
+
+  #error-pass2{
+    position: absolute;
+    bottom: 89%;
+    right: 10%;
+  }
+
+  
   
   
   @media screen and (max-width: 1050px){

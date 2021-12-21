@@ -8,7 +8,7 @@ const categorias = [
 'Calefaccion y Aires',
 'Accesorios de vehiculos',
 'Computacion',
-'Heladeras',
+'Hogar',
 'Pequeños electros'];
 
 const imagenes =[
