@@ -5,11 +5,15 @@
 <body class="products-search">
   <%- include('./partials/header') %> 
 
-    <main class="search-main">
-       
-        <div class="products-container">
+    <main>
+    <p>Resultado de la busqueda</p>
+      <section>
+        
+              <% products.forEach(product => { %>
 
-            <!--TARJETAS DE LOS PRODUCTOS-->
+
+                <div class="box-product">
+                  <a href="/product/detailProduct/<%= product.id %>">
 
             <section class="productos-recomendados">
                 <div class="productos">
@@ -31,11 +35,14 @@
                                   <div class="envio-gratis">
                                     <p><i class="fas fa-truck"></i>Envio <b>GRATIS</b> a CABA Y GBA</p>
                                   </div>
+                                  <% if (product.discount >=  10) { %>
+                                    <div class="descuento">
+                                     <p><%= product.discount %>%OFF</p>
+                                   </div>
+                                   <% } %>
                                   
               
-                                  <div class="descuento">
-                                  <p><%= product.discount %>%OFF</p>
-                                </div>
+                                
               
                                 </div>
                             </article>
@@ -48,8 +55,11 @@
                     </div>
                   </div>
                 </div>
-              </section>
-        </div>
+            <% }) %>
+  
+            
+       
+      </section>
 
 
     </main>

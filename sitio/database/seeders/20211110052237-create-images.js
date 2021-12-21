@@ -36,10 +36,39 @@ let products = [
      "images": ["samsung-s20-1.png"]
   },
   {
-     "id": 9,
-     "images": ["default.jpg"]
+   "id": 9,
+   "images": ["aire-philco-1.png"]
+  },
+  {
+   "id": 10,
+   "images": ["Patrick-HeladeraCiclica-1.png"]
+  },
+  {
+   "id": 11,
+   "images": ["lavarropas samsung- 1.png"]
+  },
+  {
+   "id": 12,
+   "images": ["cocina whirlpool- 1.png"]
+  },
+  {
+   "id": 13,
+   "images": ["microondas atma- 1.png"]
+  },
+  {
+   "id": 14,
+   "images": ["pava electrica philips - 1.png"]
+  },
+  {
+   "id": 15,
+   "images": ["xbox-series-x-1.png"]
+  },
+  {
+   "id": 16,
+   "images": ["Samsung-Galaxy-A01 -1.png"]
   }
 ]
+
 
 let images = products.map(product => {
   let image = {

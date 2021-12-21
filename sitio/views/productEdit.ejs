@@ -13,13 +13,13 @@
                         <h4>Editar producto</h4>
                     </div>
                     <div class="card-body">
-                        <form action="/product/update/<%= product.id %>?_method=PUT" class="row" method="POST" enctype="multipart/form-data">
+                        <form id="form-edit-product" action="/product/update/<%= product.id %>?_method=PUT" class="row" method="POST" enctype="multipart/form-data">
                                 <div class="col-9 mb-3">
                                     <div class="form-floating ">
                                         <input type="text" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" id="name" placeholder="Nombre del producto" name="name" value="<%= product.name %>">
                                         <label for="name">Nombre del producto</label>
                                       </div>
-                                      <span class="text-danger small ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
+                                      <span id="nameError" class="text-danger small ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
                                 </div>
                                 <div class="col-3 mb-3 d-flex justify-content-center mt-3">
                                   <div class="form-check form-switch">
@@ -32,7 +32,7 @@
                                         <textarea style="resize: none; height: 100px;" class="form-control <%= locals.errors && errors.description ? 'is-invalid' : null %>" placeholder="Descripción del producto" id="floatingTextarea" name="description"><%= product.description %></textarea>
                                         <label for="floatingTextarea">Descripción</label>
                                       </div>
-                                      <span class="text-danger small ms-2"><%= locals.errors && errors.description ? errors.description.msg : null%> </span>
+                                      <span id="descriptionError" class="text-danger small ms-2"><%= locals.errors && errors.description ? errors.description.msg : null%> </span>
 
                                 </div>
                                <div class="col-12 col-md-6 mb-3">
@@ -40,7 +40,7 @@
                                     <input type="number" class="form-control <%= locals.errors && errors.price ? 'is-invalid' : null %>" id="price" name="price" value=<%= product.price %>>
                                     <label for="price">Precio</label>
                                   </div>
-                                  <span class="text-danger small ms-2"><%= locals.errors && errors.price ? errors.price.msg : null%> </span>
+                                  <span id="priceError" class="text-danger small ms-2"><%= locals.errors && errors.price ? errors.price.msg : null%> </span>
 
                                </div>
                                <div class="col-12 col-md-6 mb-3">
@@ -48,7 +48,7 @@
                                     <input type="number" class="form-control <%= locals.errors && errors.priceRegular ? 'is-invalid' : null %>" id="priceRegular" name="priceRegular" value=<%= product.priceRegular %>>
                                     <label for="priceRegular">Precio Regular</label>
                                   </div>
-                                  <span class="text-danger small ms-2"><%= locals.errors && errors.priceRegular ? errors.priceRegular.msg : null%> </span>
+                                  <span id="priceRegularError" class="text-danger small ms-2"><%= locals.errors && errors.priceRegular ? errors.priceRegular.msg : null%> </span>
 
                                </div>
                                <div class="col-12 col-md-6 mb-3">
@@ -56,7 +56,7 @@
                                     <input type="number" class="form-control <%= locals.errors && errors.discount ? 'is-invalid' : null %>" id="discount" name="discount" value=<%= product.discount %>>
                                     <label for="discount">Descuento</label>
                                   </div>
-                                  <span class="text-danger small ms-2"><%= locals.errors && errors.discount ? errors.discount.msg : null%> </span>
+                                  <span id="discountError" class="text-danger small ms-2"><%= locals.errors && errors.discount ? errors.discount.msg : null%> </span>
 
                                </div>
                                <div class="col-12 col-md-6 mb-3">
@@ -69,15 +69,33 @@
                                     </select>
                                     <label for="category">Categoría</label>
                                   </div>
-                                  <span class="text-danger small ms-2"><%= locals.errors && errors.category ? errors.category.msg : null%> </span>
+                                  <span id="categoryError" class="text-danger small ms-2"><%= locals.errors && errors.category ? errors.category.msg : null%> </span>
 
                                </div>
                                <div class="col-12 col-md-6">
                                 <div class="mb-3">
-                                    <label for="image" class="btn btn-outline-secondary w-100 mt-2">Subir imagen</label>
-                                    <input hidden class="form-control" type="file" id="image" name="image" multiple>
+                                    <label for="image" class="btn btn-outline-secondary w-100 mt-2" id="btnImagen">Subir imagen</label>
+                                    <input hidden class="form-control" type="file" accept="image/*" id="image" name="image" multiple onchange="addImage('<%=product.id%>',this.files)">
+                                    <span id="imageError" class="text-danger small ms-2"><%= locals.errors && errors.image ? errors.image.msg : null%> </span>
                                   </div>
                                </div>
+
+                               <div class="card-body">
+                                <div class="row my-4 g-2" id="preview">
+                                  <% product.images.forEach((image,index) => { %>
+                                    <div class="col-4 text-center" >
+                                      <img width="200" src="/images/detailProduct/<%= image.file %>" alt="imagen">
+                                        <div >
+                                          <a onclick="deleteImage('<%=image.id%>')" class="btn btn-danger ">Eliminar</a>
+                                        </div>
+                                    </div>
+                                  <% }) %>
+                                </div>
+
+                                
+
+                                  <!--errors-->
+                               <span id="errorEmpty" class="text-danger"></span>
                                 <div class="col-12 mt-5">
                                     <button type="submit" class="btn btn-outline-dark w-100">Guardar</button>
                                 </div>
@@ -91,7 +109,8 @@
         </div>
     </main>
 
-    <%- include('./partials/scripts') %> 
-
+    <%- include('./partials/scripts') %>
+    <script src="/javascripts/productEdit.js"></script>
+    <script src="/javascripts/productEditImage.js"></script>
 </body>
 </html>
