@@ -10,11 +10,7 @@ module.exports = [
         min : 20
     }).withMessage('La descripción debe tener un mímino de 20 caracteres'),
 
-    check('features')
-    .notEmpty().withMessage('Las caracteristicas son obligatorias').bail()
-    .isLength({
-        min : 20
-    }).withMessage('Las caracteristicas deben tener un mímino de 20 caracteres'),
+    
 
     check('price')
     .isDecimal({
