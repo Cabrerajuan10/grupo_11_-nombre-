@@ -8,7 +8,7 @@
     "price": 69.999,
     "priceRegular": 82.000,
     "discount": 0,
-    "categoryId": 4,
+    "categoryId": 8,
     "show": true,
     createdAt: new Date
 },
@@ -38,14 +38,14 @@
     "price": 106.999,
     "priceRegular": 150000,
     "discount": 10,
-    "categoryId": 4,
+    "categoryId": 1,
     "show": true,
     createdAt: new Date
 },
 {
     "name": "Impresora Multifunción HP",
     "description": "Con la impresora multifunción HP Deskjet Ink Advantage 3775 podrás imprimir, escanear y copiar de manera inalámbrica. Tiene un diseño compacto, pensado para ahorrar espacio y que quepa en un escritorio, un estante o en el lugar de tu hogar que necesites. Además, cuenta con un modo silencioso que evita ruidos molestas excesivos",
-    "categoryId": 5,
+    "categoryId": 8,
     "price": 14.499,
     "priceRegular": 18620,
     "discount": 10,
@@ -58,7 +58,7 @@
     "price": 29.999,
     "priceRegular": 30362,
     "discount": 10,
-    "categoryId": 3,
+    "categoryId": 4,
     "show": true,
     createdAt: new Date
 },
@@ -68,7 +68,7 @@
     "price": 34.999,
     "priceRegular": 40000,
     "discount": 15,
-    "categoryId": 6,
+    "categoryId": 9,
     "show": true,
     createdAt: new Date
 },
@@ -78,7 +78,7 @@
     "price": 19.999,
     "priceRegular": 21000,
     "discount": 5,
-    "categoryId": 5,
+    "categoryId": 10,
     "show": true,
     createdAt: new Date
 },
@@ -88,7 +88,7 @@
     "price": 28.999,
     "priceRegular": 350000,
     "discount": 10,
-    "categoryId": 3,
+    "categoryId": 4,
     "show": true,
     createdAt: new Date
 }

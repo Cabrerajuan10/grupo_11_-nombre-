@@ -97,7 +97,10 @@ module.exports = {
 
     },
     edit: (req, res) => {
-        let product = db.Product.findByPk(req.params.id)
+        let product = db.Product.findByPk(req.params.id,{
+            include : [{all:true}]
+        }) 
+            
         let categories = db.Category.findAll()
 
         Promise.all([product,categories])
@@ -117,7 +120,7 @@ module.exports = {
 
         if (errors.isEmpty()) {
             const { name, description,features, price, priceRegular, discount, category, show } = req.body;
-         
+         console.log('----------------------------------' + category)
             db.Product.update(
                 {
                     name : name.trim(),
@@ -221,7 +224,8 @@ module.exports = {
                     categories,
                     rols,
                     users,
-                    title: 'Resultado de la búsqueda'
+                    title: 'Resultado de la búsqueda',
+                    active: "productos"
                 })
             })
             .catch(error => console.log(error))
@@ -261,7 +265,8 @@ module.exports = {
                     category,
                     categories,
                     rols,
-                    users              
+                    users,
+                    active: "productos"           
             
                 })
             })

@@ -75,7 +75,8 @@ module.exports = {
                     categories,
                     users,
                     rols,
-                    rol
+                    rol,
+                    active: "productos"
                 })
             })
             .catch(error => console.log(error))

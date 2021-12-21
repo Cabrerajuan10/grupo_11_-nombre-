@@ -153,7 +153,8 @@ module.exports = {
                     categories,
                     users,
                     rols,
-                    title: 'Resultado de la búsqueda'
+                    title: 'Resultado de la búsqueda',
+                    active: "usuarios"
                 })
             })
             .catch(error => console.log(error))
@@ -211,7 +212,8 @@ module.exports = {
                     rol,
                     categories,
                     rols,
-                    users: rol.users            
+                    users: rol.users,
+                    active: "usuarios"         
             
                 })
             })
