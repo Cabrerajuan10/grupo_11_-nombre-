@@ -18,7 +18,7 @@
                                 <img class="img-fluid rounded-start" src="/images/users/<%= user.avatar %> "  alt="">
                             </div>
                             <div class="col-12 col-md-8">
-                                <form id="form-profile" class="row" method="POST" enctype="multipart/form-data" novalidate autocomplete="off">
+                                <form action="/users/profile" id="form-profile" class="row" method="POST" enctype="multipart/form-data" novalidate autocomplete="off">
                                     <div class="col-12 mb-3">
                                         <div class="form-floating ">
                                             <input type="text" id="input-name"class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>"  placeholder="Nombre " name="name" value="<%= user.name %>">
@@ -36,10 +36,10 @@
                                     </div>
                                     <div class="col-12 mb-3">
                                         <div class="form-floating ">
-                                            <input type="password" class="form-control" id="input-password" placeholder="Contraseña" name="password" value="<%= user.password %>" >
+                                            <input type="password" class="form-control" id="input-password" placeholder="Contraseña" name="password" >
                                             <label for="email">Cambiar contraseña</label>
-                                            <span id="error-password" class="small text-danger"></span>
-				                            <span id="info-password" class="small text-info"></span>
+                                            <!-- <span id="error-password" class="small text-danger"></span>
+				                            <span id="info-password" class="small text-info"></span> -->
                                           </div>
                                           <span class="text-danger small ms-2"><%= locals.errors && errors.password ? errors.password.msg : null%> </span>
 

@@ -48,7 +48,7 @@ inputName.addEventListener('blur', function() {
 
 /* password */
 
-inputPassword.addEventListener('keydown', function() {
+/* inputPassword.addEventListener('keydown', function() {
     $('info-password').innerText = null;
 })
 
@@ -65,7 +65,7 @@ inputPassword.addEventListener('blur', function() {
             this.classList.add('is-valid');
             break;
     }
-})
+}) */
 
 
 /*errores al enviar form */
@@ -76,7 +76,7 @@ formulario.addEventListener('submit', e => {
     let error = false;
     const elementos = formulario.elements;
     
-    for (let i = 0; i < elementos.length - 2; i++) {
+    for (let i = 0; i < elementos.length - 3; i++) {
         
         if(!elementos[i].value){
             elementos[i].classList.add('is-invalid');
