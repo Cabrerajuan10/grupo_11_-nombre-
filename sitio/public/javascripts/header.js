@@ -30,7 +30,7 @@
    navLinks.classList.toggle("show1");
   }
 
-   
+
 
 
 

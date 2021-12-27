@@ -12,9 +12,9 @@
 /*!EFECTOS NAV BAR*/
 
 header{
-
   height: 140px;
 }
+
 header .nav-links{
   display: flex;
   align-items: center;
@@ -241,6 +241,102 @@ header .btn:hover{
 
 
 
+/*!MENU BURGUER*/
+
+.burguer-nav .mainMenu {
+  display: flex;
+  list-style: none;
+}
+.burguer-nav .mainMenu li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.burguer-nav .mainMenu li a:hover {
+  background: rgb(255,94,0);
+}
+.burguer-nav .openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+.burguer-nav .mainMenu .closeMenu , .icons i {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+.fa-facebook:hover {color: rgb(0, 110, 255);}
+.fa-twitter:hover {color: rgb(86, 154, 243);}
+.fa-instagram:hover {color: rgb(255, 0, 191);}
+.fa-github:hover {color: rgb(255, 123, 0);}
+
+.burguer-nav .logo {
+  margin: 6px;
+  font-size: 25px;
+  cursor: pointer;
+}
+@media(max-width: 450px){
+  .burguer-nav{
+    color: #fff;
+    position: absolute;
+    left: 5px;
+  
+  
+  }
+  .burguer-nav .mainMenu {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: var(--colorNaranja);
+      transition: top 1s ease;
+      display: none;
+  }
+  .burguer-nav .mainMenu .closeMenu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+
+  }
+  .burguer-nav .openMenu {
+      display: block;
+  }
+  .burguer-nav .mainMenu li a:hover {
+      background: none;
+      color: rgb(255, 123, 0);
+      font-size: 1.6rem;
+  }
+  .icons-burguer i {
+      display: inline-block;
+      padding: 12px;
+  }
+}
+
+@media (min-width:450px){
+  .burguer-nav {
+    display:none;
+  }
+  .burguer-nav .mainMenu {
+    
+    display: none;
+}
+
+
+}
+
+
+
+
 
 
 
@@ -296,22 +392,49 @@ header .btn:hover{
 }
 
 @media (max-width:450px){
+  .header{
+    width: 100vw;
+    height: 180px;
+    position:relative;
+  }
+
+ /* header  .logo-link{
+
+   }
+
+ */
+  header  .logo-link .logo{
+   width: 60px;
+  }
+  
+  .header .logo-link{
+    padding-left: 40px;
+  }
+
+
+   .header .form-search {
+     width: 100%;
+     position: absolute;
+      top:60%;
+      right: 7%;
+  } 
+
+  header .form-search .input-search input{
+    width: 90%;
+  }
 
   .nav li{
       font-size: 14px;
-  }
-  header .form-search{
-    display:none;
   }
 
   header .fa-bars{
     display: block;
   }
 
-  header .links{
+  /* header .links{
     display:none;
   }
-
+ */
 }
 
 
